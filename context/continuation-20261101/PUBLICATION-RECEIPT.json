@@ -1,0 +1,52 @@
+{
+  "project": "BIDOPS",
+  "publishedUTC": "2026-11-01T04:08:43.841209+00:00",
+  "files": [
+    {
+      "path": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\context\\continuation-20261101\\BRIEF.md",
+      "bytes": 7553,
+      "sha256": "0f85ee1501e29bd9a8d2b3e37e385d909b4a0df4f12e524069ce515dd4b511ba",
+      "beforeSHA256": "4dc2312b984b44ff1242652fb62c08954b63e7f7f1b9174a51221661e90906f8"
+    },
+    {
+      "path": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\context\\continuation-20261101\\SOURCE-MAP.md",
+      "bytes": 11460,
+      "sha256": "daf7c0001c87df9cc2c126c86dbc984bb9ecfefeffa5fd7656e99895fd716faa",
+      "beforeSHA256": "3ace9dd13f095bfed3a58137f28267a8751fc8090c04f52b94daa2abfe0c15c7"
+    },
+    {
+      "path": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\context\\continuation-20261101\\DECISION-LOG.md",
+      "bytes": 5767,
+      "sha256": "b7ed623cdcd70350fbf5af19df2efd5e1f9caa8702d1eb643449ebf391618079",
+      "beforeSHA256": "e3e50e203d654be0df2d6ab95aa04b1f23734511dd014533628484be1b3527c9"
+    },
+    {
+      "path": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\context\\continuation-20261101\\ROADMAP-STATUS.md",
+      "bytes": 4694,
+      "sha256": "31b9e33dde01049b9f8e78635b41732a3d6e616b3efb9eaf63eddeaf6a7e7b82",
+      "beforeSHA256": "206d32389607a6e8a1faae0a976fc4199b23fbc379a11c676532d8f89fa5affd"
+    },
+    {
+      "path": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\context\\continuation-20261101\\PLAN-VS-IMPLEMENTATION.md",
+      "bytes": 10828,
+      "sha256": "e2b4b21990eb620de67608ac68f0042ef9bc3f4438bba221ed347d22993c1b55",
+      "beforeSHA256": "7f46bb51ee8a20724bef3b0c9087ccb055781f172780c7210c1c711169035667"
+    },
+    {
+      "path": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\context\\continuation-20261101\\PATCH-PROJECT_STATE-README.md",
+      "bytes": 2827,
+      "sha256": "63b9ed0b90325d062ce030642040d7e2f22c1af96bd0010bc90b99b5bfebae8e",
+      "beforeSHA256": "b69fdf4d047b45dbaec523fa39f0248782e0164aaf05428dd33430697d0e7500"
+    },
+    {
+      "path": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\context\\continuation-20261101\\SOURCES-READ.json",
+      "bytes": 7339,
+      "sha256": "4ece18f3a8f7c66f246a48009cb5eb0c7b73204c79df7bb60697c408ce7f7b94",
+      "beforeSHA256": "f59a954eb071453e7e1a0bd383f85e4e3abbddc20c2856f988eeccf217987fc3"
+    }
+  ],
+  "state": "Reviewed product definition/plan and source coverage; not implementation/release",
+  "route": "Claude CLI tools in exact conversation, not Desktop PID or UI-render proof",
+  "quota": "Quality phase had weekly-limit exit1; post-reset continuation completed exit0",
+  "runtimeChanged": false
+}

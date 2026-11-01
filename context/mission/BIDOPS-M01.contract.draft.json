@@ -1,0 +1,69 @@
+{
+  "_status": "DRAFT — chưa duyệt. Không chạy `oser init` cho đến khi Dũng duyệt Mission (D09) và chọn nơi cài plugin. Xoá khoá _status/_notes trước khi init.",
+  "_notes": [
+    "Định dạng theo nnc-claude-plugins main 94ddf8b, examples/r1-contract.example.json (schema nnc-oser/mission@1).",
+    "authority = nguồn chuẩn ĐÃ có hiệu lực (SOP gốc + chỉ dẫn của Dũng); P1-REQUEST chưa duyệt nên KHÔNG làm authority.",
+    "sources liệt kê từng tệp vì kernel giới hạn 64 MiB; không đưa workbook/ảnh gốc (inventory: 22 tệp, 103.015.868 byte) vào fingerprint."
+  ],
+  "id": "BIDOPS-M01",
+  "goal": "Phiếu P1 BIDOPS-P1-001 cho một ca/gói đầu tiên được chủ nghiệp vụ chấp nhận, kèm so sánh cách làm đã được chọn và bộ ca kiểm tổng hợp sẵn sàng làm đầu vào P2.",
+  "owner": "Dung (VOSYDUNG)",
+  "baseline": {
+    "id": "BIDOPS-BASE-20261030",
+    "authority": [
+      {"path": "sources/method/SOP-P1-P2-VA-CA-KHO-2-v1.pdf"},
+      {"path": "CLAUDE.md"},
+      {"path": "requirements/00-README-AUTHORITY.md"},
+      {"path": "requirements/10-LOCK-REGISTER.md"}
+    ]
+  },
+  "sources": [
+    "requirements",
+    "discovery/PRODUCT-FRAMING.md",
+    "context/PROJECT_STATE.md",
+    "sources/method/SOP-extracted.txt",
+    "sources/whatsapp/key-source-wording.json",
+    "sources/whatsapp/claims.json",
+    "sources/whatsapp/chronology.json",
+    "sources/plans/plan-source-text.txt",
+    "sources/analysis/workbooks/REPORT-WORKBOOKS.md",
+    "sources/analysis/images-pdf/FINDINGS-IMAGES-PDF.md",
+    "sources/inventory.json"
+  ],
+  "acceptance": [
+    {
+      "id": "AC-01",
+      "description": "Phiếu P1 có mã ca, as-is được người đang làm xác nhận, vai/IO/ngoại lệ/phần người giữ, ví dụ được phép và tiêu chí đúng/sai.",
+      "requires": ["document", "human_confirmation"]
+    },
+    {
+      "id": "AC-02",
+      "description": "Chủ nghiệp vụ chấp nhận đầu ra P1; D01 ghi người/ngày/phạm vi/bằng chứng trong requirements/DECISIONS.md.",
+      "requires": ["human_approval"]
+    },
+    {
+      "id": "AC-03",
+      "description": "So sánh ít nhất ba cách (quy trình/Excel · cấu hình/Skill · công cụ) theo Decision Card có đánh đổi; chủ nghiệp vụ chọn (D07).",
+      "requires": ["document", "human_decision"]
+    },
+    {
+      "id": "AC-04",
+      "description": "Bộ fixture tổng hợp + expected result phủ các ca trong requirements/P2-VALIDATION.md; kiểm kỹ thuật ghi PASS/FAIL từng ca, chạy lại lần hai không nhân đôi.",
+      "requires": ["test", "document"]
+    },
+    {
+      "id": "AC-05",
+      "description": "Không vi phạm guardrail: sources/ khớp hash inventory, không gửi/push/nộp thầu, không đụng bộ đã gửi hoặc tệp Mittaphab.",
+      "requires": ["audit"]
+    },
+    {
+      "id": "AC-06",
+      "description": "Người thử độc lập do Dũng chỉ định (D06) xác nhận phiếu P1 và ca kiểm; người soạn không tự nhận.",
+      "requires": ["human_review"]
+    }
+  ],
+  "policy": {
+    "bindings": [],
+    "max_active_executions": 1
+  }
+}

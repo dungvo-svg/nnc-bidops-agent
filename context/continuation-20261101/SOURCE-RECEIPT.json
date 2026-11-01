@@ -1,0 +1,31 @@
+{
+  "project": "BIDOPS",
+  "sessionId": "a5ab430d-1ab4-4c21-8a6a-2b597076de9f",
+  "ownerRoot": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent",
+  "canonicalHome": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\context\\continuation-20261101",
+  "draftOutput": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-31\\task\\output\\bidops-relock-20261101\\owner-project-audit-20261101",
+  "sourceUserMessage": "Sentinel_ecaae41e61a88191b2d3ec0670fd62e4",
+  "observedAtUTC": "2026-11-01T03:09:11.651080+00:00",
+  "copiedSources": [
+    {
+      "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-31\\task\\output\\bidops-parent-context-20261031\\sources\\BIDOPS-A-P1-CEO-HUMAN-NODES-20261031.md",
+      "destination": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\context\\continuation-20261101\\sources\\PLAN-A-v8.md",
+      "bytes": 98525,
+      "sha256": "7caf1d009a6a5598748f6b22c8b4ee783526e21cce00fb1d4b382ba282db617f"
+    },
+    {
+      "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-31\\task\\output\\bidops-parent-context-20261031\\sources\\BIDOPS-THAU-LITE-NGUOI-AGENT-20261031.md",
+      "destination": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\context\\continuation-20261101\\sources\\PLAN-A-LITE-v1.md",
+      "bytes": 9605,
+      "sha256": "7a3a13fe64ba6add909fed2f0cd09a08ed91c5dfbec56c894702302220bdcd9d"
+    },
+    {
+      "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-31\\task\\output\\NNC-B-DOC-NGAN.md",
+      "destination": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\context\\continuation-20261101\\sources\\IMPLEMENTATION-READOUT-v4.md",
+      "bytes": 6655,
+      "sha256": "290854053f39dfe82648599bf4f2a2d488facf330365485585062f480bd55b3a"
+    }
+  ],
+  "hostRole": "place source/task; independentlyreview and publish canonical docs after Claude draft; no runtime code changes",
+  "settingsChanged": false
+}

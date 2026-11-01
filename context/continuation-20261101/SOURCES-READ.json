@@ -1,0 +1,61 @@
+{
+  "schema": "bidops-sources-read/2",
+  "session": "a5ab430d-1ab4-4c21-8a6a-2b597076de9f",
+  "written": "2026-11-01",
+  "labels": {
+    "FRESH_READ": "read with tools in the 01/11 audit turns",
+    "HASH_MATCH": "full text received earlier in this conversation; 01/11 only verified sha256",
+    "INDEX": "path/hash only",
+    "CODEX_RECEIPT": "value reported by Codex; not verified by Claude"
+  },
+  "method_note": "CLI-resumed conversation tools; not a live Desktop PID receipt. No company-wide or all-session scan claimed.",
+  "abbrev": {"OWNER": "D:/WORK/Agent/Agent-first/NNC BidOps Agent", "OUT": "C:/Users/Admin/Documents/Codex/2026-10-31/task/output"},
+  "sources": [
+    {"path": "OWNER/context/continuation-20261101/TASK.md", "bytes": 6035, "sha256": "704abc0fd258f632220ad109046e2c50850fdff7e0bc04052774f311e368b5ed", "sha_source": "computed by Claude 01/11; not in SOURCE-RECEIPT.json", "label": "FRESH_READ (also delivered verbatim in user turn)"},
+    {"path": "OWNER/context/continuation-20261101/SOURCE-RECEIPT.json", "label": "FRESH_READ"},
+    {"path": "OWNER/context/continuation-20261101/sources/PLAN-A-v8.md", "bytes": 98525, "sha256": "7caf1d009a6a5598748f6b22c8b4ee783526e21cce00fb1d4b382ba282db617f", "label": "HASH_MATCH (full text received 31/10 in this conversation; not re-paged 01/11)"},
+    {"path": "OWNER/context/continuation-20261101/sources/PLAN-A-LITE-v1.md", "bytes": 9605, "sha256": "7a3a13fe64ba6add909fed2f0cd09a08ed91c5dfbec56c894702302220bdcd9d", "label": "HASH_MATCH"},
+    {"path": "OWNER/context/continuation-20261101/sources/IMPLEMENTATION-READOUT-v4.md", "bytes": 6655, "sha256": "290854053f39dfe82648599bf4f2a2d488facf330365485585062f480bd55b3a", "label": "FRESH_READ; Kho/meeting-assistant sections excluded"},
+    {"path": "OUT/bidops-parent-context-20261031/sources/BIDOPS-B-HANDOFF-MANIFEST-20261031.md", "sha256": "8f7b7fd2... (from evidence tag 31/10)", "label": "full text received 31/10; not re-read; hash not re-verified (no read permission to that folder on 01/11)"},
+    {"path": "OUT/bidops-parent-context-20261031/sources/BIDOPS-B-CONTEXT-APPENDICES-20261031.md", "sha256": "b877d67e... (evidence tag)", "label": "same as manifest; size 137395 vs 135602 suspected metadata error, unverified"},
+    {"path": "OWNER/context/PROJECT_STATE.md", "label": "FRESH_READ 01/11"},
+    {"path": "OWNER/requirements/10-LOCK-REGISTER.md", "label": "current content seen 01/11 (no LOCKED node)"},
+    {"path": "OWNER/requirements/DECISIONS.md", "label": "authored/read 30-31/10; not re-read 01/11"},
+    {"path": "OWNER/{CLAUDE.md, AGENTS.md, requirements/00-README-AUTHORITY.md, 01-PRD-CORE.md, 08-SOURCE-MAP.md, 11-ROLE-AUTHORITY-MAP.md, P1-REQUEST.md, P2-VALIDATION.md, BACKLOG-ACCEPTANCE.md, context/mission/*}", "label": "not_enumerated_this_turn; authored/read 30-31/10"},
+    {"path": "OUT/bidops-B-pilot-20261031/project/src/workpacks.py", "sha256": "1c8e6192bc324b3f5e42d79ac83f2308f0965eef569ca6942aa9875b96c951d4", "label": "FRESH_READ + sha256sum 01/11"},
+    {"path": "OUT/bidops-B-pilot-20261031/project/tests/test_workpacks.py", "sha256": "cdcea9aa088d1c09bd6e40b2115731ccb8917acddf7c6d3dfd6ac3446a45de45", "label": "FRESH_READ; sha asserted in Claude smoke"},
+    {"path": "OUT/bidops-B-pilot-20261031/project/README.md", "label": "FRESH_READ 01/11 (source of 2068/1455/3523/4577 wording)"},
+    {"path": "OUT/bidops-B-pilot-20261031/project/AGENTS.md", "label": "FRESH_READ 01/11"},
+    {"path": "OUT/bidops-B-pilot-20261031/project/docs/CODING-CONTRACT.md", "label": "FRESH_READ in audit turn 01/11 (RELOCK.json earlier recorded grep only)"},
+    {"path": "OUT/bidops-B-pilot-20261031/project/docs/STATE-MAPPING.md", "label": "FRESH_READ 01/11"},
+    {"path": "OUT/bidops-B-pilot-20261031/project/docs/DATA-CONTRACT.md", "sha256": "e14822276c90... (as provided 31/10, not re-hashed)", "label": "full text received 31/10 (§1-19); grep 01/11"},
+    {"path": "OUT/bidops-B-pilot-20261031/project/src/catalog_lifecycle.py", "sha256": "b6dc9986ac97... (as provided 31/10, not re-hashed)", "label": "full text received 31/10"},
+    {"path": "OUT/bidops-B-pilot-20261031/project/src/{ledger,assessments,catalog_intake,four_bv_intake,synthetic}.py", "label": "function index only (grep def/class); bodies not read except ledger.canonical/digest"},
+    {"path": "OUT/bidops-B-pilot-20261031/project/tests/", "label": "grep count 100 'def test_' across 8 files; only test_workpacks.py read in full"},
+    {"path": "OUT/bidops-B-pilot-20261031/control/continuation-20261031/{PREPATCH-REPRO,POSTPATCH-VERIFICATION,POSTPATCH-LOCAL-COMMIT}.json", "label": "FRESH_READ 01/11 (content is CODEX_RECEIPT)"},
+    {"path": "KOM-INTAKE-SUMMARY.json sha 4bd04710...", "label": "full text received 31/10 (legacy priced=649)"},
+    {"path": "OUT/bidops-relock-20261101/{RELOCK.json, WORK-RECEIPT.md, CONTRACT-AMENDMENT-20261101.md, OWNER-PROJECT-DOC-PATCH.md, project/tests/test_relock_smoke.py, project/sandbox/SMOKE-RESULT.json}", "label": "authored by Claude 01/11"}
+  ],
+  "round2_2026-11-01": [
+    {"path": "OWNER/context/continuation-20261101/sources/PLAN-A-v8.md", "label": "FRESH_READ lines 24-153, 300-499 (Opus); rest HASH_MATCH"},
+    {"path": "OWNER/context/continuation-20261101/sources/PLAN-A-LITE-v1.md", "label": "FRESH_READ full 72 lines (Opus)"},
+    {"path": "OWNER/context/continuation-20261101/sources/QUALITY-SOURCE-FACTS.json", "label": "FRESH_READ (Opus); content is Codex structured extraction"},
+    {"path": "OWNER/context/continuation-20261101/PUBLICATION-RECEIPT.json", "label": "FRESH_READ"},
+    {"path": "OWNER/context/PROJECT_STATE.md", "label": "FRESH_READ lines 1-20 + grep (applied continuity section verified)"},
+    {"path": "OWNER/README.md", "label": "grep line 11 pointer verified"},
+    {"path": "OWNER/sources/whatsapp/chronology.json", "label": "FRESH_READ all 168 msgs by source-audit-sonnet (4 long msgs truncated)"},
+    {"path": "OWNER/sources/plans/plan-source-text.txt", "label": "FRESH_READ by worker"},
+    {"path": "OWNER/sources/{inventory.json, whatsapp/source-files.json, whatsapp/claims.json}", "label": "FRESH_READ by worker"},
+    {"path": "OWNER/sources/whatsapp/originals/ I17, I13, I14, I12 JPEG", "label": "viewed by worker; only legible content described"},
+    {"path": "OUT/bidops-B-pilot-20261031/project/src/{ledger,assessments,catalog_lifecycle,workpacks}.py", "label": "full bodies by scope-audit-sonnet; Opus spot-read ledger.py 534-591, 703-761"}
+  ],
+  "not_read": [
+    "22 original binaries (INDEX)",
+    "actual common-catalog.sqlite / kom DB / draft-inbox.sqlite / XLSX (CODEX_RECEIPT hashes only)",
+    "L3 lab artifact (not re-verified in this audit)",
+    "raw MISA, credentials, private sessions, previously denied Drive reports",
+    "pilot context/BRIEF.md and source-manifest.json current versions (31/10 versions received)"
+  ],
+  "decisions_found": "No owner D/LCK node LOCKED; D10-D13 PROPOSED. User directions forwarded via task/parent are work scope, not business locks.",
+  "genuine_gaps": ["formal HSMT/addenda/closing times", "real principals/ACL/channel", "current accepted quotes (pilot 0; company-wide unknown)", "identity-complete variants (pilot 0)", "goods-documents-money live data", "economics/working capital and competitive basis implementation", "master writer", "business acceptance of P1"]
+}

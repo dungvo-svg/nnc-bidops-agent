@@ -1,0 +1,68 @@
+{
+  "id": "BIDOPS-F01",
+  "stage": "RESEARCH",
+  "actor": "Dung (VOSYDUNG) — điều phối; chủ nghiệp vụ ca đầu chưa chốt (D01)",
+  "problem": "Nhóm Thầu/Cung ứng kênh HC phải chọn danh mục/gói có thể chào cho nhiều BV, nhưng yêu cầu BV, giá, quy cách và phản hồi NCC nằm rải ở nhiều file và chat; cập nhật/ghép qua nhiều BV bằng tay dễ nhầm lịch sử với dữ liệu mới và khó thấy dòng nào đủ điều kiện chào.",
+  "current_reality": {
+    "workflow": "Tái dựng 30/10 từ tin nhắn, CHƯA được người đang làm xác nhận: BV phát hành → Phet báo hạn, giữ chuẩn bị/in → Siêng/Tình nguồn tin, giá tỉnh → Tình giao list, Sơn tìm NCC TQ, tính giá vốn vào Sheet riêng (cập nhật ≥4 lần/3 ngày) → Phet nhập bảng giá theo nhóm → nguồn khác (Sharma, Stevimed, giá mua gần nhất) → vòng kiểm hàng chưa giá → tính giá/biên (công thức Phet, AI của Oanh) → DUYỆT: chưa có bằng chứng → in (Phet) / NỘP: chưa có bằng chứng. Chi tiết: discovery/DINH-HINH-SAN-PHAM.md §2.",
+    "pain": "Có ít nhất ba bảng có thể bị coi là master (bảng gốc Oanh 5 BV, danh mục chung Cung ứng 4 gói, workbook Komsenahak) chưa có chủ; phản hồi NCC có sai khác quy cách/đơn vị chưa giải quyết; giá năm trước dễ bị dùng như giá hiện hành; nhiều hạn nộp trùng nhau (context/HOP-VA-DUNG-CHUNG.md, discovery/PRODUCT-FRAMING.md).",
+    "current_tools": [
+      "Excel: bảng gốc chung HC (Oanh), workbook Komsenahak (Phet), bảng giá theo nhóm (Phet)",
+      "Google Sheet/Drive: danh mục chung Cung ứng, sheet tìm hàng TQ (Sơn), bảng giá mua gần nhất (An)",
+      "WhatsApp nhóm, Zoom/lịch họp",
+      "MISA/AMIS (kế hoạch Cung ứng R10, chưa nạp dữ liệu)",
+      "App Trợ lý Cung ứng (theo kế hoạch R10; chưa kiểm)"
+    ],
+    "constraints": [
+      "Không sửa nguồn, bộ thầu đã gửi, tệp Mittaphab của người khác",
+      "Quyết định danh mục chào, tương đương kỹ thuật, giá, NCC, cam kết giao chỉ do người có quyền",
+      "Không chào mặc định 100% danh mục; 5 BV là bối cảnh đối chiếu",
+      "Giá vốn, công nợ, danh sách khách hàng không đưa ra ngoài công ty",
+      "Áp SOP P1/P2 v1 26/10/2026 của Dũng"
+    ],
+    "baseline": "Chưa đo — chưa có số thời gian/lần sửa/lỗi ghép; không điền 0."
+  },
+  "research": [
+    {
+      "candidate": "Cách 1 — chủ master + form trên Excel sẵn có",
+      "class": "native/configuration",
+      "fit": "Giải đau chưa có chủ master và nhập lại nhiều lần; công sức thấp, dễ đảo ngược; BGC có khóa MPSC sạch.",
+      "source_ref": "discovery/DINH-HINH-SAN-PHAM.md §3, §8",
+      "unknowns": [
+        "Chủ master (D02)",
+        "Đồng bộ nhiều người trên Excel chưa chứng minh",
+        "Quy tắc giá (D03)"
+      ]
+    },
+    {
+      "candidate": "Cách 2 — bước đối chiếu có dấu vết (agent đề xuất ghép, người duyệt) trên một ca",
+      "class": "reusable Skill/workflow",
+      "fit": "Hợp ghép yêu cầu↔chào có sai khác (Com/Amp, 600/500 ml, 2,5×5/2,0×5); ADAPT logic thau-bv-nnc A–D + SCHEMA.md.",
+      "source_ref": "discovery/DINH-HINH-SAN-PHAM.md §1, §8; SRC-THAU-BV-NNC",
+      "unknowns": [
+        "Ca đầu (D01)",
+        "Ai nhận/từ chối sai khác (D04)",
+        "Dữ liệu được phép đưa vào agent"
+      ]
+    },
+    {
+      "candidate": "Cách 3 — công cụ mới có version",
+      "class": "custom build",
+      "fit": "Chỉ khi số đo cho thấy cách 1+2 không đủ; rủi ro trùng App Trợ lý Cung ứng.",
+      "source_ref": "discovery/DINH-HINH-SAN-PHAM.md §4",
+      "unknowns": [
+        "Baseline",
+        "Phạm vi App Cung ứng",
+        "Người bảo trì"
+      ]
+    }
+  ],
+  "unresolved": [
+    "As-is chưa được người đang làm xác nhận; bước duyệt (chỉ có trong hướng dẫn BGC) và nộp chưa có bằng chứng thực hiện",
+    "Chủ master (D02) và ca đầu (D01)",
+    "Ba luật dữ liệu D11–D13 chờ người duyệt",
+    "Quy tắc giá lệch: hệ số 1,12/1,22, % vận chuyển, FX, VAT (D03)",
+    "Ví dụ được phép; người thử độc lập (D06); baseline chưa đo",
+    "Phạm vi App Trợ lý Cung ứng so với BidOps"
+  ]
+}
