@@ -14,7 +14,8 @@ AG-GOI  Agent Gói thầu (điều phối, giữ BẢN THỂ, đầu ghi duy nh�
    ├─ AG-NHAN    Agent Nhận về / intake        (kiểm runtime trước khi vào bản thể)
    ├─ AG-HOP     Agent Họp                     (ghi, tóm tắt; chỉ đọc)
    └─ AG-CANHAN  Agent cá nhân của từng người  (chạy dưới quyền chủ của nó)
-Node người: Trang · Tar · Sơn · Duy · Huyền · Tình · Phét · Linh … (theo bảng chia của nhóm)
+Node người: Trang · Lý · Tar · Sơn · Duy · Huyền · Tình · Phét · Linh … (theo bảng chia của nhóm)
+Bể chung nhiều gói: AG-GOI giữ một bể chung cho các gói cùng mùa (gói nộp trước phủ gói sau), xem QUY-TRINH §1b
 ```
 
 ## 2. AG-GOI — Agent Gói thầu
@@ -70,7 +71,8 @@ Ghi âm, tóm tắt và rút việc **chỉ khi người dùng bật**. Gắn nh
 | CEO / người điều hành | Ưu tiên, hạn, quyết D3 | Bảng duyệt gọn; câu hỏi có phương án (R2 decision contract) |
 | Phét | Nguồn đã nộp, công thức giá Kom, hàng hiếm, hồ sơ | Đối chiếu nguồn đã nộp; hỏi xác nhận công thức |
 | Tình | Kiểm giá | Bảng so giá cùng loại (GM/GV/chào, tiền tệ, ĐVT, VAT) |
-| Trang | NCC Việt Nam, giá mua, giá vốn | File runtime theo NCC; danh sách cần hỏi |
+| Trang | NCC Việt Nam, giá mua, giá vốn; nhận khung ≈ 900 mã | File runtime theo NCC; hàng đợi tuần tự; danh sách cần hỏi |
+| Lý | Cùng tìm thuốc phía sau phần của Trang (Dũng nêu 09/11); quy trình cước QT-CU-05 | Hàng đợi riêng tách từ phần chia theo bảng của nhóm; chưa tự gán mã |
 | Tar | Xác nhận thành phần | Danh sách tra cứu cần xác nhận, có độ chắc |
 | Sơn | Trung Quốc, ngoài Hà Nội | Danh sách theo hoạt chất cho NCC Trung Quốc |
 | Duy | Kom thuốc, giá thuốc đang bán | Đối chiếu với danh mục đang bán |

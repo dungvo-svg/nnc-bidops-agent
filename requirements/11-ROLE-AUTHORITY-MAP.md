@@ -32,6 +32,7 @@ Gắn một người với một node, một hộp thư, một mã chia việc v
 | `THUOC-SON` | Sơn | `S` (23 dòng) | `03_Son` | Giá Sơn | Nguồn Trung Quốc; tìm NCC ngoài Hà Nội (họp 09/11); ảnh thuốc bổ sung | Email |
 | `THUOC-DUY` | Duy | `D` (64 dòng) | `04_Duy` | Giá Duy | Thuốc Kom (họp 05/11 "kéo Duy vào"); file "Thau 2027 Duy"; giá thuốc đang bán (họp 09/11) | Email; ranh giới quyền giá OTC và giá thầu |
 | `THUOC-HUYEN` | Huyền ("Hiền" trong ASR là Huyền theo Dũng 09/11) | `H` (8 dòng) | `05_Huyen` | Giá Huyền | Điểm danh họp 09/11; "Theo dõi giá" trong `BAO-GIA_dot-1_Huyen` | Vai; không có trong danh sách 19 người; email |
+| `THUOC-LY` | Chị Lý | — (chưa thấy mã riêng trong bảng chia) | — (chưa thấy hộp thư riêng) | — | Cùng tìm thuốc phía sau phần ≈ 900 mã của Trang (chat Dũng 09/11); Ms Lý phụ trách cước QT-CU-05 trong quy trình cung ứng | Phần mã cụ thể theo bảng chia nhóm; hộp thư; xác nhận Ms Lý cước = cùng người |
 | `THUOC-TINH` | Mrs Tình | — | — | — (dấu kiểm giá trong sheet Giá NNC KOM) | "Chị Tình kiểm giá, không thay người phụ trách xác nhận hàng" (báo cáo 09/11) | Quyền duyệt giá chưa biết |
 | `THUOC-PHET` | Phét | — | — | Giá Phét | Nguồn đã nộp MTP; hàng hiếm hỏi Phét; giữ công thức giá Kom | Quyền chốt giá nộp |
 
