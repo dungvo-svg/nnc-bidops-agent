@@ -20,6 +20,23 @@ Chủ duy nhất cho người-vai-quyền. Vai lấy theo nguồn (tổng hợp 
 | `ACT-AN` | Phạm An | R10 F3 sửa bảng giá; gửi bảng giá mua gần nhất |
 | `ACT-KHAC` | Lý, Đức, Khem, malita, PE/TA | Lý: R10 T2. Khác: vai chưa biết |
 
+## Identity node nhóm Thuốc (đề xuất khóa `LCK-IDENTITY-THUOC`, 09/11/2026)
+
+Gắn một người với một node, một hộp thư, một mã chia việc và một cột giá, để gom kết quả không nhầm người. **Chỉ là định danh, không cấp quyền quyết định** (CAP vẫn như bảng dưới). Nguồn: `SRC-KOM-AK-0511` (cột AK), `SRC-HOP-0411-0911`, `SRC-DRIVE-THUOC-0911`, chat Dũng (`SRC-CHAT-DUNG-0511`).
+
+| node_id | Người | Mã AK trong bảng chia Kom | Hộp thư Drive | Cột giá file chung | Vai có bằng chứng | Còn thiếu để khóa |
+| --- | --- | --- | --- | --- | --- | --- |
+| `THUOC-DUNG` | Dũng (`dung.vo@nnclaogroup.com`) | — | `Inbox_thau/06_Dung` (có từ 07/11), `01_Trang/Dung_inbox` | — | Tổng hợp, chia file theo bảng nhóm, vá file chung, giữ lock; tự nêu "không phải người giao việc" | — (người dùng phiên) |
+| `THUOC-TRANG` | Trang | `0` / `#N/A` (chưa ai nhận, 979 dòng) | `01_Trang` | Giá Trang | Hàng NCC Việt Nam, hỏi giá, tính giá vốn (họp 05/11); file "Final DOT-1…dien-gia-261109", 8 báo giá NCC trong `BAO-GIA_dot-1_Trang` | Trang xác nhận nhận phần 0/#N/A; email |
+| `THUOC-TAR` | Tar | `T` (36 dòng) | `02_Tar` | Giá Tar | Nhóm Thuốc; "Tar check" trong file Trang; "chờ Tar xác nhận sau tra cứu" (báo cáo 09/11) | Vai cụ thể; email |
+| `THUOC-SON` | Sơn | `S` (23 dòng) | `03_Son` | Giá Sơn | Nguồn Trung Quốc; tìm NCC ngoài Hà Nội (họp 09/11); ảnh thuốc bổ sung | Email |
+| `THUOC-DUY` | Duy | `D` (64 dòng) | `04_Duy` | Giá Duy | Thuốc Kom (họp 05/11 "kéo Duy vào"); file "Thau 2027 Duy"; giá thuốc đang bán (họp 09/11) | Email; ranh giới quyền giá OTC và giá thầu |
+| `THUOC-HUYEN` | Huyền ("Hiền" trong ASR là Huyền theo Dũng 09/11) | `H` (8 dòng) | `05_Huyen` | Giá Huyền | Điểm danh họp 09/11; "Theo dõi giá" trong `BAO-GIA_dot-1_Huyen` | Vai; không có trong danh sách 19 người; email |
+| `THUOC-TINH` | Mrs Tình | — | — | — (dấu kiểm giá trong sheet Giá NNC KOM) | "Chị Tình kiểm giá, không thay người phụ trách xác nhận hàng" (báo cáo 09/11) | Quyền duyệt giá chưa biết |
+| `THUOC-PHET` | Phét | — | — | Giá Phét | Nguồn đã nộp MTP; hàng hiếm hỏi Phét; giữ công thức giá Kom | Quyền chốt giá nộp |
+
+Quy ước: ghi kết quả của người nào thì chỉ vào cột giá của người đó và các ô "Kết quả trao đổi", "Người / ngày" trên dòng có mã đó. Đổi người phụ trách là đổi trong bảng chia của nhóm (cột AK), không sửa ở đây.
+
 ## CAP — quyền quyết định (ai giữ: chưa chốt)
 
 | CAP | Quyền | Quyết định liên quan | Người giữ |

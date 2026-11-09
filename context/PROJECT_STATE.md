@@ -1,5 +1,11 @@
 # Trạng thái tiếp tục
 
+## 02/11/2026 — đọc trước
+
+- Cách làm hiện hành: [mission/README.md § Cách làm hiện hành từ 02/11/2026](mission/README.md#cách-làm-hiện-hành-từ-02112026).
+- Thứ tự việc: DATA và PHƯƠNG ÁN A trước, HỌP đóng băng.
+- Trạng thái các nhánh và người ghi: [branches/README.md](branches/README.md).
+
 ## Continuity đã đối chiếu — 01/11/2026
 
 Điểm vào hiện hành: [BRIEF](continuation-20261101/BRIEF.md) → [nguồn](continuation-20261101/SOURCE-MAP.md) → [quyết định](continuation-20261101/DECISION-LOG.md) → [A so với B](continuation-20261101/PLAN-VS-IMPLEMENTATION.md) → [lộ trình](continuation-20261101/ROADMAP-STATUS.md).
@@ -39,6 +45,18 @@ Chưa xác minh quote/Jundamed sheet hiện hành, Sharma/version, tương đư�
 - **RESEARCH 30/10 (chiều):** 3 nhánh nghiên cứu chỉ đọc → [`discovery/DINH-HINH-SAN-PHAM.md`](../discovery/DINH-HINH-SAN-PHAM.md); sản phẩm đề xuất ghi vào `01-PRD-CORE`; thêm D11–D13 + 3 khóa PROPOSED; F01 sang RESEARCH (`formation-check` hợp lệ). Phát hiện: pipeline `thau-bv-nnc` của Dũng là tài sản dùng lại chính (`SRC-THAU-BV-NNC`, không chạy builder); không có bằng chứng ai duyệt giá/ai nộp.
 - **Chờ Dũng:** họp chốt D02 → D01 → D11–D13 + ai duyệt/nộp; xác nhận `LCK-METHOD`; tên org + lời mời (D08); duyệt Mission (D09).
 - **Làm được không cần chờ:** fixture tổng hợp 9 ca P2-VALIDATION; đọc thân hàm `match_build.py`/`build_master.py`/`SCHEMA.md` (chỉ đọc) để quyết REUSE/ADAPT; gói họp từ bản Định hình.
+
+## Thuốc 04–09/11: vận hành thực tế
+
+Đọc [`context/KHUNG-AGENT-THAU-THUOC-20261109.md`](KHUNG-AGENT-THAU-THUOC-20261109.md) (bản đồ Drive/máy, khung Agent đang chạy, nhật ký theo biên họp, việc mở). Tóm tắt:
+- **File chung** trên Drive `Thau BV/THUOC-agent-teams-20261104/10-DU-LIEU-CHUNG/THUOC-NGUON-HANG-6-DON-VI-v2.xlsx` (id `1ilOLCO…`); nhóm ghi ô vàng; phiên Thầu chỉ vá đúng ô, không chép đè.
+- **Inbox_thau** 5 người (Trang 979 · Tar 36 · Sơn 23 · Duy 64 · Huyền 8 dòng), chia theo cột Người phụ trách của file Kom (`SRC-KOM-AK-0511`), kèm hướng dẫn người + hướng dẫn agent dùng chung. Dũng không giao việc.
+- **LOCK-20261105** (local, chỉ đọc): file chung + 5 file chia + bản đồ vị trí + hash. Tiền tệ: GM VND/USD, GV kíp (+ VND), Giá 1 kíp, giá nhóm điền VND/1 ĐVT.
+- Ưu tiên theo họp 09/11 [lời nói]: Quân y trước; hạn đủ giá 11/11, hồ sơ Kom 11–12, thầu 13. Việc mở gần nhất: thêm cột thành phần hoạt chất chính vào file đợt 1 (Kom trước).
+- Thư mục `20-NHOM-HANG` và phương án v1 chia theo nhóm A–E: tạm gác.
+- **09/11 (đọc Drive 18:40):** cột thành phần đã vào file đợt 1 của chị Trang ("Final DOT-1…", có cột Tên chuẩn + Tar check), Dũng báo đã gửi. Nhóm có báo cáo toàn gói và tiến độ Kom ở gốc cây: Kom 1.116 mã, 318 có giá mua, 117 giá vốn, 285 hàng chào, chưa có giá chào 2027; 7 mã chưa định danh; ảnh 100/285. Mốc: Kom 13/11, Mahosot 25/11, Settha 26/11, Mẹ & Bé 27/11 (chưa đối chiếu thông báo thầu).
+- **Hồ sơ 09/11:** kinh nghiệm chưng cất [`KINH-NGHIEM-THAU-THUOC-20261109.md`](KINH-NGHIEM-THAU-THUOC-20261109.md); decision D16–D17 (`CONFIRMED_USER_DIRECTION`), D18 tiền tệ Kom (PROPOSED), D19 thứ tự gói (Chưa chốt); identity node Thuốc trong `11` (`LCK-IDENTITY-THUOC` PROPOSED). Không D* nghiệp vụ nào thành LOCKED.
+- **Chưng cất lại 09/11 (tách Human/Agent, QUY TẮC vs CÁCH THỨC):** sự cố lớn nhất là dữ liệu tràn lan (≥ 7 bản chứa giá Kom, không bản thể, runtime lẫn file hợp nhất). Đúc kết [hồ sơ Agent gói thầu](agent-goi-thau/HO-SO-AGENT-GOI-THAU.md) + [quy trình gói thầu](agent-goi-thau/QUY-TRINH-GOI-THAU.md) (5 lớp dữ liệu, một bản thể/gói, intake + lock); D20 PROPOSED. **Chờ Dũng:** chỉ định một bản L1 cho Kom 2027.
 
 ## Việc Claude có thể làm tiếp
 
