@@ -98,5 +98,5 @@
 - **09:13–09:16:** chị Tar nhờ đưa % và công thức theo bảng giá Phét từng mã vào file SVNK; mã không có trong Phét thì dùng 25/8/10/5.
   - Agent so khác biệt file chị Tar trên Drive (chị đã sửa 365 ô).
   - Điền % và công thức cho 297 mã trên bản local. 83 mã có giá vốn trùng Phét ra giá chào khớp 100%.
-  - Chưa ghi lên Drive.
+  - 09:39 thay file trên Drive (file không đổi từ 09:26).
 - **09:17:** Dũng yêu cầu ghi lịch sử này lên git.
