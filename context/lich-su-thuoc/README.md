@@ -13,7 +13,8 @@ Dũng yêu cầu ngày 13/11/2026: ghi lại toàn bộ quá trình làm thầu 
 | [03-THEO-NGUOI.md](03-THEO-NGUOI.md) | Dũng làm việc với từng anh chị: giao gì, trao đổi gì, kết quả |
 | [04-CHI-DAO-VA-QUYET-DINH.md](04-CHI-DAO-VA-QUYET-DINH.md) | Chỉ đạo của Dũng (trích ngắn) và trạng thái D-xx |
 | [05-SAI-SOT-VA-SUA.md](05-SAI-SOT-VA-SUA.md) | Sai sót của Agent: ai phát hiện, nguyên nhân, cách sửa, bài học |
-| [06-HOI-LAI-NHIEU-LAN.md](06-HOI-LAI-NHIEU-LAN.md) | Những chỗ Dũng phải hỏi lại, vì sao, cách tránh |
+| [06-HOI-LAI-NHIEU-LAN.md](06-HOI-LAI-NHIEU-LAN.md) | Những chỗ Dũng phải hỏi lại, vì sao, cách tránh (gồm cả trao đổi trực tiếp Dũng ↔ Agent) |
+| [06b-HOI-LAI-DAY-DU.md](06b-HOI-LAI-DAY-DU.md) | Danh sách đủ 164 tin hỏi lại/nghi vấn trong 424 tin Dũng gửi Agent, theo ngày và nhóm |
 | [07-CON-MO.md](07-CON-MO.md) | Điều chưa rõ hoặc chưa có bằng chứng (không đoán) |
 
 ## Quy ước

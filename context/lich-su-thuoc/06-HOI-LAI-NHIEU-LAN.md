@@ -1,6 +1,42 @@
 # 06. Những chỗ Dũng phải hỏi lại nhiều lần
 
-Giai đoạn 30/10–09/11 có khoảng 40 lượt hỏi lại, 10–13/11 có khoảng 40 lượt. Hai buổi tối 11/11 và 12/11 tập trung nhiều nhất (14 và 18 tin).
+Phạm vi gồm cả trao đổi trực tiếp giữa Dũng và Agent trong các phiên làm việc, không chỉ họp và tài liệu (Dũng nhắc lại ngày 13/11).
+
+**Đếm đầy đủ:**
+- Trong 424 tin Dũng gửi Agent (30/10–13/11), có **164 tin hỏi lại hoặc nghi vấn**. Cách lọc: tin có dấu hỏi, hoặc có chữ "sao", "là sao", "chưa", "hả", "nhỉ", "không hiểu"…
+- Danh sách từng tin, kèm giờ, theo nhóm: [06b-HOI-LAI-DAY-DU.md](06b-HOI-LAI-DAY-DU.md).
+- **Theo ngày:**
+
+  | Ngày | Số tin |
+  |---|---|
+  | 30/10 | 5 |
+  | 31/10 | 2 |
+  | 01/11 | 1 |
+  | 02/11 | 1 |
+  | 03/11 | 2 |
+  | 04/11 | 10 |
+  | 05/11 | 20 |
+  | 09/11 | 2 |
+  | 10/11 | 11 |
+  | **11/11** | **54** |
+  | **12/11** | **53** |
+  | 13/11 | 3 |
+- **Theo nhóm từ khóa:**
+
+  | Nhóm | Số tin |
+  |---|---|
+  | Đã xong/cập nhật chưa | 26 |
+  | Ảnh, thị giác | 24 |
+  | "Là sao" | 17 |
+  | Viết cho người đọc | 10 |
+  | File/phiên bản/ở đâu | 9 |
+  | Quy tắc/phạm vi | 6 |
+  | Tiền tệ | 6 |
+  | Sao không hỏi/tìm kỹ | 4 (nhiều tin cùng ý đã rơi vào nhóm trên) |
+  | Quyền/git | 3 |
+  | Khác (hỏi thông tin, hỏi ý kiến) | 59 |
+
+Hai ngày 11/11 và 12/11 chiếm 2/3 số lượt. Đây là hai ngày Agent làm nhiều thao tác ghi trực tiếp lên sheet và form, và báo cáo nhiều nhất. Các mục dưới đây là phân tích lý do và cách tránh.
 
 ## 1. "Đã xong/đã update chưa?" – báo cáo không kèm bằng chứng
 - **Ví dụ:**
@@ -72,6 +108,21 @@ Giai đoạn 30/10–09/11 có khoảng 40 lượt hỏi lại, 10–13/11 có k
   - "làm tiếp trên file nào?";
   - "V10 có phải file chị Oanh đưa không?" (đúng: cùng một file, v10 là lần ghi thứ 10 của Agent).
 - **Tránh:** mỗi gói một bản thể. Khi nói "phiên bản", nói rõ đó là cùng file hay file khác.
+
+## 7b. 13/11 – vẫn hỏi lại
+- **Câu hỏi:**
+  - "V10 có phải file chị Oanh đưa không?";
+  - "làm sao cấp quyền? push";
+  - "check thử có thật đang sửa không để thay? nếu không ta phải mở sheet điền tay hả?";
+  - "Những chỗ anh phải hỏi lại… không chỉ ở phiên họp… cả phần tôi và bạn ở đây nữa".
+- **Vì sao:**
+  - Agent nói "chờ chị Tar còn đang sửa" mà chưa kiểm file;
+  - báo "bị chặn quyền" mà không nói cách cấp quyền;
+  - dựng lịch sử "hỏi lại" chủ yếu từ họp và báo cáo, chưa đếm hết trao đổi trực tiếp.
+- **Tránh:**
+  - kiểm sự thật (thời gian sửa, md5) trước khi nêu lý do chờ;
+  - khi bị chặn thì nói luôn cách gỡ;
+  - lấy toàn bộ tin nhắn làm nguồn chính.
 
 ## 8. Ảnh và thị giác
 - **Ví dụ:**
