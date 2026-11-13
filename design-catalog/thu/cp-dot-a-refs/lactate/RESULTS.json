@@ -1,0 +1,233 @@
+{
+  "product": "Lactate Ringer & Dextrose 5%",
+  "results": [
+    {
+      "id": "lactate-a1",
+      "option": "CP-A1",
+      "attempts": [
+        {
+          "attempt": 1,
+          "tool": "image_gen__imagegen",
+          "prompt": "USE: A commercial pharmaceutical packaging design mockup for human review; create a photorealistic full product image, not a verified existing product photograph.\n\nINPUTS: Image 1 is the complete wrap-label artwork for Lactate option A1. Image 2 is a larger typographic detail of the SAME small-print fields, not a second label: print those fields once only. Image 3 is the approved bottle shape and material reference. Use Image 3 for the container only; replace its old printed layout with Image 1. Do not copy old printing or add other words.\n\nSCENE: One upright bottle, exactly front-facing, pure white seamless background, soft diffuse studio illumination, close gentle contact shadow. No box, blister, tray, props or extra objects. Bottle fills about 85% of image height. Target 1024 × 1024 pixels, square.\n\nSUBJECT: One 500 ml polypropylene medical IV infusion bottle with clear colourless liquid near its sloped shoulder; rounded body, integral hanging ring below the base, rubber stopper and white plastic tear-off cap. Preserve the recognizable bottle geometry of Image 3.\n\nDESIGN: Use a broad horizontal blue name ribbon, then a large centred volume block, ingredient and route, then two balanced smaller information columns, and a single horizontal row of empty lot/date fields. Rich but restrained abstract wave/line graphics only. One blue ink colour (#14558B and tint coverage of the same ink), no different-colour inks. The print follows the cylindrical body naturally and is printed directly on the plastic; no paper label edges, pasted flat panels or white patches.\n\nTEXT: All wording EXACT, verbatim, Vietnamese accents and case as in Images 1 and 2. Large product name \"LACTATE RINGER & DEXTROSE 5%\"; emphasize \"500 ml\" within the field \"Chai nhựa 500 ml\". Other exact text: \"Ringer lactat + Glucose 5%\"; \"Dung dịch tiêm truyền · Truyền tĩnh mạch\"; \"Cơ sở sản xuất: Công ty CP Hóa – Dược phẩm Mekophar – Việt Nam\"; \"Đọc kỹ hướng dẫn sử dụng trước khi dùng\"; \"Để xa tầm tay trẻ em\"; \"Chỉ định, chống chỉ định, cách dùng và các thông tin khác: xem tờ hướng dẫn sử dụng\"; \"Số lô SX:\"; \"NSX:\"; \"HD:\". Keep values after the three lot/date labels blank. Preserve product geometry and label legibility exactly. Do not translate, paraphrase, invent punctuation, add English or omit words.\n\nMATERIAL: semi-transparent matte polypropylene IV bottle, rounded body, hanging ring at the base, rubber stopper with white plastic tear-off cap; label printed directly on the plastic in one ink colour, not a paper sticker; clear colourless solution.\n\nCONSTRAINTS: No logos, NNC, ℞/Rx, GMP, registration number, barcode, addresses, clinical claims, extra figures, watermark, humans, organs or symptom illustrations. Matte natural plastic, no harsh shiny highlights. All text and the bottle must share coherent perspective; the model must redraw the complete packshot. No pasted SVG or composited text panels.",
+          "referenced_image_paths": [
+            "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\cp-dot-a-refs\\lactate\\Lactate_CP-A1_FRONT.png",
+            "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\cp-dot-a-refs\\lactate\\Lactate_CP-A1_DETAIL.png",
+            "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\KOM-0029_Lactate-Ringer-Dextrose-5pct_THU8.png"
+          ],
+          "transparent_background": false,
+          "raw_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a1ce06-3250-7181-8d38-9fb071b4bf18\\exec-f574db0c-7055-4a98-bf83-b1d2cbf9feca.png"
+        },
+        {
+          "id": "lactate-a1",
+          "attempt": 2,
+          "tool": "image_gen__imagegen",
+          "prompt": "USE: One narrowly targeted text-layout edit to Lactate option A1.\n\nCHANGE ONLY THE PRODUCT-NAME BLOCK: Replace the existing two-line product name by the SAME exact wording in three larger lines:\n\"LACTATE\"\n\"RINGER &\"\n\"DEXTROSE 5%\"\nUse a bold, easy-to-read font at least 1.6 times the current name lettering. The three lines must be the dominant upper-label feature and remain easy to read when the image is reduced. Expand the existing horizontal blue title ribbon upward into the unused area of the bottle shoulder if space is needed; do not shrink any words or abbreviate the name.\n\nPRESERVE EXACTLY: Keep the same bottle geometry, transparent matte PP, liquid, rubber stopper, white tear-off cap, hanging ring, light, white background, blue ink and A1 horizontal-ribbon design. Keep \"Chai nhựa\", \"500 ml\", ingredient, administration route, manufacturer, the two small-print columns and all their words, empty lot/date fields and every other line identical. Keep other elements in their current positions as far as possible.\n\nTEXT: All text EXACT, verbatim. The full product-name order is \"LACTATE RINGER & DEXTROSE 5%\"; only line breaks and font size change. No other editing, new text, overlays, logos, Rx, GMP, registration, barcode or symbols. Target 1024 × 1024 pixels.",
+          "referenced_image_paths": [
+            "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\KOM-0029_Lactate-Ringer-Dextrose-5pct_CP-A1.png"
+          ],
+          "input_dimensions": [
+            1024,
+            1024
+          ],
+          "transparent_background": false,
+          "raw_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a1ce06-3250-7181-8d38-9fb071b4bf18\\exec-ae2f6a28-f16e-4aa3-8330-4da87ca07c47.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "qa": "Product name now three exact lines; lower text checked at 4x and matches source. No code overlay. Coordinator to choose final and normalize size.",
+          "reason": "Coordinator 90px QA found full bottle product name difficult to read; one targeted edit per option to enlarge name to three exact lines, with other content preserved. This is attempt 2 (maximum allowed)."
+        }
+      ],
+      "final_path": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\KOM-0029_Lactate-Ringer-Dextrose-5pct_CP-A1.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "requested_size": "1024x1024",
+      "size_status": "CHUA: native output 1254x1254, not resized per coordinator",
+      "composition_status": "Single frontal bottle with loop, white closure, clear liquid, no carton or blister; A1 horizontal ribbon / volume / two columns",
+      "line_qa": [
+        {
+          "field": "Tên",
+          "expected": "LACTATE RINGER & DEXTROSE 5%",
+          "status": "DAT_VISUAL_ZOOM",
+          "method": "full image plus 4x crop of lower text; line breaks permitted"
+        },
+        {
+          "field": "Quy cách",
+          "expected": "Chai nhựa 500 ml",
+          "status": "DAT_VISUAL_ZOOM",
+          "method": "full image plus 4x crop of lower text; line breaks permitted"
+        },
+        {
+          "field": "Thành phần",
+          "expected": "Ringer lactat + Glucose 5%",
+          "status": "DAT_VISUAL_ZOOM",
+          "method": "full image plus 4x crop of lower text; line breaks permitted"
+        },
+        {
+          "field": "Dạng/đường dùng",
+          "expected": "Dung dịch tiêm truyền · Truyền tĩnh mạch",
+          "status": "DAT_VISUAL_ZOOM",
+          "method": "full image plus 4x crop of lower text; line breaks permitted"
+        },
+        {
+          "field": "NSX",
+          "expected": "Cơ sở sản xuất: Công ty CP Hóa – Dược phẩm Mekophar – Việt Nam",
+          "status": "DAT_VISUAL_ZOOM",
+          "method": "full image plus 4x crop of lower text; line breaks permitted"
+        },
+        {
+          "field": "Câu hướng dẫn",
+          "expected": "Đọc kỹ hướng dẫn sử dụng trước khi dùng",
+          "status": "DAT_VISUAL_ZOOM",
+          "method": "full image plus 4x crop of lower text; line breaks permitted"
+        },
+        {
+          "field": "Trẻ em",
+          "expected": "Để xa tầm tay trẻ em",
+          "status": "DAT_VISUAL_ZOOM",
+          "method": "full image plus 4x crop of lower text; line breaks permitted"
+        },
+        {
+          "field": "Câu chuẩn dài",
+          "expected": "Chỉ định, chống chỉ định, cách dùng và các thông tin khác: xem tờ hướng dẫn sử dụng",
+          "status": "DAT_VISUAL_ZOOM",
+          "method": "full image plus 4x crop of lower text; line breaks permitted"
+        },
+        {
+          "field": "Lô/ngày",
+          "expected": "Số lô SX: | NSX: | HD:",
+          "status": "DAT_VISUAL_ZOOM",
+          "method": "full image plus 4x crop of lower text; line breaks permitted"
+        }
+      ],
+      "observed_limitations": [
+        "Native dimensions differ from requested 1024x1024; tool has no size parameter.",
+        "Material and actual bottle dimensions not physically verified.",
+        "No reading check at 90px."
+      ],
+      "final_sha256": "10fc815c52b225319e5b5a2c38e40d6dc20dcc8b8d4de2af668fbb2a41597e76",
+      "postprocessing": "None; copied raw PNG verbatim",
+      "candidate_after_retry": "C:\\Users\\Admin\\.codex\\generated_images\\01a1ce06-3250-7181-8d38-9fb071b4bf18\\exec-ae2f6a28-f16e-4aa3-8330-4da87ca07c47.png",
+      "selection_status": "PENDING_COORDINATOR_QA_AND_COPY",
+      "final_path_state": "Existing final still selected before retry; root owns replacement and size normalization",
+      "attempt_count": 2
+    },
+    {
+      "id": "lactate-a2",
+      "option": "CP-A2",
+      "attempts": [
+        {
+          "attempt": 1,
+          "tool": "image_gen__imagegen",
+          "prompt": "USE: A commercial pharmaceutical packaging design mockup for human review; create a photorealistic full product image, not a verified existing product photograph.\n\nINPUTS: Image 1 is the complete wrap-label artwork for Lactate option A2. Image 2 is a larger typographic detail of the SAME small-print fields, not a second label: print those fields once only. Image 3 is the approved bottle shape and material reference. Use Image 3 for the container only; replace its old printed layout with Image 1. Do not copy old printing or add other words.\n\nSCENE: One upright bottle, exactly front-facing, pure white seamless background, soft diffuse studio illumination, close gentle contact shadow. No box, blister, tray, props or extra objects. Bottle fills about 85% of image height. Target 1024 × 1024 pixels, square.\n\nSUBJECT: One 500 ml polypropylene medical IV infusion bottle with clear colourless liquid near its sloped shoulder; rounded body, integral hanging ring below the base, rubber stopper and white plastic tear-off cap. Preserve the recognizable bottle geometry of Image 3.\n\nDESIGN: Use an asymmetric vertical blue spine, a large central product name, a circular blue volume medallion to the right, then clear information groups and two balanced smaller columns, with a single bottom row of empty lot/date fields. Rich but restrained abstract wave/line graphics only. One blue ink colour (#14558B and tint coverage of the same ink), no different-colour inks. The print follows the cylindrical body naturally and is printed directly on the plastic; no paper label edges, pasted flat panels or white patches.\n\nTEXT: All wording EXACT, verbatim, Vietnamese accents and case as in Images 1 and 2. Large product name \"LACTATE RINGER & DEXTROSE 5%\"; emphasize \"500 ml\" within the field \"Chai nhựa 500 ml\". Other exact text: \"Ringer lactat + Glucose 5%\"; \"Dung dịch tiêm truyền · Truyền tĩnh mạch\"; \"Cơ sở sản xuất: Công ty CP Hóa – Dược phẩm Mekophar – Việt Nam\"; \"Đọc kỹ hướng dẫn sử dụng trước khi dùng\"; \"Để xa tầm tay trẻ em\"; \"Chỉ định, chống chỉ định, cách dùng và các thông tin khác: xem tờ hướng dẫn sử dụng\"; \"Số lô SX:\"; \"NSX:\"; \"HD:\". Keep values after the three lot/date labels blank. Preserve product geometry and label legibility exactly. Do not translate, paraphrase, invent punctuation, add English or omit words.\n\nMATERIAL: semi-transparent matte polypropylene IV bottle, rounded body, hanging ring at the base, rubber stopper with white plastic tear-off cap; label printed directly on the plastic in one ink colour, not a paper sticker; clear colourless solution.\n\nCONSTRAINTS: No logos, NNC, ℞/Rx, GMP, registration number, barcode, addresses, clinical claims, extra figures, watermark, humans, organs or symptom illustrations. Matte natural plastic, no harsh shiny highlights. All text and the bottle must share coherent perspective; the model must redraw the complete packshot. No pasted SVG or composited text panels.",
+          "referenced_image_paths": [
+            "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\cp-dot-a-refs\\lactate\\Lactate_CP-A2_FRONT.png",
+            "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\cp-dot-a-refs\\lactate\\Lactate_CP-A2_DETAIL.png",
+            "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\KOM-0029_Lactate-Ringer-Dextrose-5pct_THU8.png"
+          ],
+          "transparent_background": false,
+          "raw_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a1ce06-3250-7181-8d38-9fb071b4bf18\\exec-0b2a55e9-7bd9-4545-9ed8-1f2dd0efd1ca.png"
+        },
+        {
+          "id": "lactate-a2",
+          "attempt": 2,
+          "tool": "image_gen__imagegen",
+          "prompt": "USE: One narrowly targeted text-layout edit to Lactate option A2.\n\nCHANGE ONLY THE PRODUCT-NAME BLOCK: Replace the existing two-line product name by the SAME exact wording in three larger lines:\n\"LACTATE\"\n\"RINGER &\"\n\"DEXTROSE 5%\"\nUse bold blue typography at least 1.6 times the current name lettering. Make the name block dominant and legible after reduction. It may expand upward into the unused shoulder/body area above the present name, but do not move or shrink the other content. Preserve the existing A2 vertical blue spine and right-hand circular volume medallion.\n\nPRESERVE EXACTLY: Keep the same bottle geometry, matte semi-transparent PP, liquid, white tear-off cap, rubber stopper, bottom hanging ring, soft light and pure white background. Keep \"Chai nhựa\", \"500 ml\", ingredient, administration route, manufacturer, the two small-print groups, every other word, and the empty lot/date row identical to the reference. Keep positions of all those other elements.\n\nTEXT: All wording EXACT, verbatim. Product name remains \"LACTATE RINGER & DEXTROSE 5%\" in this exact order; only line breaks and type size change. No added text, logos, Rx, GMP, registration, barcode, symbols, stickers or pasted SVG panels. Preserve product geometry and label legibility exactly. Target 1024 × 1024 pixels.",
+          "referenced_image_paths": [
+            "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\KOM-0029_Lactate-Ringer-Dextrose-5pct_CP-A2.png"
+          ],
+          "input_dimensions": [
+            1024,
+            1024
+          ],
+          "transparent_background": false,
+          "raw_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a1ce06-3250-7181-8d38-9fb071b4bf18\\exec-5ce96d9f-5f20-4077-ac5b-faa4bda0499d.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "qa": "Product name now three exact lines; lower text checked at 4x and matches source. No code overlay. Coordinator to choose final and normalize size.",
+          "reason": "Coordinator 90px QA found full bottle product name difficult to read; one targeted edit per option to enlarge name to three exact lines, with other content preserved. This is attempt 2 (maximum allowed)."
+        }
+      ],
+      "final_path": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\KOM-0029_Lactate-Ringer-Dextrose-5pct_CP-A2.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "requested_size": "1024x1024",
+      "size_status": "CHUA: native output 1254x1254, not resized per coordinator",
+      "composition_status": "Single frontal bottle with loop, white closure, clear liquid; A2 vertical spine, circular volume medallion, centered name and two lower columns; no carton or blister",
+      "line_qa": [
+        {
+          "field": "Tên",
+          "expected": "LACTATE RINGER & DEXTROSE 5%",
+          "status": "DAT_VISUAL_ZOOM",
+          "method": "full image plus 4x crop of lower text; line breaks permitted"
+        },
+        {
+          "field": "Quy cách",
+          "expected": "Chai nhựa 500 ml",
+          "status": "DAT_VISUAL_ZOOM",
+          "method": "full image plus 4x crop of lower text; line breaks permitted"
+        },
+        {
+          "field": "Thành phần",
+          "expected": "Ringer lactat + Glucose 5%",
+          "status": "DAT_VISUAL_ZOOM",
+          "method": "full image plus 4x crop of lower text; line breaks permitted"
+        },
+        {
+          "field": "Dạng/đường dùng",
+          "expected": "Dung dịch tiêm truyền · Truyền tĩnh mạch",
+          "status": "DAT_VISUAL_ZOOM",
+          "method": "full image plus 4x crop of lower text; line breaks permitted"
+        },
+        {
+          "field": "NSX",
+          "expected": "Cơ sở sản xuất: Công ty CP Hóa – Dược phẩm Mekophar – Việt Nam",
+          "status": "DAT_VISUAL_ZOOM",
+          "method": "full image plus 4x crop of lower text; line breaks permitted"
+        },
+        {
+          "field": "Câu hướng dẫn",
+          "expected": "Đọc kỹ hướng dẫn sử dụng trước khi dùng",
+          "status": "DAT_VISUAL_ZOOM",
+          "method": "full image plus 4x crop of lower text; line breaks permitted"
+        },
+        {
+          "field": "Trẻ em",
+          "expected": "Để xa tầm tay trẻ em",
+          "status": "DAT_VISUAL_ZOOM",
+          "method": "full image plus 4x crop of lower text; line breaks permitted"
+        },
+        {
+          "field": "Câu chuẩn dài",
+          "expected": "Chỉ định, chống chỉ định, cách dùng và các thông tin khác: xem tờ hướng dẫn sử dụng",
+          "status": "DAT_VISUAL_ZOOM",
+          "method": "full image plus 4x crop of lower text; line breaks permitted"
+        },
+        {
+          "field": "Lô/ngày",
+          "expected": "Số lô SX: | NSX: | HD:",
+          "status": "DAT_VISUAL_ZOOM",
+          "method": "full image plus 4x crop of lower text; line breaks permitted"
+        }
+      ],
+      "observed_limitations": [
+        "Native dimensions differ from requested 1024x1024; tool has no size parameter.",
+        "Material and actual bottle dimensions not physically verified.",
+        "No reading check at 90px."
+      ],
+      "final_sha256": "1ad359868d65a3e345f30afd652bbc5efc25aac95490c178330f31f7c39013ff",
+      "postprocessing": "None; copied raw PNG verbatim",
+      "candidate_after_retry": "C:\\Users\\Admin\\.codex\\generated_images\\01a1ce06-3250-7181-8d38-9fb071b4bf18\\exec-5ce96d9f-5f20-4077-ac5b-faa4bda0499d.png",
+      "selection_status": "PENDING_COORDINATOR_QA_AND_COPY",
+      "final_path_state": "Existing final still selected before retry; root owns replacement and size normalization",
+      "attempt_count": 2
+    }
+  ]
+}

@@ -296,8 +296,8 @@ class LedgerBehavior(unittest.TestCase):
 
     def test_won_package_retains_fulfillment_until_explicitly_finished(self):
         self.link("prebid")
-        self.link("purchase-after-win", need="fulfillment", qty="4")
         self.ledger.transition_case("won", self.builder, "river", "win", "synthetic award receipt")
+        self.link("purchase-after-win", need="fulfillment", qty="4")
         work = self.ledger.active_worklist()
         self.assertEqual(["fulfillment"], [w["need_type"] for w in work])
         self.ledger.finish_demand("delivered", self.builder, "purchase-after-win", "fulfilled", "synthetic receipt")

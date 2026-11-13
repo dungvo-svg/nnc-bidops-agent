@@ -1,0 +1,465 @@
+{
+  "schema": "bidops-source-only-copy/1",
+  "preparedAtUtc": "2026-11-01T06:22:50Z",
+  "sourceRoot": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-31\\task\\output\\bidops-B-pilot-20261031\\project",
+  "sourceCommitFromExistingReceipt": "aac3e9428084254ae21fba4eaf0ee7b85a014b70",
+  "commitFreshlyVerified": false,
+  "receiptPath": "C:/Users/Admin/Documents/Codex/2026-10-31/task/output/bidops-B-pilot-20261031/control/continuation-20261031/POSTPATCH-LOCAL-COMMIT.json",
+  "sourceIdentityNote": "Content hashes freshly computed; no Git command run. Commit identity comes from existing receipt, not a fresh branch check.",
+  "preparedRoot": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-31\\task\\output\\readiness-materials\\BIDOPS\\source-only",
+  "proposedOwnerRoot": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent",
+  "proposedCodeRootRelative": "data-work/pilots/bidops-b-next-20261101",
+  "ownerTransferStatus": "COPIED_HASH_VERIFIED_SOURCE_ONLY_NOT_OWNER_CODE_INTEGRATION",
+  "fileCount": 23,
+  "totalBytes": 235452.0,
+  "allowlistSelection": [
+    "src/*.py, direct children only",
+    "tests/*.py, direct children only",
+    "README.md",
+    "docs/CODING-CONTRACT.md",
+    "docs/DATA-CONTRACT.md",
+    "docs/STATE-MAPPING.md",
+    "config.sample.json",
+    "demo.py"
+  ],
+  "excluded": [
+    ".git",
+    ".claude and hook/plugin configuration",
+    "AGENTS.md and CLAUDE.md from pilot; owner originals take precedence",
+    "context copied from pilot; use owner continuation instead",
+    "__pycache__, *.pyc and other caches",
+    "all DB/SQLite/WAL/SHM files",
+    "all CSV/XLSX and real catalog/workpack/intake inputs",
+    "real sources, quotes, people and contact data",
+    "env files, credentials, secrets, tokens",
+    "runtime logs and execution outputs"
+  ],
+  "files": [
+    {
+      "path": "src/__init__.py",
+      "bytes": 42,
+      "sha256": "5a8f6ff2ed8bb9b0fa4452ba6ff746a7fac9cfde3d69b0ebeb1f7e346d05054f",
+      "preparedRelativePath": "source-only/src/__init__.py",
+      "proposedOwnerRelativePath": "data-work/pilots/bidops-b-next-20261101/src/__init__.py",
+      "copiedToOwner": true,
+      "copyVerified": true
+    },
+    {
+      "path": "src/assessments.py",
+      "bytes": 6283,
+      "sha256": "0bd8c6a94283b850a18c3ccc63a5af77ee2a138c4c360dedae1cb216712e2dde",
+      "preparedRelativePath": "source-only/src/assessments.py",
+      "proposedOwnerRelativePath": "data-work/pilots/bidops-b-next-20261101/src/assessments.py",
+      "copiedToOwner": true,
+      "copyVerified": true
+    },
+    {
+      "path": "src/catalog_intake.py",
+      "bytes": 26380,
+      "sha256": "e39f4062dd902b3db4faf37231c929c475331a225e52f3625c6349089bb736f8",
+      "preparedRelativePath": "source-only/src/catalog_intake.py",
+      "proposedOwnerRelativePath": "data-work/pilots/bidops-b-next-20261101/src/catalog_intake.py",
+      "copiedToOwner": true,
+      "copyVerified": true
+    },
+    {
+      "path": "src/catalog_lifecycle.py",
+      "bytes": 14147,
+      "sha256": "b6dc9986ac978c93e73ad295638e21929bf35739d2334cfd3f57eac2ed6be15b",
+      "preparedRelativePath": "source-only/src/catalog_lifecycle.py",
+      "proposedOwnerRelativePath": "data-work/pilots/bidops-b-next-20261101/src/catalog_lifecycle.py",
+      "copiedToOwner": true,
+      "copyVerified": true
+    },
+    {
+      "path": "src/four_bv_intake.py",
+      "bytes": 19170,
+      "sha256": "1b241db8c9bb26df52c16988b86660583a0528ebbc69ad2112de460b52e12d5d",
+      "preparedRelativePath": "source-only/src/four_bv_intake.py",
+      "proposedOwnerRelativePath": "data-work/pilots/bidops-b-next-20261101/src/four_bv_intake.py",
+      "copiedToOwner": true,
+      "copyVerified": true
+    },
+    {
+      "path": "src/ledger.py",
+      "bytes": 47026,
+      "sha256": "3b39bb5efbe05629badbbfde03ad7c2355b6661768fe354df6f14a817b4816f2",
+      "preparedRelativePath": "source-only/src/ledger.py",
+      "proposedOwnerRelativePath": "data-work/pilots/bidops-b-next-20261101/src/ledger.py",
+      "copiedToOwner": true,
+      "copyVerified": true
+    },
+    {
+      "path": "src/synthetic.py",
+      "bytes": 5496,
+      "sha256": "9fd14eb0d9bd3fda7df6368f8372ac512954c958d86322fc2d8ff43b584909c9",
+      "preparedRelativePath": "source-only/src/synthetic.py",
+      "proposedOwnerRelativePath": "data-work/pilots/bidops-b-next-20261101/src/synthetic.py",
+      "copiedToOwner": true,
+      "copyVerified": true
+    },
+    {
+      "path": "src/workpacks.py",
+      "bytes": 14427,
+      "sha256": "1c8e6192bc324b3f5e42d79ac83f2308f0965eef569ca6942aa9875b96c951d4",
+      "preparedRelativePath": "source-only/src/workpacks.py",
+      "proposedOwnerRelativePath": "data-work/pilots/bidops-b-next-20261101/src/workpacks.py",
+      "copiedToOwner": true,
+      "copyVerified": true
+    },
+    {
+      "path": "tests/__init__.py",
+      "bytes": 60,
+      "sha256": "a19b2019803062f2cfce8d25ed6ccc3e47e4c151682042259f1cafbae619f76a",
+      "preparedRelativePath": "source-only/tests/__init__.py",
+      "proposedOwnerRelativePath": "data-work/pilots/bidops-b-next-20261101/tests/__init__.py",
+      "copiedToOwner": true,
+      "copyVerified": true
+    },
+    {
+      "path": "tests/test_assessments.py",
+      "bytes": 5639,
+      "sha256": "523021a9247189fa836c64854028f3c9f5d39f0cf305d78b898a7610fc5b10b0",
+      "preparedRelativePath": "source-only/tests/test_assessments.py",
+      "proposedOwnerRelativePath": "data-work/pilots/bidops-b-next-20261101/tests/test_assessments.py",
+      "copiedToOwner": true,
+      "copyVerified": true
+    },
+    {
+      "path": "tests/test_catalog_intake.py",
+      "bytes": 12329,
+      "sha256": "5088369d07eccb7684e1da90112048eb01ceac2e4d259af5fc52de25116c3b50",
+      "preparedRelativePath": "source-only/tests/test_catalog_intake.py",
+      "proposedOwnerRelativePath": "data-work/pilots/bidops-b-next-20261101/tests/test_catalog_intake.py",
+      "copiedToOwner": true,
+      "copyVerified": true
+    },
+    {
+      "path": "tests/test_catalog_lifecycle.py",
+      "bytes": 7711,
+      "sha256": "ffe2d4e0dfaf7fd1e501c5c5f673f45eca4f616100cb78cd3a05135d1fb92977",
+      "preparedRelativePath": "source-only/tests/test_catalog_lifecycle.py",
+      "proposedOwnerRelativePath": "data-work/pilots/bidops-b-next-20261101/tests/test_catalog_lifecycle.py",
+      "copiedToOwner": true,
+      "copyVerified": true
+    },
+    {
+      "path": "tests/test_demo.py",
+      "bytes": 2021,
+      "sha256": "46a3ab1eee3e1d8902925afe6d343687188a9358711e9d40f7e466b77185a46f",
+      "preparedRelativePath": "source-only/tests/test_demo.py",
+      "proposedOwnerRelativePath": "data-work/pilots/bidops-b-next-20261101/tests/test_demo.py",
+      "copiedToOwner": true,
+      "copyVerified": true
+    },
+    {
+      "path": "tests/test_four_bv_intake.py",
+      "bytes": 8074,
+      "sha256": "cce00cdeab18da2020a06e376cd4a61084c41f3b7d88ae4058957a31872d1278",
+      "preparedRelativePath": "source-only/tests/test_four_bv_intake.py",
+      "proposedOwnerRelativePath": "data-work/pilots/bidops-b-next-20261101/tests/test_four_bv_intake.py",
+      "copiedToOwner": true,
+      "copyVerified": true
+    },
+    {
+      "path": "tests/test_identity_validity.py",
+      "bytes": 3135,
+      "sha256": "8700c46ad729bcda371d421af5bd9690450b3951d4b584be5b9395cbd892f004",
+      "preparedRelativePath": "source-only/tests/test_identity_validity.py",
+      "proposedOwnerRelativePath": "data-work/pilots/bidops-b-next-20261101/tests/test_identity_validity.py",
+      "copiedToOwner": true,
+      "copyVerified": true
+    },
+    {
+      "path": "tests/test_ledger.py",
+      "bytes": 25575,
+      "sha256": "5b9754b064324b63e6ca0638930f6c7b21a5c86d9bafb71aa06e74eaa27f73f7",
+      "preparedRelativePath": "source-only/tests/test_ledger.py",
+      "proposedOwnerRelativePath": "data-work/pilots/bidops-b-next-20261101/tests/test_ledger.py",
+      "copiedToOwner": true,
+      "copyVerified": true
+    },
+    {
+      "path": "tests/test_workpacks.py",
+      "bytes": 12570,
+      "sha256": "cdcea9aa088d1c09bd6e40b2115731ccb8917acddf7c6d3dfd6ac3446a45de45",
+      "preparedRelativePath": "source-only/tests/test_workpacks.py",
+      "proposedOwnerRelativePath": "data-work/pilots/bidops-b-next-20261101/tests/test_workpacks.py",
+      "copiedToOwner": true,
+      "copyVerified": true
+    },
+    {
+      "path": "README.md",
+      "bytes": 7459,
+      "sha256": "95dfa8d2ece98fb4bd50d768fb880508c1c93c9b3dee94c2e392ff4d5c1042f4",
+      "preparedRelativePath": "source-only/README.md",
+      "proposedOwnerRelativePath": "data-work/pilots/bidops-b-next-20261101/README.md",
+      "copiedToOwner": true,
+      "copyVerified": true
+    },
+    {
+      "path": "docs/CODING-CONTRACT.md",
+      "bytes": 1662,
+      "sha256": "a13432894a6f6d3b585e19903682bb22453842b5f9e854bce95735878de8f336",
+      "preparedRelativePath": "source-only/docs/CODING-CONTRACT.md",
+      "proposedOwnerRelativePath": "data-work/pilots/bidops-b-next-20261101/docs/CODING-CONTRACT.md",
+      "copiedToOwner": true,
+      "copyVerified": true
+    },
+    {
+      "path": "docs/DATA-CONTRACT.md",
+      "bytes": 6588,
+      "sha256": "e14822276c90904d3a1785820a615ca58f80b0f01ed1efc0d007f4c89e05b739",
+      "preparedRelativePath": "source-only/docs/DATA-CONTRACT.md",
+      "proposedOwnerRelativePath": "data-work/pilots/bidops-b-next-20261101/docs/DATA-CONTRACT.md",
+      "copiedToOwner": true,
+      "copyVerified": true
+    },
+    {
+      "path": "docs/STATE-MAPPING.md",
+      "bytes": 2438,
+      "sha256": "634de5adf72444150d5fe86b365e3bdfc3894fdada2e46428454f77c0fffc153",
+      "preparedRelativePath": "source-only/docs/STATE-MAPPING.md",
+      "proposedOwnerRelativePath": "data-work/pilots/bidops-b-next-20261101/docs/STATE-MAPPING.md",
+      "copiedToOwner": true,
+      "copyVerified": true
+    },
+    {
+      "path": "config.sample.json",
+      "bytes": 416,
+      "sha256": "a0d495c185f089a3aec7d7e458f7988032c90eb75fdf6b17c924c7fdb25382fd",
+      "preparedRelativePath": "source-only/config.sample.json",
+      "proposedOwnerRelativePath": "data-work/pilots/bidops-b-next-20261101/config.sample.json",
+      "copiedToOwner": true,
+      "copyVerified": true
+    },
+    {
+      "path": "demo.py",
+      "bytes": 6804,
+      "sha256": "aec99afa3809965e65c753b2a2d777780aafa58762e0895246e93955ffd194e6",
+      "preparedRelativePath": "source-only/demo.py",
+      "proposedOwnerRelativePath": "data-work/pilots/bidops-b-next-20261101/demo.py",
+      "copiedToOwner": true,
+      "copyVerified": true
+    }
+  ],
+  "ownerContextPins": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 1355,
+      "sha256": "f66a4c9c2057cb65f9ffe04b0e147e4f69522b61225a4aed14341a7368936fd6",
+      "readScope": "full text in readiness planning; no source mutation"
+    },
+    {
+      "path": "CLAUDE.md",
+      "bytes": 5367,
+      "sha256": "822084b9fbde99c962cdcd4b5d4af4106139151f96a263dd2b4fcad0dfad1f4a",
+      "readScope": "full text in readiness planning; no source mutation"
+    },
+    {
+      "path": "context/PROJECT_STATE.md",
+      "bytes": 8127,
+      "sha256": "bd4a4941a3a44ce8afc54f2a1762eb85806d07b5b7b1b2aac6b4c1fe5a1ef0c5",
+      "readScope": "full text in readiness planning; no source mutation"
+    },
+    {
+      "path": "context/continuation-20261101/BRIEF.md",
+      "bytes": 7553,
+      "sha256": "0f85ee1501e29bd9a8d2b3e37e385d909b4a0df4f12e524069ce515dd4b511ba",
+      "readScope": "full text in readiness planning; no source mutation"
+    },
+    {
+      "path": "context/continuation-20261101/SOURCE-MAP.md",
+      "bytes": 11460,
+      "sha256": "daf7c0001c87df9cc2c126c86dbc984bb9ecfefeffa5fd7656e99895fd716faa",
+      "readScope": "full text in readiness planning; no source mutation"
+    },
+    {
+      "path": "context/continuation-20261101/DECISION-LOG.md",
+      "bytes": 5767,
+      "sha256": "b7ed623cdcd70350fbf5af19df2efd5e1f9caa8702d1eb643449ebf391618079",
+      "readScope": "full text in readiness planning; no source mutation"
+    },
+    {
+      "path": "context/continuation-20261101/PLAN-VS-IMPLEMENTATION.md",
+      "bytes": 10828,
+      "sha256": "e2b4b21990eb620de67608ac68f0042ef9bc3f4438bba221ed347d22993c1b55",
+      "readScope": "full text in readiness planning; no source mutation"
+    },
+    {
+      "path": "context/continuation-20261101/ROADMAP-STATUS.md",
+      "bytes": 4694,
+      "sha256": "31b9e33dde01049b9f8e78635b41732a3d6e616b3efb9eaf63eddeaf6a7e7b82",
+      "readScope": "full text in readiness planning; no source mutation"
+    },
+    {
+      "path": "requirements/00-README-AUTHORITY.md",
+      "bytes": 5672,
+      "sha256": "4722658ea23aa244b005f86a2e50df745815c7718d84b4f30f3e31a12deb4906",
+      "readScope": "full text in readiness planning; no source mutation"
+    },
+    {
+      "path": "context/mission/README.md",
+      "bytes": 6919,
+      "sha256": "70f1ac8ffb93ea70c100cac0157e06b39b86504f9558e4185131121cfb4503c0",
+      "readScope": "full text in readiness planning; no source mutation"
+    },
+    {
+      "path": "requirements/P1-REQUEST.md",
+      "bytes": 3617,
+      "sha256": "1ac5a097713ed03fb42b41d075fc62229440faf69a4ab861e3288241e7fc8db1",
+      "readScope": "full text in readiness planning; no source mutation"
+    },
+    {
+      "path": "sources/README.md",
+      "bytes": 3825,
+      "sha256": "86c8aaad392ba0154c4392977ccd88145feb4dbc53f48caf6dac3080648a48b2",
+      "readScope": "full text in readiness planning; no source mutation"
+    }
+  ],
+  "ownerInstructionsPreserved": true,
+  "testsRunByThisPreparation": [],
+  "preparedContentOnly": true,
+  "copiedAtUtc": "2026-11-01T06:30:44.242726+00:00",
+  "actualCodeRoot": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\data-work\\pilots\\bidops-b-next-20261101",
+  "copyReceipt": [
+    {
+      "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-31\\task\\output\\readiness-materials\\BIDOPS\\source-only\\src\\__init__.py",
+      "destination": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\data-work\\pilots\\bidops-b-next-20261101\\src\\__init__.py",
+      "bytes": 42,
+      "sha256": "5a8f6ff2ed8bb9b0fa4452ba6ff746a7fac9cfde3d69b0ebeb1f7e346d05054f"
+    },
+    {
+      "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-31\\task\\output\\readiness-materials\\BIDOPS\\source-only\\src\\assessments.py",
+      "destination": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\data-work\\pilots\\bidops-b-next-20261101\\src\\assessments.py",
+      "bytes": 6283,
+      "sha256": "0bd8c6a94283b850a18c3ccc63a5af77ee2a138c4c360dedae1cb216712e2dde"
+    },
+    {
+      "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-31\\task\\output\\readiness-materials\\BIDOPS\\source-only\\src\\catalog_intake.py",
+      "destination": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\data-work\\pilots\\bidops-b-next-20261101\\src\\catalog_intake.py",
+      "bytes": 26380,
+      "sha256": "e39f4062dd902b3db4faf37231c929c475331a225e52f3625c6349089bb736f8"
+    },
+    {
+      "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-31\\task\\output\\readiness-materials\\BIDOPS\\source-only\\src\\catalog_lifecycle.py",
+      "destination": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\data-work\\pilots\\bidops-b-next-20261101\\src\\catalog_lifecycle.py",
+      "bytes": 14147,
+      "sha256": "b6dc9986ac978c93e73ad295638e21929bf35739d2334cfd3f57eac2ed6be15b"
+    },
+    {
+      "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-31\\task\\output\\readiness-materials\\BIDOPS\\source-only\\src\\four_bv_intake.py",
+      "destination": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\data-work\\pilots\\bidops-b-next-20261101\\src\\four_bv_intake.py",
+      "bytes": 19170,
+      "sha256": "1b241db8c9bb26df52c16988b86660583a0528ebbc69ad2112de460b52e12d5d"
+    },
+    {
+      "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-31\\task\\output\\readiness-materials\\BIDOPS\\source-only\\src\\ledger.py",
+      "destination": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\data-work\\pilots\\bidops-b-next-20261101\\src\\ledger.py",
+      "bytes": 47026,
+      "sha256": "3b39bb5efbe05629badbbfde03ad7c2355b6661768fe354df6f14a817b4816f2"
+    },
+    {
+      "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-31\\task\\output\\readiness-materials\\BIDOPS\\source-only\\src\\synthetic.py",
+      "destination": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\data-work\\pilots\\bidops-b-next-20261101\\src\\synthetic.py",
+      "bytes": 5496,
+      "sha256": "9fd14eb0d9bd3fda7df6368f8372ac512954c958d86322fc2d8ff43b584909c9"
+    },
+    {
+      "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-31\\task\\output\\readiness-materials\\BIDOPS\\source-only\\src\\workpacks.py",
+      "destination": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\data-work\\pilots\\bidops-b-next-20261101\\src\\workpacks.py",
+      "bytes": 14427,
+      "sha256": "1c8e6192bc324b3f5e42d79ac83f2308f0965eef569ca6942aa9875b96c951d4"
+    },
+    {
+      "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-31\\task\\output\\readiness-materials\\BIDOPS\\source-only\\tests\\__init__.py",
+      "destination": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\data-work\\pilots\\bidops-b-next-20261101\\tests\\__init__.py",
+      "bytes": 60,
+      "sha256": "a19b2019803062f2cfce8d25ed6ccc3e47e4c151682042259f1cafbae619f76a"
+    },
+    {
+      "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-31\\task\\output\\readiness-materials\\BIDOPS\\source-only\\tests\\test_assessments.py",
+      "destination": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\data-work\\pilots\\bidops-b-next-20261101\\tests\\test_assessments.py",
+      "bytes": 5639,
+      "sha256": "523021a9247189fa836c64854028f3c9f5d39f0cf305d78b898a7610fc5b10b0"
+    },
+    {
+      "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-31\\task\\output\\readiness-materials\\BIDOPS\\source-only\\tests\\test_catalog_intake.py",
+      "destination": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\data-work\\pilots\\bidops-b-next-20261101\\tests\\test_catalog_intake.py",
+      "bytes": 12329,
+      "sha256": "5088369d07eccb7684e1da90112048eb01ceac2e4d259af5fc52de25116c3b50"
+    },
+    {
+      "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-31\\task\\output\\readiness-materials\\BIDOPS\\source-only\\tests\\test_catalog_lifecycle.py",
+      "destination": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\data-work\\pilots\\bidops-b-next-20261101\\tests\\test_catalog_lifecycle.py",
+      "bytes": 7711,
+      "sha256": "ffe2d4e0dfaf7fd1e501c5c5f673f45eca4f616100cb78cd3a05135d1fb92977"
+    },
+    {
+      "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-31\\task\\output\\readiness-materials\\BIDOPS\\source-only\\tests\\test_demo.py",
+      "destination": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\data-work\\pilots\\bidops-b-next-20261101\\tests\\test_demo.py",
+      "bytes": 2021,
+      "sha256": "46a3ab1eee3e1d8902925afe6d343687188a9358711e9d40f7e466b77185a46f"
+    },
+    {
+      "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-31\\task\\output\\readiness-materials\\BIDOPS\\source-only\\tests\\test_four_bv_intake.py",
+      "destination": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\data-work\\pilots\\bidops-b-next-20261101\\tests\\test_four_bv_intake.py",
+      "bytes": 8074,
+      "sha256": "cce00cdeab18da2020a06e376cd4a61084c41f3b7d88ae4058957a31872d1278"
+    },
+    {
+      "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-31\\task\\output\\readiness-materials\\BIDOPS\\source-only\\tests\\test_identity_validity.py",
+      "destination": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\data-work\\pilots\\bidops-b-next-20261101\\tests\\test_identity_validity.py",
+      "bytes": 3135,
+      "sha256": "8700c46ad729bcda371d421af5bd9690450b3951d4b584be5b9395cbd892f004"
+    },
+    {
+      "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-31\\task\\output\\readiness-materials\\BIDOPS\\source-only\\tests\\test_ledger.py",
+      "destination": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\data-work\\pilots\\bidops-b-next-20261101\\tests\\test_ledger.py",
+      "bytes": 25575,
+      "sha256": "5b9754b064324b63e6ca0638930f6c7b21a5c86d9bafb71aa06e74eaa27f73f7"
+    },
+    {
+      "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-31\\task\\output\\readiness-materials\\BIDOPS\\source-only\\tests\\test_workpacks.py",
+      "destination": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\data-work\\pilots\\bidops-b-next-20261101\\tests\\test_workpacks.py",
+      "bytes": 12570,
+      "sha256": "cdcea9aa088d1c09bd6e40b2115731ccb8917acddf7c6d3dfd6ac3446a45de45"
+    },
+    {
+      "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-31\\task\\output\\readiness-materials\\BIDOPS\\source-only\\README.md",
+      "destination": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\data-work\\pilots\\bidops-b-next-20261101\\README.md",
+      "bytes": 7459,
+      "sha256": "95dfa8d2ece98fb4bd50d768fb880508c1c93c9b3dee94c2e392ff4d5c1042f4"
+    },
+    {
+      "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-31\\task\\output\\readiness-materials\\BIDOPS\\source-only\\docs\\CODING-CONTRACT.md",
+      "destination": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\data-work\\pilots\\bidops-b-next-20261101\\docs\\CODING-CONTRACT.md",
+      "bytes": 1662,
+      "sha256": "a13432894a6f6d3b585e19903682bb22453842b5f9e854bce95735878de8f336"
+    },
+    {
+      "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-31\\task\\output\\readiness-materials\\BIDOPS\\source-only\\docs\\DATA-CONTRACT.md",
+      "destination": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\data-work\\pilots\\bidops-b-next-20261101\\docs\\DATA-CONTRACT.md",
+      "bytes": 6588,
+      "sha256": "e14822276c90904d3a1785820a615ca58f80b0f01ed1efc0d007f4c89e05b739"
+    },
+    {
+      "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-31\\task\\output\\readiness-materials\\BIDOPS\\source-only\\docs\\STATE-MAPPING.md",
+      "destination": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\data-work\\pilots\\bidops-b-next-20261101\\docs\\STATE-MAPPING.md",
+      "bytes": 2438,
+      "sha256": "634de5adf72444150d5fe86b365e3bdfc3894fdada2e46428454f77c0fffc153"
+    },
+    {
+      "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-31\\task\\output\\readiness-materials\\BIDOPS\\source-only\\config.sample.json",
+      "destination": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\data-work\\pilots\\bidops-b-next-20261101\\config.sample.json",
+      "bytes": 416,
+      "sha256": "a0d495c185f089a3aec7d7e458f7988032c90eb75fdf6b17c924c7fdb25382fd"
+    },
+    {
+      "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-31\\task\\output\\readiness-materials\\BIDOPS\\source-only\\demo.py",
+      "destination": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\data-work\\pilots\\bidops-b-next-20261101\\demo.py",
+      "bytes": 6804,
+      "sha256": "aec99afa3809965e65c753b2a2d777780aafa58762e0895246e93955ffd194e6"
+    }
+  ]
+}

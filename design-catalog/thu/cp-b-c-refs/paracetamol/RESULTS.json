@@ -1,0 +1,83 @@
+{
+  "results": [
+    {
+      "option": "B1",
+      "path": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\KOM-0337_Paracetamol-05g_CP-B1.png",
+      "raw_imagegen_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a1cdf3-9216-7e23-9fb2-5938f838c938\\exec-76c898cc-bcce-43cb-8840-4dc50fcd4568.png",
+      "sha256": "b34e4f35c8dc20e7644363bcb0da42b22be412091ce96964027eb53ba2c68886",
+      "dimensions_px": [
+        1536,
+        1024
+      ],
+      "expected_dimensions_px": [
+        1536,
+        1024
+      ],
+      "attempts": 1,
+      "targeted_edit": false,
+      "tool": "image_gen__imagegen",
+      "model": "not exposed",
+      "transparent_background": false,
+      "quality": "not exposed",
+      "reference_images": [
+        "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\cp-b-c-refs\\paracetamol\\B1_FRONT.png",
+        "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\cp-b-c-refs\\paracetamol\\B1_SIDE.png"
+      ],
+      "prompt": "IMPORTANT PACKAGING SCALE: A LONG HORIZONTAL 225 mm bulk carton containing 50 blisters. The long 225 mm dimension lies horizontally in the picture, and the medium-sized front with significant long side must visibly convey a large long bulk carton, NOT a small thin or standard box. One blister of exactly 10 tablets is a visual scale cue.\n\nDESIGN: Lương Anh identity blue #1565C0 with ivory upper front and sweeping blue wave in lower half, largest title on left; red-orange #D84315 rounded 0,5 g badge on right.\nUSE: Photorealistic packaging design mockup for human review, not a verified real product photograph.\nSUBJECT: One very LONG, horizontally lying carton designed to hold 50 blisters, approximate width x height x depth 105 x 60 x 225 mm, with the long dimension plainly visible, substantial long side; DO NOT depict a small two- or three-blister carton. Three-quarter view showing front, long right side and top. One unlettered aluminium-PVC blister at front, exactly 10 plain round white tablets in two rows of five. White studio background, soft lighting. 1536x1024.\nINPUTS: Image 1 front artwork and Image 2 long side artwork are references only. Create the complete packshot afresh without pasting or digitally compositing SVG artwork. Preserve product geometry and label legibility exactly; text EXACT verbatim with Vietnamese diacritics, no extra words or characters.\nFRONT TEXT: \"Paracetamol\"; \"0,5 g\"; \"Mỗi viên nén chứa: Paracetamol 500 mg\"; \"Viên nén · Uống\"; \"Tablets · Oral use\"; \"Hộp 50 vỉ x 10 viên nén\"; \"Cơ sở sản xuất: Lương Anh – Việt Nam\".\nSIDE TEXT: \"Paracetamol 0,5 g\"; \"Thành phần:\"; \"Mỗi viên nén chứa: Paracetamol 500 mg\"; \"Dạng bào chế:\"; \"Viên nén · Uống\"; \"Quy cách:\"; \"Hộp 50 vỉ x 10 viên nén\"; \"Box of 50 blisters x 10 tablets\"; \"Chỉ định, chống chỉ định, cách dùng và các thông tin khác: xem tờ hướng dẫn sử dụng\"; \"Đọc kỹ hướng dẫn sử dụng trước khi dùng\"; \"Để xa tầm tay trẻ em\"; \"Số lô SX:\"; \"NSX:\"; \"HD:\". Leave fields blank.\nMATERIAL: matte-laminated white ivory paperboard carton (~300 gsm), offset printed, crisp folded edges, no foil, no gloss UV, no specular highlights. aluminium–PVC blister shown FRONT SIDE ONLY (clear thermoformed PVC cavities with the tablets/capsules visible, plain silver aluminium base around them); perforation lines between cells.\nCONSTRAINTS: Use only Vietnamese primary and supplied English secondary, no additional marks, logo, NNC, Rx, GMP, registration number, barcode, lot/date values, organs, people or symptoms. Abstract waves or arcs only. Do not crop product.",
+      "text_issues": [],
+      "text_qa": {
+        "Paracetamol": "Đạt quan sát phóng to",
+        "0,5 g": "Đạt: dấu phẩy, đơn vị g",
+        "Paracetamol 500 mg": "Đạt quan sát phóng to",
+        "Hộp 50 vỉ x 10 viên nén": "Đạt quan sát phóng to",
+        "Box of 50 blisters x 10 tablets": "Đạt quan sát phóng to",
+        "Viên nén · Uống": "Đạt quan sát phóng to",
+        "Cơ sở sản xuất: Lương Anh – Việt Nam": "Đạt quan sát phóng to",
+        "câu chuẩn + lô/ngày trống": "Đạt quan sát, cần kiểm độc lập"
+      },
+      "blister_count": "một vỉ mặt trước: 10 viên, 2×5",
+      "geometry": "hộp dài mô phỏng; 105×60×225 là quy ước, không phải số đo đã xác nhận",
+      "status": "generated_needs_independent_review"
+    },
+    {
+      "option": "B2",
+      "path": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\KOM-0337_Paracetamol-05g_CP-B2.png",
+      "raw_imagegen_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a1cdf3-9216-7e23-9fb2-5938f838c938\\exec-00be3075-4ba7-4d1a-9d6b-51bc68d73171.png",
+      "sha256": "f1abe92f3c09295129da1e55442ce8b2e123a0bb7a107622264bb8a7c889bbd8",
+      "dimensions_px": [
+        1536,
+        1024
+      ],
+      "expected_dimensions_px": [
+        1536,
+        1024
+      ],
+      "attempts": 1,
+      "targeted_edit": false,
+      "tool": "image_gen__imagegen",
+      "model": "not exposed",
+      "transparent_background": false,
+      "quality": "not exposed",
+      "reference_images": [
+        "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\cp-b-c-refs\\paracetamol\\B2_FRONT.png",
+        "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\cp-b-c-refs\\paracetamol\\B2_SIDE.png"
+      ],
+      "prompt": "IMPORTANT PACKAGING SCALE: A LONG HORIZONTAL 225 mm bulk carton containing 50 blisters. The long 225 mm dimension lies horizontally in the picture, and the medium-sized front with significant long side must visibly convey a large long bulk carton, NOT a small thin or standard box. One blister of exactly 10 tablets is a visual scale cue.\n\nDESIGN: distinct Lương Anh composition, blue #1565C0 diagonal arc field flowing in from right with sweeping pale-blue lines, red-orange #D84315 0,5 g badge directly below the title; ivory text field.\nUSE: Photorealistic packaging design mockup for human review, not a verified real product photograph.\nSUBJECT: One very LONG, horizontally lying carton designed to hold 50 blisters, approximate width x height x depth 105 x 60 x 225 mm, with the long dimension plainly visible, substantial long side; DO NOT depict a small two- or three-blister carton. Three-quarter view showing front, long right side and top. One unlettered aluminium-PVC blister at front, exactly 10 plain round white tablets in two rows of five. White studio background, soft lighting. 1536x1024.\nINPUTS: Image 1 front artwork and Image 2 long side artwork are references only. Create the complete packshot afresh without pasting or digitally compositing SVG artwork. Preserve product geometry and label legibility exactly; text EXACT verbatim with Vietnamese diacritics, no extra words or characters.\nFRONT TEXT: \"Paracetamol\"; \"0,5 g\"; \"Mỗi viên nén chứa: Paracetamol 500 mg\"; \"Viên nén · Uống\"; \"Tablets · Oral use\"; \"Hộp 50 vỉ x 10 viên nén\"; \"Cơ sở sản xuất: Lương Anh – Việt Nam\".\nSIDE TEXT: \"Paracetamol 0,5 g\"; \"Thành phần:\"; \"Mỗi viên nén chứa: Paracetamol 500 mg\"; \"Dạng bào chế:\"; \"Viên nén · Uống\"; \"Quy cách:\"; \"Hộp 50 vỉ x 10 viên nén\"; \"Box of 50 blisters x 10 tablets\"; \"Chỉ định, chống chỉ định, cách dùng và các thông tin khác: xem tờ hướng dẫn sử dụng\"; \"Đọc kỹ hướng dẫn sử dụng trước khi dùng\"; \"Để xa tầm tay trẻ em\"; \"Số lô SX:\"; \"NSX:\"; \"HD:\". Leave fields blank.\nMATERIAL: matte-laminated white ivory paperboard carton (~300 gsm), offset printed, crisp folded edges, no foil, no gloss UV, no specular highlights. aluminium–PVC blister shown FRONT SIDE ONLY (clear thermoformed PVC cavities with the tablets/capsules visible, plain silver aluminium base around them); perforation lines between cells.\nCONSTRAINTS: Use only Vietnamese primary and supplied English secondary, no additional marks, logo, NNC, Rx, GMP, registration number, barcode, lot/date values, organs, people or symptoms. Abstract waves or arcs only. Do not crop product.",
+      "text_issues": [],
+      "text_qa": {
+        "Paracetamol": "Đạt quan sát phóng to",
+        "0,5 g": "Đạt: dấu phẩy, đơn vị g",
+        "Paracetamol 500 mg": "Đạt quan sát phóng to",
+        "Hộp 50 vỉ x 10 viên nén": "Đạt quan sát phóng to",
+        "Box of 50 blisters x 10 tablets": "Đạt quan sát phóng to",
+        "Viên nén · Uống": "Đạt quan sát phóng to",
+        "Cơ sở sản xuất: Lương Anh – Việt Nam": "Đạt quan sát phóng to",
+        "câu chuẩn + lô/ngày trống": "Đạt quan sát, cần kiểm độc lập"
+      },
+      "blister_count": "một vỉ mặt trước: 10 viên, 2×5",
+      "geometry": "hộp dài mô phỏng; 105×60×225 là quy ước, không phải số đo đã xác nhận",
+      "status": "generated_needs_independent_review"
+    }
+  ]
+}
+

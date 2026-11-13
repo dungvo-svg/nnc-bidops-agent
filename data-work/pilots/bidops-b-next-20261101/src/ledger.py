@@ -15,6 +15,8 @@ import re
 import sqlite3
 from typing import Callable
 
+from .assessments import certificate_check, portfolio_check
+
 
 class Conflict(ValueError):
     pass
@@ -58,6 +60,27 @@ def _ref(value):
 
 def _key(value):
     return canonical(value)
+
+
+def _business_assessments(checks):
+    """Five separate business assessments; fixture checks inform, never score or approve."""
+    def unknown(reason):
+        return {"status": "unknown", "reason": reason}
+    certificate, portfolio = checks["certificate"], checks["portfolio"]
+    fixture = "fixture check only; business owner has not attested"
+    return {
+        "dossier_compliance": ({"status": "checked_fixture_only", "reason": fixture,
+                                "identity_state": certificate["identity_state"]}
+                               if certificate else unknown("no certificate/dossier check supplied")),
+        "supply_capability": ({"status": "checked_fixture_only", "reason": fixture,
+                               "resource_states": [r["state"] for r in portfolio["resources"]]}
+                              if portfolio else unknown("no capacity/allocation check supplied")),
+        "economics_working_capital": ({"status": "checked_fixture_only", "reason": fixture + "; no FX, profit or cash",
+                                       "currencies": sorted(portfolio["costs_by_currency"])}
+                                      if portfolio else unknown("no cost/working-capital check supplied")),
+        "competitive_basis": unknown("no competitor or award-basis evidence in pilot"),
+        "actual_outcome": unknown("outcome is only known after an award receipt"),
+    }
 
 
 def _nodes(nodes):
@@ -111,6 +134,9 @@ class Ledger:
               deadline TEXT, planned_closure TEXT);
             CREATE TABLE IF NOT EXISTS demand_state(
               link_id TEXT PRIMARY KEY, status TEXT NOT NULL);
+            CREATE TABLE IF NOT EXISTS case_authority(
+              case_id TEXT PRIMARY KEY, snapshot_sha256 TEXT NOT NULL,
+              planning_date TEXT, snapshot TEXT NOT NULL);
         """)
         try:
             with self.db:
@@ -287,8 +313,11 @@ class Ledger:
         if not row or row[0] != key[2]:
             raise Blocked("requirement revision drift")
 
-    def qualify(self, requirement_key, quote_id, evidence):
-        """Read-only inspection; missing or negative evidence remains a blocker."""
+    def qualify(self, requirement_key, quote_id, evidence, checks=None):
+        """Read-only inspection; missing or negative evidence remains a blocker.
+
+        Optional fixture checks (certificate/portfolio) are pinned with their source refs.
+        """
         req = self._get("requirement", _key(requirement_key))
         quote = self._get("quote", quote_id)
         if not isinstance(evidence, dict) or set(evidence) != {"goods", "documents", "money"}:
@@ -316,7 +345,9 @@ class Ledger:
             _text(obj["ref"], "evidence.ref")
             refs.append(_ref(obj["source_ref"]))
             axes[axis] = True
-        manifest = self._manifest(refs)
+        check_results, check_blockers, check_refs = self._run_checks(checks)
+        blockers.extend(check_blockers)
+        manifest = self._manifest(refs + check_refs)
         try:
             self._assert_sources_current(manifest)
             self._assert_requirement_current(requirement_key)
@@ -354,10 +385,45 @@ class Ledger:
         body = {"schema": "bidops-candidate/1", "requirement_key": requirement_key,
                 "requirement": req, "quote": quote, "evidence": evidence,
                 "axes": axes, "source_manifest": manifest,
+                "case_snapshot_sha256": case["snapshot_sha256"],
+                "assessment_checks": check_results,
+                "business_assessments": _business_assessments(check_results),
+                "case_epoch": self._case_epoch(req["package_id"]),
                 "as_of": self.now().date().isoformat(), "blockers": sorted(set(blockers)),
                 "status": "blocked" if blockers else "needs_review",
                 "business_authorization": "not_attested"}
         return {**body, "candidate_hash": digest(body)}
+
+    def _run_checks(self, checks):
+        """Fixture certificate/portfolio checks; results are evidence, never approval."""
+        results, blockers, refs = {"certificate": None, "portfolio": None}, [], []
+        if checks is None:
+            return results, blockers, refs
+        if not isinstance(checks, dict) or not set(checks) <= {"certificate", "portfolio"}:
+            raise ValueError("checks may only contain certificate and/or portfolio")
+        today = self.now().date().isoformat()
+        if checks.get("certificate") is not None:
+            item = checks["certificate"]
+            if not isinstance(item, dict) or set(item) != {"required", "certificate", "source_ref"}:
+                raise ValueError("certificate check requires required, certificate and source_ref")
+            refs.append(_ref(item["source_ref"]))
+            result = certificate_check(item["required"], item["certificate"], as_of=today)
+            if result["identity_state"] != "matched_identity_only":
+                blockers.append("certificate_" + result["identity_state"])
+            blockers.extend(f"certificate_{axis}_expired" for axis, state in result["expiry_axes"].items()
+                            if state == "expired_in_fixture")
+            if result["registry_snapshot_state"] == "future_invalid":
+                blockers.append("certificate_registry_snapshot_future_invalid")
+            results["certificate"] = result
+        if checks.get("portfolio") is not None:
+            item = checks["portfolio"]
+            if not isinstance(item, dict) or set(item) != {"resources", "allocations", "costs", "source_ref"}:
+                raise ValueError("portfolio check requires resources, allocations, costs and source_ref")
+            refs.append(_ref(item["source_ref"]))
+            result = portfolio_check(item["resources"], item["allocations"], item["costs"])
+            blockers.extend(sorted({"portfolio_" + issue["reason"] for issue in result["issues"]}))
+            results["portfolio"] = result
+        return results, blockers, refs
 
     def _quote_date_blockers(self, quote):
         if not quote["valid_from"] or not quote["valid_until"]:
@@ -411,7 +477,8 @@ class Ledger:
             if not all(ref in supplied for ref in expected):
                 raise Blocked("mission manifest omits scoped source")
             self._assert_sources_current(supplied)
-            stored = {**mission, "source_manifest": supplied, "issued_by": actor}
+            stored = {**mission, "source_manifest": supplied, "issued_by": actor,
+                      "case_epoch": self._case_epoch(req["package_id"])}
             if not self._immutable("mission", mission["mission_id"], stored):
                 raise Conflict("mission already issued; retry the original event_id")
             self.db.execute("INSERT INTO mission_state VALUES(?,?,NULL)", (mission["mission_id"], "issued"))
@@ -431,6 +498,8 @@ class Ledger:
                 raise Blocked("no active prebid demand for scoped requirement")
             if self.now() >= _instant(mission["deadline"]):
                 raise Blocked("mission deadline reached; explicit reissue required")
+            if mission.get("case_epoch", 0) != self._case_epoch(mission["requirement_key"][0]):
+                raise Blocked("case reopened after mission issue; explicit reissue required")
         state = self.db.execute("SELECT * FROM mission_state WHERE mission_id=?", (mission_id,)).fetchone()
         return mission, state
 
@@ -479,15 +548,18 @@ class Ledger:
                     "candidate_id_preserved": state["candidate_id"], "automatic_undo": False}
         return self._event(event_id, actor, "mission_cancel", payload, "mission_cancel", change)
 
-    def return_mission(self, event_id, actor, mission_id, quote_id, evidence):
+    def return_mission(self, event_id, actor, mission_id, quote_id, evidence, checks=None):
         payload = {"mission_id": mission_id, "quote_id": quote_id, "evidence": evidence}
+        if checks is not None:
+            # Present only when used, so earlier events keep their exact retry digest.
+            payload["checks"] = checks
         def change():
             mission, state = self._owned_mission(actor, mission_id)
             if state["status"] != "accepted":
                 raise Blocked("mission must be explicitly accepted before return")
             if quote_id not in mission["quote_ids"]:
                 raise Forbidden("quote outside immutable mission scope")
-            candidate = self.qualify(mission["requirement_key"], quote_id, evidence)
+            candidate = self.qualify(mission["requirement_key"], quote_id, evidence, checks)
             if not all(ref in mission["source_manifest"] for ref in candidate["source_manifest"]):
                 raise Forbidden("evidence source outside immutable mission manifest")
             candidate.pop("candidate_hash")
@@ -521,6 +593,10 @@ class Ledger:
             raise Blocked("case deadline passed without a confirmed disposition or extension")
         if not self.prebid_demand_active(candidate["requirement_key"]):
             raise Blocked("no active prebid demand for candidate")
+        if candidate.get("case_snapshot_sha256") != case["snapshot_sha256"]:
+            raise Blocked("case snapshot changed after candidate; requalify required")
+        if candidate.get("case_epoch", 0) != self._case_epoch(candidate["requirement_key"][0]):
+            raise Blocked("case reopened after candidate; review is not inherited")
         if require_valid_quote and self._quote_date_blockers(candidate["quote"]):
             raise Blocked("candidate quote is not currently valid")
         if require_valid_quote:
@@ -631,44 +707,73 @@ class Ledger:
     def intake_variant(self, event_id, actor, variant):
         """Canonical synthetic identity; incomplete variants are never auto-merged."""
         variant = json.loads(canonical(variant))
+        return self._event(event_id, actor, "variant_intake", variant, "catalog_intake",
+                           lambda: self._store_variant(variant))
+
+    def intake_bridged_variant(self, event_id, actor, bridged):
+        """Variant from an explicit reviewed catalog line resolution, with its provenance.
+
+        Only a BRIDGED record is accepted; HOLD/unresolved lines never become variants.
+        """
+        bridged = json.loads(canonical(bridged))
         def change():
-            fields = {"variant_id", "item_code", "specification", "unit",
-                      "registration_id", "identity_valid_from", "identity_valid_until"}
-            if set(variant) != fields:
-                raise ValueError("normalized variant fields required; unknown is null")
-            _text(variant["variant_id"], "variant_id")
-            if variant["item_code"] is not None:
-                _text(variant["item_code"], "item_code")
-            spec = variant["specification"]
-            if spec is not None and (not isinstance(spec, dict) or any(
-                    not isinstance(k, str) or not isinstance(v, str) or not v.strip()
-                    for k, v in spec.items())):
-                raise ValueError("specification is null or a string-to-string object")
-            for field in fields - {"variant_id", "item_code", "specification"}:
-                if variant[field] is not None:
-                    _text(variant[field], field)
-            for field in ("identity_valid_from", "identity_valid_until"):
-                if variant[field] is not None:
-                    try:
-                        date.fromisoformat(variant[field])
-                    except (ValueError, TypeError) as error:
-                        raise ValueError(f"{field} must be an ISO date or null") from error
-            if (variant["identity_valid_from"] and variant["identity_valid_until"]
-                    and variant["identity_valid_from"] > variant["identity_valid_until"]):
-                raise ValueError("identity validity range is reversed")
-            complete = bool(variant["item_code"] and spec and variant["unit"])
-            identity = {k: v for k, v in variant.items() if k != "variant_id"}
-            identity_hash = digest(identity if complete else variant)
-            stored = {**variant, "identity_hash": identity_hash, "identity_complete": complete}
-            added = self._immutable("variant", variant["variant_id"], stored)
-            if added:
-                old = self.db.execute("SELECT variant_id FROM variant_identity WHERE identity_hash=?",
-                                      (identity_hash,)).fetchone()
-                if old:
-                    raise Conflict(f"identity already has canonical variant_id: {old[0]}")
-                self.db.execute("INSERT INTO variant_identity VALUES(?,?)", (identity_hash, variant["variant_id"]))
-            return {"variant_id": variant["variant_id"], "identity_complete": complete, "inserted": added}
-        return self._event(event_id, actor, "variant_intake", variant, "catalog_intake", change)
+            if not isinstance(bridged, dict) or bridged.get("status") != "BRIDGED":
+                raise ValueError("only a BRIDGED catalog resolution can become a ledger variant")
+            variant, provenance = bridged.get("variant"), bridged.get("provenance")
+            if not isinstance(variant, dict) or not isinstance(provenance, dict):
+                raise ValueError("bridged variant and provenance are required")
+            if provenance.get("mapping") != "explicit_reviewed_line_resolution":
+                raise ValueError("only explicit reviewed line resolution is accepted")
+            for key in ("catalog_variant_id", "catalog_identity_sha256", "resolution_evidence_ref",
+                        "reviewed_by", "line_id", "source_version"):
+                _text(provenance.get(key), "provenance." + key)
+            if provenance["catalog_variant_id"] != variant.get("variant_id"):
+                raise Conflict("provenance does not describe this variant")
+            result = self._store_variant(variant)
+            record = {**provenance, "flags": bridged.get("flags") or []}
+            # One variant may be resolved from several case lines; provenance is per line.
+            if not self._immutable("variant_provenance", provenance["line_id"], record):
+                raise Conflict("variant already bridged with this provenance; retry original event_id")
+            return {**result, "provenance_mapping": provenance["mapping"]}
+        return self._event(event_id, actor, "variant_bridge", bridged, "catalog_intake", change)
+
+    def _store_variant(self, variant):
+        fields = {"variant_id", "item_code", "specification", "unit",
+                  "registration_id", "identity_valid_from", "identity_valid_until"}
+        if not isinstance(variant, dict) or set(variant) != fields:
+            raise ValueError("normalized variant fields required; unknown is null")
+        _text(variant["variant_id"], "variant_id")
+        if variant["item_code"] is not None:
+            _text(variant["item_code"], "item_code")
+        spec = variant["specification"]
+        if spec is not None and (not isinstance(spec, dict) or any(
+                not isinstance(k, str) or not isinstance(v, str) or not v.strip()
+                for k, v in spec.items())):
+            raise ValueError("specification is null or a string-to-string object")
+        for field in fields - {"variant_id", "item_code", "specification"}:
+            if variant[field] is not None:
+                _text(variant[field], field)
+        for field in ("identity_valid_from", "identity_valid_until"):
+            if variant[field] is not None:
+                try:
+                    date.fromisoformat(variant[field])
+                except (ValueError, TypeError) as error:
+                    raise ValueError(f"{field} must be an ISO date or null") from error
+        if (variant["identity_valid_from"] and variant["identity_valid_until"]
+                and variant["identity_valid_from"] > variant["identity_valid_until"]):
+            raise ValueError("identity validity range is reversed")
+        complete = bool(variant["item_code"] and spec and variant["unit"])
+        identity = {k: v for k, v in variant.items() if k != "variant_id"}
+        identity_hash = digest(identity if complete else variant)
+        stored = {**variant, "identity_hash": identity_hash, "identity_complete": complete}
+        added = self._immutable("variant", variant["variant_id"], stored)
+        if added:
+            old = self.db.execute("SELECT variant_id FROM variant_identity WHERE identity_hash=?",
+                                  (identity_hash,)).fetchone()
+            if old:
+                raise Conflict(f"identity already has canonical variant_id: {old[0]}")
+            self.db.execute("INSERT INTO variant_identity VALUES(?,?)", (identity_hash, variant["variant_id"]))
+        return {"variant_id": variant["variant_id"], "identity_complete": complete, "inserted": added}
 
     def _variant_for(self, item):
         variant = self._get("variant", item["variant_id"])
@@ -692,19 +797,87 @@ class Ledger:
             return {"case_id": case_id, "status": "active"}
         return self._event(event_id, actor, "case_create", payload, "case_manage", change)
 
+    def _case_epoch(self, case_id):
+        """Each explicit reopen starts a new scope; earlier reviews/missions are history."""
+        return self.db.execute(
+            "SELECT count(*) FROM events WHERE json_extract(envelope,'$.type')='case_transition' "
+            "AND json_extract(envelope,'$.payload.case_id')=? "
+            "AND json_extract(envelope,'$.payload.action')='reopen'", (case_id,)).fetchone()[0] + self.db.execute(
+            "SELECT count(*) FROM events WHERE json_extract(envelope,'$.type')='case_snapshot_adopt' "
+            "AND json_extract(receipt,'$.result.case_id')=? "
+            "AND json_extract(receipt,'$.result.case_reopened')=1", (case_id,)).fetchone()[0]
+
     def case_status(self, case_id):
         self._get("tender_case", case_id)
         state = dict(self.db.execute("SELECT * FROM case_state WHERE case_id=?", (case_id,)).fetchone())
-        state["timeline_status"] = (
-            "overdue_unknown" if state["status"] == "active" and state["deadline"]
-            and self.now() > _instant(state["deadline"]) else state["status"])
+        bound = self.db.execute("SELECT snapshot_sha256,planning_date FROM case_authority WHERE case_id=?",
+                                (case_id,)).fetchone()
+        state["authority"] = "catalog_snapshot" if bound else "ledger"
+        state["snapshot_sha256"] = bound[0] if bound else None
+        state["planning_date"] = bound[1] if bound else None
+        # Neither a legal closing instant nor a planning date closes a case by itself.
+        passed = (state["deadline"] and self.now() > _instant(state["deadline"])
+                  or state["planning_date"] and self.now().date() > date.fromisoformat(state["planning_date"]))
+        state["timeline_status"] = "overdue_unknown" if state["status"] == "active" and passed else state["status"]
         return state
+
+    def _ledger_owned_case(self, case_id):
+        state = self.case_status(case_id)
+        if state["authority"] != "ledger":
+            raise Blocked("case authority is the catalog snapshot; adopt a newer snapshot instead")
+        return state
+
+    def adopt_case_snapshot(self, event_id, actor, snapshot, expected_previous_sha256):
+        """Project one catalog CaseSnapshot into the ledger; the catalog stays the case authority."""
+        snapshot = json.loads(canonical(snapshot))
+        payload = {"snapshot": snapshot, "expected_previous_sha256": expected_previous_sha256}
+        def change():
+            keys = {"schema", "case_id", "status", "planning_date", "official_closing_at", "source_status",
+                    "active_source_version", "closure_policy", "lifecycle_events", "snapshot_sha256"}
+            if not isinstance(snapshot, dict) or set(snapshot) != keys or snapshot["schema"] != "bidops-case-snapshot/1":
+                raise ValueError("bidops-case-snapshot/1 fields required")
+            body = {k: v for k, v in snapshot.items() if k != "snapshot_sha256"}
+            if digest(body) != snapshot["snapshot_sha256"]:
+                raise ValueError("case snapshot hash mismatch")
+            case_id = _text(snapshot["case_id"], "case_id")
+            if snapshot["status"] not in {"active", "closed", "cancelled", "won"}:
+                raise ValueError("unknown catalog case status")
+            if snapshot["planning_date"] is not None:
+                date.fromisoformat(snapshot["planning_date"])
+            if snapshot["official_closing_at"] is not None:
+                _instant(snapshot["official_closing_at"])
+            current = self.db.execute("SELECT snapshot_sha256,snapshot FROM case_authority WHERE case_id=?",
+                                      (case_id,)).fetchone()
+            if (current[0] if current else None) != expected_previous_sha256:
+                raise Conflict("case snapshot head changed; explicit expected_previous_sha256 required")
+            if current:
+                # Catalog lifecycle history only grows; an older or diverged snapshot cannot roll back.
+                seen = json.loads(current[1])["lifecycle_events"]
+                if snapshot["lifecycle_events"][:len(seen)] != seen:
+                    raise Conflict("case snapshot is older than or diverges from the adopted head")
+            exists = self.db.execute("SELECT status FROM case_state WHERE case_id=?", (case_id,)).fetchone()
+            if not exists:
+                self._immutable("tender_case", case_id, {"case_id": case_id, "title": None, "deadline": None,
+                                                         "authority": "catalog_snapshot"})
+                self.db.execute("INSERT INTO case_state VALUES(?,?,?,NULL)", (case_id, "active", None))
+            previous = exists[0] if exists else None
+            reopened = previous is not None and previous != "active" and snapshot["status"] == "active"
+            self.db.execute("UPDATE case_state SET status=?,deadline=? WHERE case_id=?",
+                            (snapshot["status"], snapshot["official_closing_at"], case_id))
+            self.db.execute("INSERT INTO case_authority VALUES(?,?,?,?) ON CONFLICT(case_id) DO UPDATE SET "
+                            "snapshot_sha256=excluded.snapshot_sha256,planning_date=excluded.planning_date,"
+                            "snapshot=excluded.snapshot",
+                            (case_id, snapshot["snapshot_sha256"], snapshot["planning_date"], canonical(snapshot)))
+            return {"case_id": case_id, "status": snapshot["status"], "previous_status": previous,
+                    "snapshot_sha256": snapshot["snapshot_sha256"], "case_reopened": reopened,
+                    "official_closing_at": snapshot["official_closing_at"], "authority": "catalog_snapshot"}
+        return self._event(event_id, actor, "case_snapshot_adopt", payload, "case_manage", change)
 
     def transition_case(self, event_id, actor, case_id, action, reason):
         payload = {"case_id": case_id, "action": action, "reason": reason}
         def change():
             _text(reason, "case transition reason")
-            state = self.case_status(case_id)
+            state = self._ledger_owned_case(case_id)
             target = {"close": "closed", "cancel": "cancelled", "reopen": "active", "win": "won"}.get(action)
             if target is None:
                 raise ValueError("explicit close/cancel/reopen/win required")
@@ -721,17 +894,36 @@ class Ledger:
         def change():
             _instant(deadline)
             _text(reason, "deadline change reason")
-            state = self.case_status(case_id)
+            state = self._ledger_owned_case(case_id)
             self.db.execute("UPDATE case_state SET deadline=? WHERE case_id=?", (deadline, case_id))
-            return {"case_id": case_id, "deadline": deadline, "status": state["status"]}
+            result = {"case_id": case_id, "deadline": deadline, "previous_deadline": state["deadline"],
+                      "status": state["status"], "semantics": "correction"}
+            if state["deadline"] and _instant(deadline) < _instant(state["deadline"]):
+                # Recorded as fact; whether earlier corrections need extra approval is not decided.
+                result["backward_correction_policy"] = "pending_business_decision"
+            return result
         return self._event(event_id, actor, "case_deadline_changed", payload, "case_manage", change)
+
+    def extend_case_deadline(self, event_id, actor, case_id, deadline, evidence_ref):
+        """Extension (CL semantics): strictly later than the current deadline."""
+        payload = {"case_id": case_id, "deadline": deadline, "evidence_ref": evidence_ref}
+        def change():
+            new = _instant(deadline)
+            _text(evidence_ref, "extension evidence_ref")
+            state = self._ledger_owned_case(case_id)
+            if state["deadline"] and new <= _instant(state["deadline"]):
+                raise ValueError("extension must be later than the current deadline")
+            self.db.execute("UPDATE case_state SET deadline=? WHERE case_id=?", (deadline, case_id))
+            return {"case_id": case_id, "deadline": deadline, "previous_deadline": state["deadline"],
+                    "status": state["status"], "semantics": "extension"}
+        return self._event(event_id, actor, "case_deadline_extended", payload, "case_manage", change)
 
     def plan_case_closure(self, event_id, actor, case_id, planned_at, reason):
         payload = {"case_id": case_id, "planned_at": planned_at, "reason": reason}
         def change():
             _instant(planned_at)
             _text(reason, "planned closure reason")
-            state = self.case_status(case_id)
+            state = self._ledger_owned_case(case_id)
             self.db.execute("UPDATE case_state SET planned_closure=? WHERE case_id=?", (planned_at, case_id))
             return {"case_id": case_id, "planned_closure": planned_at, "status": state["status"]}
         return self._event(event_id, actor, "case_closure_planned", payload, "case_manage", change)
@@ -743,9 +935,11 @@ class Ledger:
                 raise ValueError("demand link fields required")
             _text(link["link_id"], "link_id")
             req = self._get("requirement", _key(link["requirement_key"]))
-            self.case_status(req["package_id"])
+            case = self.case_status(req["package_id"])
             if link["need_type"] not in {"prebid_sourcing", "fulfillment"}:
                 raise ValueError("explicit need_type required")
+            if link["need_type"] == "fulfillment" and case["status"] != "won":
+                raise Blocked("fulfillment demand requires an explicitly won case")
             if link["quantity"] is not None:
                 try:
                     quantity = Decimal(link["quantity"]) if isinstance(link["quantity"], str) else None

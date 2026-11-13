@@ -1,0 +1,45 @@
+{
+  "reason": "Coordinator 90px QA found full bottle product name difficult to read; one targeted edit per option to enlarge name to three exact lines, with other content preserved. This is attempt 2 (maximum allowed).",
+  "receipts": [
+    {
+      "id": "lactate-a1",
+      "attempt": 2,
+      "tool": "image_gen__imagegen",
+      "prompt": "USE: One narrowly targeted text-layout edit to Lactate option A1.\n\nCHANGE ONLY THE PRODUCT-NAME BLOCK: Replace the existing two-line product name by the SAME exact wording in three larger lines:\n\"LACTATE\"\n\"RINGER &\"\n\"DEXTROSE 5%\"\nUse a bold, easy-to-read font at least 1.6 times the current name lettering. The three lines must be the dominant upper-label feature and remain easy to read when the image is reduced. Expand the existing horizontal blue title ribbon upward into the unused area of the bottle shoulder if space is needed; do not shrink any words or abbreviate the name.\n\nPRESERVE EXACTLY: Keep the same bottle geometry, transparent matte PP, liquid, rubber stopper, white tear-off cap, hanging ring, light, white background, blue ink and A1 horizontal-ribbon design. Keep \"Chai nhựa\", \"500 ml\", ingredient, administration route, manufacturer, the two small-print columns and all their words, empty lot/date fields and every other line identical. Keep other elements in their current positions as far as possible.\n\nTEXT: All text EXACT, verbatim. The full product-name order is \"LACTATE RINGER & DEXTROSE 5%\"; only line breaks and font size change. No other editing, new text, overlays, logos, Rx, GMP, registration, barcode or symbols. Target 1024 × 1024 pixels.",
+      "referenced_image_paths": [
+        "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\KOM-0029_Lactate-Ringer-Dextrose-5pct_CP-A1.png"
+      ],
+      "input_dimensions": [
+        1024,
+        1024
+      ],
+      "transparent_background": false,
+      "raw_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a1ce06-3250-7181-8d38-9fb071b4bf18\\exec-ae2f6a28-f16e-4aa3-8330-4da87ca07c47.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "qa": "Product name now three exact lines; lower text checked at 4x and matches source. No code overlay. Coordinator to choose final and normalize size."
+    },
+    {
+      "id": "lactate-a2",
+      "attempt": 2,
+      "tool": "image_gen__imagegen",
+      "prompt": "USE: One narrowly targeted text-layout edit to Lactate option A2.\n\nCHANGE ONLY THE PRODUCT-NAME BLOCK: Replace the existing two-line product name by the SAME exact wording in three larger lines:\n\"LACTATE\"\n\"RINGER &\"\n\"DEXTROSE 5%\"\nUse bold blue typography at least 1.6 times the current name lettering. Make the name block dominant and legible after reduction. It may expand upward into the unused shoulder/body area above the present name, but do not move or shrink the other content. Preserve the existing A2 vertical blue spine and right-hand circular volume medallion.\n\nPRESERVE EXACTLY: Keep the same bottle geometry, matte semi-transparent PP, liquid, white tear-off cap, rubber stopper, bottom hanging ring, soft light and pure white background. Keep \"Chai nhựa\", \"500 ml\", ingredient, administration route, manufacturer, the two small-print groups, every other word, and the empty lot/date row identical to the reference. Keep positions of all those other elements.\n\nTEXT: All wording EXACT, verbatim. Product name remains \"LACTATE RINGER & DEXTROSE 5%\" in this exact order; only line breaks and type size change. No added text, logos, Rx, GMP, registration, barcode, symbols, stickers or pasted SVG panels. Preserve product geometry and label legibility exactly. Target 1024 × 1024 pixels.",
+      "referenced_image_paths": [
+        "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\KOM-0029_Lactate-Ringer-Dextrose-5pct_CP-A2.png"
+      ],
+      "input_dimensions": [
+        1024,
+        1024
+      ],
+      "transparent_background": false,
+      "raw_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a1ce06-3250-7181-8d38-9fb071b4bf18\\exec-5ce96d9f-5f20-4077-ac5b-faa4bda0499d.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "qa": "Product name now three exact lines; lower text checked at 4x and matches source. No code overlay. Coordinator to choose final and normalize size."
+    }
+  ]
+}

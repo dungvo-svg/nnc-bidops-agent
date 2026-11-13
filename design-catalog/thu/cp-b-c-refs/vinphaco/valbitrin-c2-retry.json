@@ -1,0 +1,10 @@
+{
+  "attempt": 2,
+  "prompt": "USE: One targeted camera-view correction to the supplied Valbitrin CP-C2 packshot.\n\nCHANGE ONLY VIEWPOINT: Show the carton in three-quarter view with the FRONT, RIGHT SIDE and TOP visible. The narrow blue side panel with vertical \"VALBITRIN 100\" must be on the RIGHT side of the image, not the left. Re-render the view naturally; do not horizontally mirror or reverse any lettering.\n\nPRESERVE EXACTLY: Keep the same long thin carton proportions 125 × 55 × 12 mm, same CP-C2 red/blue design, all front words and Vietnamese accents, decimal commas \"48,6 mg\" and \"51,4 mg\", every dose and unit, blank lot/date fields, one front-facing blister of exactly 14 white round tablets arranged 2 rows of 7, matte materials, white background and soft lighting. Do not add or remove anything else.\n\nTEXT: EXACT, verbatim. No logo, NNC, triangle, Rx, GMP, registration, barcode or extra writing. Target 1536 × 1024.",
+  "reason": "Attempt1 showed left side; target rules require front/right side/top.",
+  "referenced_image_paths": [
+    "C:\\Users\\Admin\\.codex\\generated_images\\01a1ce06-3250-7181-8d38-9fb071b4bf18\\exec-249bcc74-83b1-4f3a-ab01-134f1a2a88e3.png"
+  ],
+  "transparent_background": false,
+  "raw_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a1ce06-3250-7181-8d38-9fb071b4bf18\\exec-3492cc06-cd7f-493c-808c-46418b82c9ec.png"
+}

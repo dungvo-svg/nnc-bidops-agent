@@ -1,0 +1,147 @@
+{
+  "group": "Vinphaco CP-C",
+  "results": [
+    {
+      "id": "valbitrin-c1",
+      "product": "valbitrin",
+      "option": "CP-C1",
+      "attempts": [
+        {
+          "attempt": 1,
+          "prompt": "USE: A commercial pharmaceutical packaging design mockup for review, fully redrawn as a photorealistic packshot. Do not claim it is an existing verified product photograph.\n\nINPUTS: Image 1 is exact front artwork for Valbitrin 100 option C1. Image 2 is the narrow side artwork. Use those images only as design and EXACT typographic references. Recreate the entire carton, print, perspective and product scene consistently; do not produce pasted-flat image panels.\n\nSCENE: Pure white seamless background, soft diffuse studio light and close gentle shadows. Product occupies 80–85 percent of frame width, fully in frame. Target 1536 × 1024 pixels. Crisp, coherent carton edges, no dotted construction seams or white gaps. No prop objects.\n\nSUBJECT: One very thin, long pharmaceutical carton with proportions 125 mm wide × 55 mm high × 12 mm thick. Its thin edge must be visible in a coherent 3/4 angle. One and ONLY one front-facing aluminium–PVC blister containing EXACTLY FOURTEEN round white film-coated tablets, arranged precisely TWO ROWS OF SEVEN, lies in front-left. Do not create a second blister or loose tablets.\n\nDESIGN: ivory upper face with a broad navy-to-red flowing lower wave, large navy product name, clearly separated dosage block and high-contrast small information on the lower band. Family palette is white/ivory, red #C62828 and blue #1E4E9A. Abstract curved lines or waves only, no red triangles, no square-grid brand motif, no person, organ or symptom. Vietnamese remains primary; smaller English is secondary. Preserve product geometry and label legibility exactly.\n\nTYPE: The name is \"Valbitrin\" beside a RED rounded block \"100\". Preserve the two ingredient lines, especially decimal commas: \"Mỗi viên nén bao phim chứa:\" and \"Sacubitril 48,6 mg + Valsartan 51,4 mg\". Do not replace the commas by periods and do not interchange either number. Side shows only vertical \"VALBITRIN 100\".\n\nEXACT CONTENT: All front text must match Image 1 EXACT, verbatim. The approved content is: \"Valbitrin 100\" | \"Mỗi viên nén bao phim chứa: Sacubitril 48,6 mg + Valsartan 51,4 mg\" | \"Viên nén bao phim · Uống\" | \"Film-coated tablets · Oral use\" | \"Hộp 2 vỉ x 14 viên nén bao phim\" | \"Box of 2 blisters x 14 film-coated tablets\" | \"Cơ sở sản xuất: Công ty CP Dược phẩm Vĩnh Phúc (Vinphaco) – Việt Nam\" | \"Đọc kỹ hướng dẫn sử dụng trước khi dùng\" | \"Để xa tầm tay trẻ em\" | \"Chỉ định, chống chỉ định, cách dùng và các thông tin khác: xem tờ hướng dẫn sử dụng\" | \"Số lô SX:\" | \"NSX:\" | \"HD:\". Keep every Vietnamese accent and unit. Line breaks may follow the reference. Standard instructions and blank \"Số lô SX:\" / \"NSX:\" / \"HD:\" appear in the lower front; never invent numbers or dates. No additional wording. Count the tablet cavities: exactly 7 in the first row and 7 in the second row. Flat unmarked white round tablets, no score lines or pill lettering.\n\nMATERIAL: matte-laminated white ivory paperboard carton (~300 gsm), offset printed, crisp folded edges, no foil, no gloss UV, no specular highlights. aluminium–PVC blister shown FRONT SIDE ONLY (clear thermoformed PVC cavities with the tablets/capsules visible, plain silver aluminium base around them); perforation lines between cells. Do NOT show or create the back (foil) side; no second blister; no text on the blister.\n\nCONSTRAINTS: No logo of any kind, no red triangle, no NNC, no ℞/Rx, no GMP, no registration number, no barcode, no watermark, no address, no extra claim. Matte natural carton finish. The model renders the complete photograph: no code overlays or SVG composites in the finished image.",
+          "referenced_image_paths": [
+            "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\cp-b-c-refs\\vinphaco\\KOM-1026_Valbitrin-100_CP-C1_FRONT.png",
+            "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\cp-b-c-refs\\vinphaco\\KOM-1026_Valbitrin-100_CP-C1_SIDE.png"
+          ],
+          "raw_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a1ce06-3250-7181-8d38-9fb071b4bf18\\exec-3e1822e2-dacc-499d-b8d3-203d348e4c1a.png",
+          "transparent_background": false
+        }
+      ],
+      "final_path": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\KOM-1026_Valbitrin-100_CP-C1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "count_qa": "DAT: exactly 14 tablets, two rows of seven",
+      "line_qa": {
+        "name_dose": "DAT",
+        "ingredient_decimal_commas": "DAT: Sacubitril 48,6 mg + Valsartan 51,4 mg",
+        "dosage_form_route": "DAT",
+        "english_form": "DAT",
+        "pack_vietnamese_english": "DAT",
+        "manufacturer": "DAT",
+        "standard_phrases": "DAT at enlarged crop",
+        "blank_lot_dates": "DAT"
+      },
+      "geometry_qa": "Long slim carton, front/right side/top visible; one front blister only",
+      "postprocessing": "None; raw PNG copied unchanged",
+      "final_sha256": "8ae12265996fe69a29eee8b1d17462073fd5c49d0a5571cdccb9a6e8744ec72b",
+      "limits": [
+        "Material and physical dimensions are visual approximations.",
+        "No 90px form test performed."
+      ]
+    },
+    {
+      "id": "valbitrin-c2",
+      "product": "valbitrin",
+      "option": "CP-C2",
+      "attempts": [
+        {
+          "attempt": 1,
+          "prompt": "USE: A commercial pharmaceutical packaging design mockup for review, fully redrawn as a photorealistic packshot. Do not claim it is an existing verified product photograph.\n\nINPUTS: Image 1 is exact front artwork for Valbitrin 100 option C2. Image 2 is the narrow side artwork. Use those images only as design and EXACT typographic references. Recreate the entire carton, print, perspective and product scene consistently; do not produce pasted-flat image panels.\n\nSCENE: Pure white seamless background, soft diffuse studio light and close gentle shadows. Product occupies 80–85 percent of frame width, fully in frame. Target 1536 × 1024 pixels. Crisp, coherent carton edges, no dotted construction seams or white gaps. No prop objects.\n\nSUBJECT: One very thin, long pharmaceutical carton with proportions 125 mm wide × 55 mm high × 12 mm thick. Its thin edge must be visible in a coherent 3/4 angle. One and ONLY one front-facing aluminium–PVC blister containing EXACTLY FOURTEEN round white film-coated tablets, arranged precisely TWO ROWS OF SEVEN, lies in front-left. Do not create a second blister or loose tablets.\n\nDESIGN: an asymmetric navy vertical spine, generous ivory title area, a rounded red sweep at the upper right and a solid navy lower information field with one red curved accent; no triangular forms. Family palette is white/ivory, red #C62828 and blue #1E4E9A. Abstract curved lines or waves only, no red triangles, no square-grid brand motif, no person, organ or symptom. Vietnamese remains primary; smaller English is secondary. Preserve product geometry and label legibility exactly.\n\nTYPE: The name is \"Valbitrin\" beside a RED rounded block \"100\". Preserve the two ingredient lines, especially decimal commas: \"Mỗi viên nén bao phim chứa:\" and \"Sacubitril 48,6 mg + Valsartan 51,4 mg\". Do not replace the commas by periods and do not interchange either number. Side shows only vertical \"VALBITRIN 100\".\n\nEXACT CONTENT: All front text must match Image 1 EXACT, verbatim. The approved content is: \"Valbitrin 100\" | \"Mỗi viên nén bao phim chứa: Sacubitril 48,6 mg + Valsartan 51,4 mg\" | \"Viên nén bao phim · Uống\" | \"Film-coated tablets · Oral use\" | \"Hộp 2 vỉ x 14 viên nén bao phim\" | \"Box of 2 blisters x 14 film-coated tablets\" | \"Cơ sở sản xuất: Công ty CP Dược phẩm Vĩnh Phúc (Vinphaco) – Việt Nam\" | \"Đọc kỹ hướng dẫn sử dụng trước khi dùng\" | \"Để xa tầm tay trẻ em\" | \"Chỉ định, chống chỉ định, cách dùng và các thông tin khác: xem tờ hướng dẫn sử dụng\" | \"Số lô SX:\" | \"NSX:\" | \"HD:\". Keep every Vietnamese accent and unit. Line breaks may follow the reference. Standard instructions and blank \"Số lô SX:\" / \"NSX:\" / \"HD:\" appear in the lower front; never invent numbers or dates. No additional wording. Count the tablet cavities: exactly 7 in the first row and 7 in the second row. Flat unmarked white round tablets, no score lines or pill lettering.\n\nMATERIAL: matte-laminated white ivory paperboard carton (~300 gsm), offset printed, crisp folded edges, no foil, no gloss UV, no specular highlights. aluminium–PVC blister shown FRONT SIDE ONLY (clear thermoformed PVC cavities with the tablets/capsules visible, plain silver aluminium base around them); perforation lines between cells. Do NOT show or create the back (foil) side; no second blister; no text on the blister.\n\nCONSTRAINTS: No logo of any kind, no red triangle, no NNC, no ℞/Rx, no GMP, no registration number, no barcode, no watermark, no address, no extra claim. Matte natural carton finish. The model renders the complete photograph: no code overlays or SVG composites in the finished image.",
+          "referenced_image_paths": [
+            "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\cp-b-c-refs\\vinphaco\\KOM-1026_Valbitrin-100_CP-C2_FRONT.png",
+            "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\cp-b-c-refs\\vinphaco\\KOM-1026_Valbitrin-100_CP-C2_SIDE.png"
+          ],
+          "raw_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a1ce06-3250-7181-8d38-9fb071b4bf18\\exec-249bcc74-83b1-4f3a-ab01-134f1a2a88e3.png",
+          "transparent_background": false
+        },
+        {
+          "attempt": 2,
+          "prompt": "USE: One targeted camera-view correction to the supplied Valbitrin CP-C2 packshot.\n\nCHANGE ONLY VIEWPOINT: Show the carton in three-quarter view with the FRONT, RIGHT SIDE and TOP visible. The narrow blue side panel with vertical \"VALBITRIN 100\" must be on the RIGHT side of the image, not the left. Re-render the view naturally; do not horizontally mirror or reverse any lettering.\n\nPRESERVE EXACTLY: Keep the same long thin carton proportions 125 × 55 × 12 mm, same CP-C2 red/blue design, all front words and Vietnamese accents, decimal commas \"48,6 mg\" and \"51,4 mg\", every dose and unit, blank lot/date fields, one front-facing blister of exactly 14 white round tablets arranged 2 rows of 7, matte materials, white background and soft lighting. Do not add or remove anything else.\n\nTEXT: EXACT, verbatim. No logo, NNC, triangle, Rx, GMP, registration, barcode or extra writing. Target 1536 × 1024.",
+          "reason": "Attempt1 showed left side; target rules require front/right side/top.",
+          "referenced_image_paths": [
+            "C:\\Users\\Admin\\.codex\\generated_images\\01a1ce06-3250-7181-8d38-9fb071b4bf18\\exec-249bcc74-83b1-4f3a-ab01-134f1a2a88e3.png"
+          ],
+          "transparent_background": false,
+          "raw_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a1ce06-3250-7181-8d38-9fb071b4bf18\\exec-3492cc06-cd7f-493c-808c-46418b82c9ec.png"
+        }
+      ],
+      "final_path": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\KOM-1026_Valbitrin-100_CP-C2.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "count_qa": "DAT: exactly 14 tablets, two rows of seven",
+      "line_qa": {
+        "name_dose": "DAT",
+        "ingredient_decimal_commas": "DAT: Sacubitril 48,6 mg + Valsartan 51,4 mg",
+        "dosage_form_route": "DAT",
+        "english_form": "DAT",
+        "pack_vietnamese_english": "DAT",
+        "manufacturer": "DAT",
+        "standard_phrases": "DAT at enlarged crop",
+        "blank_lot_dates": "DAT"
+      },
+      "geometry_qa": "Thin long carton, front/right side/top after targeted correction; one front blister only",
+      "postprocessing": "None; raw PNG copied unchanged",
+      "final_sha256": "97839afa5bdad8231ce6172637f843e15ddf2e8c9674338d087543f615250775",
+      "limits": [
+        "Material and physical dimensions are visual approximations.",
+        "No 90px form test performed."
+      ]
+    },
+    {
+      "id": "vindexa-c1",
+      "product": "vindexa",
+      "option": "CP-C1",
+      "attempts": [
+        {
+          "attempt": 1,
+          "prompt": "USE: A commercial pharmaceutical packaging design mockup for review, fully redrawn as a photorealistic packshot. Do not claim it is an existing verified product photograph.\n\nINPUTS: Image 1 is exact front artwork for Vindexa 8 mg/2 ml option C1. Image 2 is the narrow side artwork. Use those images only as design and EXACT typographic references. Recreate the entire carton, print, perspective and product scene consistently; do not produce pasted-flat image panels.\n\nSCENE: Pure white seamless background, soft diffuse studio light and close gentle shadows. Product occupies 80–85 percent of frame width, fully in frame. Target 1536 × 1024 pixels. Crisp, coherent carton edges, no dotted construction seams or white gaps. No prop objects.\n\nSUBJECT: One flat pharmaceutical carton with proportions 115 mm wide × 75 mm high × 22 mm thick, in a coherent 3/4 view with front, narrow right side and lid visible. Beside and in front of the carton is ONE white plastic tray holding EXACTLY TEN transparent clear glass 2 ml ampoules, in one clearly countable row. No extra loose ampoules, no tablet blister. The ampoules contain clear colourless solution and have one-point-cut necks.\n\nDESIGN: ivory upper face with a broad navy-to-red flowing lower wave, large navy product name, clearly separated dosage block and high-contrast small information on the lower band. Family palette is white/ivory, red #C62828 and blue #1E4E9A. Abstract curved lines or waves only, no red triangles, no square-grid brand motif, no person, organ or symptom. Vietnamese remains primary; smaller English is secondary. Preserve product geometry and label legibility exactly.\n\nTYPE: The name is \"Vindexa\" beside a BLUE rounded block \"8 mg/2 ml\". The ingredient reads \"Mỗi ống 2 ml chứa: Dexamethason phosphat 8 mg\". The only lettering on EVERY ampoule is \"VINDEXA 8 mg/2 ml\", printed directly in one colour; absolutely no smaller secondary characters. Side shows only vertical \"VINDEXA 8 mg/2 ml\".\n\nEXACT CONTENT: All front text must match Image 1 EXACT, verbatim. The approved content is: \"Vindexa 8 mg/2 ml\" | \"Mỗi ống 2 ml chứa: Dexamethason phosphat 8 mg\" | \"Dung dịch tiêm · Tiêm\" | \"Solution for injection\" | \"Hộp 1 vỉ x 10 ống x 2 ml\" | \"Box of 1 blister x 10 ampoules x 2 mL\" | \"Cơ sở sản xuất: Công ty CP Dược phẩm Vĩnh Phúc (Vinphaco) – Việt Nam\" | \"Đọc kỹ hướng dẫn sử dụng trước khi dùng\" | \"Để xa tầm tay trẻ em\" | \"Chỉ định, chống chỉ định, cách dùng và các thông tin khác: xem tờ hướng dẫn sử dụng\" | \"Số lô SX:\" | \"NSX:\" | \"HD:\". Keep every Vietnamese accent and unit. Line breaks may follow the reference. Standard instructions and blank \"Số lô SX:\" / \"NSX:\" / \"HD:\" appear in the lower front; never invent numbers or dates. No additional wording. Count the ampoules carefully: exactly TEN ampoules in ONE white tray, no spare or duplicate ampoules. Preserve the full exact dose 8 mg/2 ml on the carton and on every ampoule.\n\nMATERIAL: matte-laminated white ivory paperboard carton (~300 gsm), offset printed, crisp folded edges, no foil, no gloss UV, no specular highlights. clear glass 2 ml ampoules with one-point-cut neck, label printed directly on the glass in one colour; clear colourless solution; ampoules held in a white plastic tray (only if \"vỉ\" is listed).\n\nCONSTRAINTS: No logo of any kind, no red triangle, no NNC, no ℞/Rx, no GMP, no registration number, no barcode, no watermark, no address, no extra claim. Matte natural carton finish. The model renders the complete photograph: no code overlays or SVG composites in the finished image.",
+          "referenced_image_paths": [
+            "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\cp-b-c-refs\\vinphaco\\KOM-0296_Vindexa-8mg-2ml_CP-C1_FRONT.png",
+            "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\cp-b-c-refs\\vinphaco\\KOM-0296_Vindexa-8mg-2ml_CP-C1_SIDE.png"
+          ],
+          "raw_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a1ce06-3250-7181-8d38-9fb071b4bf18\\exec-49272652-c0f0-4d18-b019-b06e8951df1b.png",
+          "transparent_background": false
+        },
+        {
+          "attempt": 2,
+          "prompt": "USE: One targeted material correction to the ampoules in this Vindexa CP-C1 packshot.\n\nCHANGE ONLY: On all TEN glass ampoules, remove the white paper-label rectangles/bands behind the blue print. The text must be printed DIRECTLY on clear glass in blue ink, with transparent glass visible between and around every letter. No sticker, paper, frosted label panel or white coating.\n\nEXACT AMPOULE TEXT: \"VINDEXA 8 mg/2 ml\" on every ampoule, no other words or characters. Two-line wrapping is acceptable. Do not alter the dose or unit.\n\nPRESERVE: Exactly 10 ampoules in the same one white tray, all glass geometry and clear colourless solution, every carton word, carton front/right/top design and thin depth, shadows, light and white background. No added objects, labels, logos, Rx, GMP, registration, barcode or numbers. Target 1536 × 1024.",
+          "reason": "Attempt1 ampoules appeared to have white label backgrounds; requested direct blue ink printing only.",
+          "referenced_image_paths": [
+            "C:\\Users\\Admin\\.codex\\generated_images\\01a1ce06-3250-7181-8d38-9fb071b4bf18\\exec-49272652-c0f0-4d18-b019-b06e8951df1b.png"
+          ],
+          "transparent_background": false,
+          "raw_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a1ce06-3250-7181-8d38-9fb071b4bf18\\exec-33619822-9d55-4bfa-87e7-3c9eefa95b9e.png"
+        }
+      ],
+      "final_path": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\KOM-0296_Vindexa-8mg-2ml_CP-C1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "count_qa": "DAT: exactly 10 ampoules in one white tray",
+      "line_qa": {
+        "name_dose": "DAT: Vindexa / 8 mg/2 ml",
+        "ingredient": "DAT: Mỗi ống 2 ml chứa: Dexamethason phosphat 8 mg",
+        "dosage_form_route": "DAT",
+        "english_form": "DAT: Solution for injection",
+        "pack_vietnamese_english": "DAT",
+        "manufacturer": "DAT",
+        "standard_phrases": "DAT at enlarged crop",
+        "blank_lot_dates": "DAT",
+        "ampoule_text": "DAT at enlarged crop, all 10 show only VINDEXA 8 mg/2 ml"
+      },
+      "geometry_qa": "Flat carton, front/right side/top, one white tray of ten clear ampoules; no extra objects",
+      "postprocessing": "None; raw PNG copied unchanged",
+      "final_sha256": "ad933075c4f0155308db95f82a4a0a85fc6ee857d546f5a8ab1ef42ec372ecfe",
+      "limits": [
+        "Printing method on glass cannot be conclusively verified; pale bands may read as white labels or tray behind transparent glass despite targeted edit.",
+        "Material and physical dimensions are visual approximations.",
+        "No 90px form test performed."
+      ]
+    }
+  ]
+}

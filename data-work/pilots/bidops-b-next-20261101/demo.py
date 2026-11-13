@@ -67,10 +67,10 @@ def main(argv=None):
             result["stale_diagnostic_blocked"] = str(error)
         ledger.transition_case("close-river", builder, "river", "close", "explicit synthetic close")
         result["after_only_river_closed"] = ledger.active_worklist()
+        ledger.transition_case("hill-won", builder, "hill", "win", "synthetic award receipt")
         ledger.link_demand("hill-fulfillment", builder,
                            {"link_id": "hill-fulfillment", "requirement_key": ["hill", "line-1", "1"],
                             "need_type": "fulfillment", "quantity": "4"})
-        ledger.transition_case("hill-won", builder, "hill", "win", "synthetic award receipt")
         result["won_keeps_fulfillment"] = ledger.active_worklist()
         ledger.transition_case("reopen-river", builder, "river", "reopen", "explicit synthetic reopen")
         result["after_reopen"] = ledger.active_worklist()

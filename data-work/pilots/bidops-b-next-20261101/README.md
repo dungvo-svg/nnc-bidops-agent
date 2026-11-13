@@ -15,9 +15,9 @@ The demo uses fictional principals, sources, quotes and packages. Its SQLite dat
 
 ## What to review
 
-- `AGENTS.md` and `CLAUDE.md`: coding entry points and ownership.
-- `context/BRIEF.md`: current mission, decisions, business boundaries and known source conflicts.
-- `context/source-manifest.json`: read-only originals/indexes and audit versions; indexed does not mean reread or operationally accepted.
+- Owner project rules: `../../../AGENTS.md`, `../../../CLAUDE.md` and `../../../context/clone-handoff/README.md`. This copy has no AGENTS/CLAUDE/context of its own.
+- Mission, decisions and boundaries: `../../../context/continuation-20261101/BRIEF.md` and `DECISION-LOG.md`.
+- Copy pins: `../../../context/continuation-20261101/desktop-readiness-bidops/COPY-MANIFEST.json`; work receipts for this copy: `receipts/`.
 - `docs/CODING-CONTRACT.md` and `docs/DATA-CONTRACT.md`: invariants, demand lifecycle and diagnostic consumption.
 - `src/ledger.py`: deterministic SQLite state/event boundary.
 - `tests/`: behavioral acceptance; see the execution receipt outside this repo for actual run counts.
@@ -28,13 +28,15 @@ Active sourcing is a view of active demand, not a destructive catalog deletion. 
 
 ## Repository and operational status
 
-Local branch `pilot/bidops-b`; remote is absent. The explicitly requested private `nnc-lao/nnc-bidops` creation was attempted once, but GitHub account `VOSYDUNG` lacks `CreateRepository`. No personal/public fallback, grants or credentials were created. No code/business data was pushed.
+This copy lives in the owner project at `data-work/pilots/bidops-b-next-20261101/`; Git and handoff status are recorded in `../../../context/clone-handoff/README.md`. Nothing is pushed from this pilot. (Historical: the original C: pilot used local branch `pilot/bidops-b`; `nnc-lao/nnc-bidops` creation failed for missing `CreateRepository`.)
 
 This is a local synthetic kernel. It does not authenticate real principals, provide a cross-owner listener/transport, guarantee queue leases/backpressure/recovery across machines, or prove staff onboarding. Pilot capability strings are fixture policy, not security or company ACLs. Master writes, quotes/commitments, contact, submission, VM deployment and merge/deploy remain outside scope.
 
 Actual Kom requirements are extracted separately as read-only, source-anchored intake for comparison with existing four-hospital rows. They are not bundled as fake synthetic data or silently matched to variants. Source documents, business bundles and extraction outputs stay outside Git; Excel/CSV is a human-facing export, never a second master.
 
 ## Read-only catalog intake
+
+Paths under `../catalog/` and `../workpacks/` below describe the original company-machine pilot. They do not exist in this copy; do not recreate them or search for real catalog data to fill them.
 
 `src/catalog_intake.py` is a separate explicit-input adapter for the normalized Kom CSV. It preserves source-anchored case lines and unresolved identities, generates pending matching work, and records idempotent intake receipts. It does not infer missing MPSC/spec/UOM/quantity/validity, make historical prices current, or accept a suggested match. Run its `--help` for supported arguments; choose an ignored/outside-Git DB path and keep the exact CSV hash alongside the result. The actual local intake and receipt are outside this code repository under `../catalog/`.
 
@@ -55,7 +57,7 @@ python -m src.workpacks --help
 python -m src.workpacks --catalog ..\catalog\common-catalog.sqlite --inbox ..\workpacks\manual\inbox.sqlite --event-id draft-sync-001 --export-csv ..\workpacks\manual\DRAFT.csv
 ```
 
-Sync runs only when requested; there is no continuous listener or staff dispatch. Exact retries retain their receipt. Changed source scope creates a new draft version; closed consumers disappear from the active projection, and reopening does not inherit an old review. Explicit cancellation stays cancelled across refresh. Choose a new export path to preserve existing files.
+`export_packet` writes a new local JSON packet for a current REVIEWED draft (owner/agent null, not sent); `import_return` records a returned file as `RETURN_UNVERIFIED` or history-only, never as acceptance. Sync runs only when requested; there is no continuous listener or staff dispatch. Exact retries retain their receipt. Changed source scope creates a new draft version; closed consumers disappear from the active projection, and reopening does not inherit an old review. Explicit cancellation stays cancelled across refresh. Choose a new export path to preserve existing files.
 
 The API supports local review and cancellation receipts. `REVIEWED` means a local preparation review, not commercial acceptance, owner assignment, employee acknowledgement or permission to send. Neither this inbox nor an edited CSV promotes a quote/master or contacts a person. The initial sensitive-context continuation was blocked. After explicit approval, the exact existing Claude BidOps session received the frozen context and then reviewed the current code. Its review found exact-retry and export-race issues plus conditional WAL drift; host-side synthetic reproductions confirmed them before local fixes. Claude did not directly edit files or run tests. The resulting implementation is host-applied and independently checked; no real principal, dispatch or commercial approval was added.
 

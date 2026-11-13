@@ -1,0 +1,10 @@
+{
+  "attempt": 2,
+  "prompt": "USE: One targeted material correction to the ampoules in this Vindexa CP-C1 packshot.\n\nCHANGE ONLY: On all TEN glass ampoules, remove the white paper-label rectangles/bands behind the blue print. The text must be printed DIRECTLY on clear glass in blue ink, with transparent glass visible between and around every letter. No sticker, paper, frosted label panel or white coating.\n\nEXACT AMPOULE TEXT: \"VINDEXA 8 mg/2 ml\" on every ampoule, no other words or characters. Two-line wrapping is acceptable. Do not alter the dose or unit.\n\nPRESERVE: Exactly 10 ampoules in the same one white tray, all glass geometry and clear colourless solution, every carton word, carton front/right/top design and thin depth, shadows, light and white background. No added objects, labels, logos, Rx, GMP, registration, barcode or numbers. Target 1536 × 1024.",
+  "reason": "Attempt1 ampoules appeared to have white label backgrounds; requested direct blue ink printing only.",
+  "referenced_image_paths": [
+    "C:\\Users\\Admin\\.codex\\generated_images\\01a1ce06-3250-7181-8d38-9fb071b4bf18\\exec-49272652-c0f0-4d18-b019-b06e8951df1b.png"
+  ],
+  "transparent_background": false,
+  "raw_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a1ce06-3250-7181-8d38-9fb071b4bf18\\exec-33619822-9d55-4bfa-87e7-3c9eefa95b9e.png"
+}

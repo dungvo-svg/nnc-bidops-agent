@@ -50,3 +50,6 @@ __pycache__/
 !/data-work/pilots/bidops-b-next-20261101/src/*.py
 !/data-work/pilots/bidops-b-next-20261101/tests/*.py
 !/data-work/pilots/bidops-b-next-20261101/docs/*.md
+
+# Chrome profile tạm khi tạo hình – không bao giờ commit
+**/_chrome-temp/

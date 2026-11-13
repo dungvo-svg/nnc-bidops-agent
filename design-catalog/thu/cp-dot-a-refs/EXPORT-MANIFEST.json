@@ -1,0 +1,124 @@
+[
+  {
+    "file": "KOM-1017_Amitriptylin-25mg_CP-A1.png",
+    "absolutePath": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\KOM-1017_Amitriptylin-25mg_CP-A1.png",
+    "beforeSize": [
+      1536,
+      1024
+    ],
+    "beforeSHA256": "6524126ba11ad415b7b59bbaeb3f7963fe72919a9b23a9af671f3a366a3785d4",
+    "finalSize": [
+      1536,
+      1024
+    ],
+    "finalSHA256": "6524126ba11ad415b7b59bbaeb3f7963fe72919a9b23a9af671f3a366a3785d4",
+    "operation": "copy of native generation",
+    "boardId": "9f86a221-add8-4f2d-812a-1eb3a149a1eb",
+    "boardItemId": "amitriptylin-a1",
+    "boardState": "ready",
+    "boardOriginalMatchesExport": true
+  },
+  {
+    "file": "KOM-1017_Amitriptylin-25mg_CP-A2.png",
+    "absolutePath": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\KOM-1017_Amitriptylin-25mg_CP-A2.png",
+    "beforeSize": [
+      1536,
+      1024
+    ],
+    "beforeSHA256": "a810913898f21ad96e44a23375b03de7001be42c449eb3745e58a942d890020d",
+    "finalSize": [
+      1536,
+      1024
+    ],
+    "finalSHA256": "a810913898f21ad96e44a23375b03de7001be42c449eb3745e58a942d890020d",
+    "operation": "copy of native generation",
+    "boardId": "9f86a221-add8-4f2d-812a-1eb3a149a1eb",
+    "boardItemId": "amitriptylin-a2",
+    "boardState": "ready",
+    "boardOriginalMatchesExport": true
+  },
+  {
+    "file": "KOM-0356-0359-0363-0373-0626_Esomex-20_CP-A1.png",
+    "absolutePath": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\KOM-0356-0359-0363-0373-0626_Esomex-20_CP-A1.png",
+    "beforeSize": [
+      1536,
+      1024
+    ],
+    "beforeSHA256": "3b8a7b713c22e87eaeff526e7d49cf1ab83d7406f651562e93f11d0b8fc5b8db",
+    "finalSize": [
+      1536,
+      1024
+    ],
+    "finalSHA256": "3b8a7b713c22e87eaeff526e7d49cf1ab83d7406f651562e93f11d0b8fc5b8db",
+    "operation": "copy of native generation",
+    "boardId": "9f86a221-add8-4f2d-812a-1eb3a149a1eb",
+    "boardItemId": "esomex-a1",
+    "boardState": "ready",
+    "boardOriginalMatchesExport": true
+  },
+  {
+    "file": "KOM-0356-0359-0363-0373-0626_Esomex-20_CP-A2.png",
+    "absolutePath": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\KOM-0356-0359-0363-0373-0626_Esomex-20_CP-A2.png",
+    "beforeSize": [
+      1536,
+      1024
+    ],
+    "beforeSHA256": "5a36521f87cc83ce1f6639415544a368ea04bc95285dd7b918a22c8ef94a533c",
+    "finalSize": [
+      1536,
+      1024
+    ],
+    "finalSHA256": "5a36521f87cc83ce1f6639415544a368ea04bc95285dd7b918a22c8ef94a533c",
+    "operation": "copy of native generation",
+    "boardId": "9f86a221-add8-4f2d-812a-1eb3a149a1eb",
+    "boardItemId": "esomex-a2",
+    "boardState": "ready",
+    "boardOriginalMatchesExport": true
+  },
+  {
+    "file": "KOM-0029_Lactate-Ringer-Dextrose-5pct_CP-A1.png",
+    "absolutePath": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\KOM-0029_Lactate-Ringer-Dextrose-5pct_CP-A1.png",
+    "beforeSize": [
+      1254,
+      1254
+    ],
+    "beforeSHA256": "10fc815c52b225319e5b5a2c38e40d6dc20dcc8b8d4de2af668fbb2a41597e76",
+    "finalSize": [
+      1024,
+      1024
+    ],
+    "finalSHA256": "9844a7b46ff87e5b6e0bf475acbaece8e0c52ab8261b7f753f349fc01cd0f57f",
+    "operation": "targeted title edit by ImageGen; whole-image Lanczos downsample only",
+    "previousExportSHA256": "33c4e951a832487b3004293eae30d0504d818ded2e0a3ff19f80e35d63df5950",
+    "selectedRawPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a1ce06-3250-7181-8d38-9fb071b4bf18\\exec-ae2f6a28-f16e-4aa3-8330-4da87ca07c47.png",
+    "selectedRawSHA256": "e04e5aee4a52465f383b816ef89513f96e17bdf8fc0e6c5813471d980b1307b4",
+    "generationAttempt": 2,
+    "boardId": "9f86a221-add8-4f2d-812a-1eb3a149a1eb",
+    "boardItemId": "lactate-a1",
+    "boardState": "ready",
+    "boardOriginalMatchesExport": true
+  },
+  {
+    "file": "KOM-0029_Lactate-Ringer-Dextrose-5pct_CP-A2.png",
+    "absolutePath": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\KOM-0029_Lactate-Ringer-Dextrose-5pct_CP-A2.png",
+    "beforeSize": [
+      1254,
+      1254
+    ],
+    "beforeSHA256": "1ad359868d65a3e345f30afd652bbc5efc25aac95490c178330f31f7c39013ff",
+    "finalSize": [
+      1024,
+      1024
+    ],
+    "finalSHA256": "1a20ca6776b60354ebea9e80b0ebca184949df9eccc3feea2539e334630d9f53",
+    "operation": "targeted title edit by ImageGen; whole-image Lanczos downsample only",
+    "previousExportSHA256": "d2ddf160860ea93aa9fbe89000252c99db17207999e4e38fd9871560130e6a72",
+    "selectedRawPath": "C:\\Users\\Admin\\.codex\\generated_images\\01a1ce06-3250-7181-8d38-9fb071b4bf18\\exec-5ce96d9f-5f20-4077-ac5b-faa4bda0499d.png",
+    "selectedRawSHA256": "da12534d126169c8b2c4b8e38c0f8756deaa037ccc618575ba7598d0272ff0d0",
+    "generationAttempt": 2,
+    "boardId": "9f86a221-add8-4f2d-812a-1eb3a149a1eb",
+    "boardItemId": "lactate-a2",
+    "boardState": "ready",
+    "boardOriginalMatchesExport": true
+  }
+]

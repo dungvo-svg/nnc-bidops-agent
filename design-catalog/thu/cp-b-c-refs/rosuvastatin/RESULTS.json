@@ -1,0 +1,324 @@
+{
+  "model": "không được công cụ cung cấp",
+  "quality": "không có tham số chọn hoặc xác nhận",
+  "results": [
+    {
+      "item_id": "KOM-0836-0838-1032_Rosuvastatin-10_CP-B1",
+      "final_path": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\KOM-0836-0838-1032_Rosuvastatin-10_CP-B1.png",
+      "raw_paths": [
+        "C:\\Users\\Admin\\.codex\\generated_images\\01a1cdf3-5c8a-7e82-b766-65edbfaa01d1\\exec-a29daba8-e4d7-4bc8-b090-fa1e57df3cee.png",
+        "C:\\Users\\Admin\\.codex\\generated_images\\01a1cdf3-5c8a-7e82-b766-65edbfaa01d1\\exec-72dfb10b-206b-4465-bbd0-31875676c3e1.png"
+      ],
+      "prompt": "USE: Photorealistic conceptual medication packaging for visual review, 1536 × 1024.\nSCENE: White seamless background, soft diffuse studio light, subtle shadow.\nSUBJECT: One thin three-quarter-view carton for 3 blisters, approximately 100 × 55 × 15 proportions, front, very narrow right side and top visible. One and only one front-facing blister of 10 plain round flat white tablets, 2 rows × 5. No foil-back blister and no other objects.\nLABEL: Image 1 is the exact front artwork for Rosuvastatin 10 mg; Image 2 is its narrow side. Preserve all the text, spelling, Vietnamese accents, line layout and manufacturer EXACT, verbatim. Side must show only \"ROSUVASTATIN 10 mg\". Front includes all three exact standard sentences and the three empty fields as Image 1; do not omit them or invent values. Preserve product geometry and label legibility exactly. No content borrowed from any other product.\nSTYLE: Use Image 1 wave geometry with cream upper area and lower flowing blue waves; deep blue dosage block. Professional blue #1565C0 Lương Anh family, no other brand.\nMATERIAL: matte-laminated white ivory paperboard carton (~300 gsm), offset printed, crisp folded edges, no foil, no gloss UV, no specular highlights. aluminium–PVC blister shown FRONT SIDE ONLY (clear thermoformed PVC cavities with the tablets/capsules visible, plain silver aluminium base around them); perforation lines between cells. Do NOT show or create the back (foil) side; no second blister; no text on the blister.\nCONSTRAINTS: No logos, ℞, NNC, Lao text, GMP, SĐK, barcode, fabricated numbers or addresses, extra marks or watermark. No organs, people or symptoms. This is an illustrative design, not actual product photography.",
+      "refs": [
+        "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\cp-b-c-refs\\rosuvastatin\\rosu10_CP-B1_front.png",
+        "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\cp-b-c-refs\\rosuvastatin\\rosu10_CP-B1_side.png"
+      ],
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "line_qa": [
+        {
+          "text": "Rosuvastatin 10 mg",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "Mỗi viên nén chứa: Rosuvastatin 10 mg",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "Viên nén · Uống",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "Tablets · Oral use",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "Hộp 3 vỉ x 10 viên nén",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "Box of 3 blisters x 10 tablets",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "Cơ sở sản xuất: Lương Anh – Việt Nam",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "Chỉ định, chống chỉ định, cách dùng và các thông tin khác: xem tờ hướng dẫn sử dụng",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "Đọc kỹ hướng dẫn sử dụng trước khi dùng",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "Để xa tầm tay trẻ em",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "Số lô SX:",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "NSX:",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "HD:",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "ROSUVASTATIN 10 mg",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        }
+      ],
+      "retry_count": 1,
+      "targeted_edit_prompt": "Change ONLY the vertical text on the narrow right side of the box to the EXACT text \"ROSUVASTATIN 10 mg\". Spell the drug name exactly: R O S U V A S T A T I N. Keep the exact same vertical orientation, blue background, white type and perspective. Keep all other text, dosage, box, artwork, blister of 10 tablets, materials, lighting, composition and geometry absolutely identical. Do not add extra text or graphics.",
+      "blister_count": 1,
+      "tablet_count": 10,
+      "notes": "Kết quả quan sát ảnh; chữ nhỏ và ảnh 90 px chưa kiểm thực tế. Hình AI không xác nhận bao bì thật."
+    },
+    {
+      "item_id": "KOM-0836-0838-1032_Rosuvastatin-10_CP-B2",
+      "final_path": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\KOM-0836-0838-1032_Rosuvastatin-10_CP-B2.png",
+      "raw_paths": [
+        "C:\\Users\\Admin\\.codex\\generated_images\\01a1cdf3-5c8a-7e82-b766-65edbfaa01d1\\exec-d47aea97-2726-4963-a7c8-fd8cadf197ce.png"
+      ],
+      "prompt": "USE: Photorealistic conceptual medication packaging for visual review, 1536 × 1024.\nSCENE: White seamless background, soft diffuse studio light, subtle shadow.\nSUBJECT: One thin three-quarter-view carton for 3 blisters, approximately 100 × 55 × 15 proportions, front, very narrow right side and top visible. One and only one front-facing blister of 10 plain round flat white tablets, 2 rows × 5. No foil-back blister and no other objects.\nLABEL: Image 1 is the exact front artwork for Rosuvastatin 10 mg; Image 2 is its narrow side. Preserve all the text, spelling, Vietnamese accents, line layout and manufacturer EXACT, verbatim. Side must show only \"ROSUVASTATIN 10 mg\". Front includes all three exact standard sentences and the three empty fields as Image 1; do not omit them or invent values. Preserve product geometry and label legibility exactly. No content borrowed from any other product.\nSTYLE: Use Image 1 architecture with a bold blue lower field and sweeping blue arc at right; deep blue dosage block. Professional blue #1565C0 Lương Anh family, no other brand.\nMATERIAL: matte-laminated white ivory paperboard carton (~300 gsm), offset printed, crisp folded edges, no foil, no gloss UV, no specular highlights. aluminium–PVC blister shown FRONT SIDE ONLY (clear thermoformed PVC cavities with the tablets/capsules visible, plain silver aluminium base around them); perforation lines between cells. Do NOT show or create the back (foil) side; no second blister; no text on the blister.\nCONSTRAINTS: No logos, ℞, NNC, Lao text, GMP, SĐK, barcode, fabricated numbers or addresses, extra marks or watermark. No organs, people or symptoms. This is an illustrative design, not actual product photography.",
+      "refs": [
+        "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\cp-b-c-refs\\rosuvastatin\\rosu10_CP-B2_front.png",
+        "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\cp-b-c-refs\\rosuvastatin\\rosu10_CP-B2_side.png"
+      ],
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "line_qa": [
+        {
+          "text": "Rosuvastatin 10 mg",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "Mỗi viên nén chứa: Rosuvastatin 10 mg",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "Viên nén · Uống",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "Tablets · Oral use",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "Hộp 3 vỉ x 10 viên nén",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "Box of 3 blisters x 10 tablets",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "Cơ sở sản xuất: Lương Anh – Việt Nam",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "Chỉ định, chống chỉ định, cách dùng và các thông tin khác: xem tờ hướng dẫn sử dụng",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "Đọc kỹ hướng dẫn sử dụng trước khi dùng",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "Để xa tầm tay trẻ em",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "Số lô SX:",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "NSX:",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "HD:",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "ROSUVASTATIN 10 mg",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        }
+      ],
+      "retry_count": 0,
+      "targeted_edit_prompt": null,
+      "blister_count": 1,
+      "tablet_count": 10,
+      "notes": "Kết quả quan sát ảnh; chữ nhỏ và ảnh 90 px chưa kiểm thực tế. Hình AI không xác nhận bao bì thật."
+    },
+    {
+      "item_id": "KOM-1034_Rosuvastatin-5_CP-B1",
+      "final_path": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\KOM-1034_Rosuvastatin-5_CP-B1.png",
+      "raw_paths": [
+        "C:\\Users\\Admin\\.codex\\generated_images\\01a1cdf3-5c8a-7e82-b766-65edbfaa01d1\\exec-a0b839bc-0f4d-4e86-bd28-6c241818ca2f.png",
+        "C:\\Users\\Admin\\.codex\\generated_images\\01a1cdf3-5c8a-7e82-b766-65edbfaa01d1\\exec-4cd61e46-e57b-43f7-9014-3008f83caee7.png"
+      ],
+      "prompt": "USE: Photorealistic conceptual medication packaging for visual review, 1536 × 1024.\nSCENE: White seamless background, soft diffuse studio light, subtle shadow.\nSUBJECT: One thin three-quarter-view carton for 3 blisters, approximately 100 × 55 × 15 proportions, front, very narrow right side and top visible. One and only one front-facing blister of 10 plain round flat white tablets, 2 rows × 5. No foil-back blister and no other objects.\nLABEL: Image 1 is the exact front artwork for Rosuvastatin 5 mg; Image 2 is its narrow side. Preserve all the text, spelling, Vietnamese accents, line layout and manufacturer EXACT, verbatim. Side must show only \"ROSUVASTATIN 5 mg\". Front includes all three exact standard sentences and the three empty fields as Image 1; do not omit them or invent values. Preserve product geometry and label legibility exactly. No content borrowed from any other product.\nSTYLE: Use Image 1 wave geometry with cream upper area and lower flowing blue waves; orange dosage block. Professional blue #1565C0 Lương Anh family, no other brand.\nMATERIAL: matte-laminated white ivory paperboard carton (~300 gsm), offset printed, crisp folded edges, no foil, no gloss UV, no specular highlights. aluminium–PVC blister shown FRONT SIDE ONLY (clear thermoformed PVC cavities with the tablets/capsules visible, plain silver aluminium base around them); perforation lines between cells. Do NOT show or create the back (foil) side; no second blister; no text on the blister.\nCONSTRAINTS: No logos, ℞, NNC, Lao text, GMP, SĐK, barcode, fabricated numbers or addresses, extra marks or watermark. No organs, people or symptoms. This is an illustrative design, not actual product photography.",
+      "refs": [
+        "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\cp-b-c-refs\\rosuvastatin\\rosu5_CP-B1_front.png",
+        "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\cp-b-c-refs\\rosuvastatin\\rosu5_CP-B1_side.png"
+      ],
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "line_qa": [
+        {
+          "text": "Rosuvastatin 5 mg",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "Mỗi viên nén chứa: Rosuvastatin 5 mg",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "Viên nén · Uống",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "Tablets · Oral use",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "Hộp 3 vỉ x 10 viên nén",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "Box of 3 blisters x 10 tablets",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "Cơ sở sản xuất: Lương Anh – Việt Nam",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "Chỉ định, chống chỉ định, cách dùng và các thông tin khác: xem tờ hướng dẫn sử dụng",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "Đọc kỹ hướng dẫn sử dụng trước khi dùng",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "Để xa tầm tay trẻ em",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "Số lô SX:",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "NSX:",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "HD:",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "ROSUVASTATIN 5 mg",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        }
+      ],
+      "retry_count": 1,
+      "targeted_edit_prompt": "Change ONLY the bottom-right batch/date field label from \"HĐ:\" to the EXACT text \"HD:\" using plain Latin capital D with no crossbar. Keep it in the same location and white type. Keep every other letter and all artwork, colors, dosage, 10-tablet blister, perspective, material, lighting and geometry absolutely identical. Do not add any extra text or marks.",
+      "blister_count": 1,
+      "tablet_count": 10,
+      "notes": "Kết quả quan sát ảnh; chữ nhỏ và ảnh 90 px chưa kiểm thực tế. Hình AI không xác nhận bao bì thật."
+    },
+    {
+      "item_id": "KOM-1034_Rosuvastatin-5_CP-B2",
+      "final_path": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\KOM-1034_Rosuvastatin-5_CP-B2.png",
+      "raw_paths": [
+        "C:\\Users\\Admin\\.codex\\generated_images\\01a1cdf3-5c8a-7e82-b766-65edbfaa01d1\\exec-6ed4d31f-ae18-4b18-9b82-652e1d0232fe.png"
+      ],
+      "prompt": "USE: Photorealistic conceptual medication packaging for visual review, 1536 × 1024.\nSCENE: White seamless background, soft diffuse studio light, subtle shadow.\nSUBJECT: One thin three-quarter-view carton for 3 blisters, approximately 100 × 55 × 15 proportions, front, very narrow right side and top visible. One and only one front-facing blister of 10 plain round flat white tablets, 2 rows × 5. No foil-back blister and no other objects.\nLABEL: Image 1 is the exact front artwork for Rosuvastatin 5 mg; Image 2 is its narrow side. Preserve all the text, spelling, Vietnamese accents, line layout and manufacturer EXACT, verbatim. Side must show only \"ROSUVASTATIN 5 mg\". Front includes all three exact standard sentences and the three empty fields as Image 1; do not omit them or invent values. Preserve product geometry and label legibility exactly. No content borrowed from any other product.\nSTYLE: Use Image 1 architecture with a bold blue lower field and sweeping blue arc at right; orange dosage block. Professional blue #1565C0 Lương Anh family, no other brand.\nMATERIAL: matte-laminated white ivory paperboard carton (~300 gsm), offset printed, crisp folded edges, no foil, no gloss UV, no specular highlights. aluminium–PVC blister shown FRONT SIDE ONLY (clear thermoformed PVC cavities with the tablets/capsules visible, plain silver aluminium base around them); perforation lines between cells. Do NOT show or create the back (foil) side; no second blister; no text on the blister.\nCONSTRAINTS: No logos, ℞, NNC, Lao text, GMP, SĐK, barcode, fabricated numbers or addresses, extra marks or watermark. No organs, people or symptoms. This is an illustrative design, not actual product photography.",
+      "refs": [
+        "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\cp-b-c-refs\\rosuvastatin\\rosu5_CP-B2_front.png",
+        "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\cp-b-c-refs\\rosuvastatin\\rosu5_CP-B2_side.png"
+      ],
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "line_qa": [
+        {
+          "text": "Rosuvastatin 5 mg",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "Mỗi viên nén chứa: Rosuvastatin 5 mg",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "Viên nén · Uống",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "Tablets · Oral use",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "Hộp 3 vỉ x 10 viên nén",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "Box of 3 blisters x 10 tablets",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "Cơ sở sản xuất: Lương Anh – Việt Nam",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "Chỉ định, chống chỉ định, cách dùng và các thông tin khác: xem tờ hướng dẫn sử dụng",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "Đọc kỹ hướng dẫn sử dụng trước khi dùng",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "Để xa tầm tay trẻ em",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "Số lô SX:",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "NSX:",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "HD:",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        },
+        {
+          "text": "ROSUVASTATIN 5 mg",
+          "result": "ĐẠT qua quan sát, cần root QA độc lập"
+        }
+      ],
+      "retry_count": 0,
+      "targeted_edit_prompt": null,
+      "blister_count": 1,
+      "tablet_count": 10,
+      "notes": "Kết quả quan sát ảnh; chữ nhỏ và ảnh 90 px chưa kiểm thực tế. Hình AI không xác nhận bao bì thật."
+    }
+  ]
+}

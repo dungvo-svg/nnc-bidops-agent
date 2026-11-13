@@ -1,0 +1,46 @@
+{
+  "created_utc": "2026-11-03T04:04:27.594479+00:00",
+  "scope": "Business-only WhatsApp/App source relay, no ASR/media/workbook transfer",
+  "source_packet": {
+    "path": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\context\\meetings\\20261103\\CEO-APP-DELTA-20261103-SOURCE.md",
+    "bytes": 7886,
+    "sha256": "9a9d54360a9cd487232b96429d5edb6c8780b2ef2bd14f17530d34e07a67aef6"
+  },
+  "reader_evidence": {
+    "whatsapp": {
+      "account": "vo dung",
+      "group": "Thầu BV",
+      "author": "Sếp HoangQuan",
+      "cutoff_vn": "2026-11-03 10:52 UTC+7",
+      "message_ids": [
+        "3EB01D774618AD8C41A159",
+        "3EB03E54DA3EA15DE10802",
+        "3EB020CB4D0C5C595C57FB"
+      ]
+    },
+    "app": {
+      "account": "Mr Dung",
+      "machine": "Admin-PC",
+      "checked_utc": [
+        "2026-11-03 03:54:07",
+        "2026-11-03 03:57:27"
+      ],
+      "project_id": 20400,
+      "task_ids": [
+        20405,
+        20415,
+        20439,
+        20460
+      ],
+      "meeting_ids": [
+        19812,
+        20419,
+        20479
+      ]
+    }
+  },
+  "identity_request_id": "3a9cdc25-bd92-48d9-8aa1-71d012e98abc",
+  "native_delivery": "PENDING fresh identity ACK; business payload NOT SENT",
+  "writer_authority": "User03:49 requested BidOps update; root explicitly authorized bounded Codex documentation update independently while native identity pending",
+  "no_inferred_authority": "No price/spec/visa/NCC approval, App, ACL, Git or runtime change."
+}

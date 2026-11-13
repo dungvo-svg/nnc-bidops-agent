@@ -1,0 +1,33 @@
+{
+  "materialized_utc": "2026-11-03T03:12:16.619976+00:00",
+  "source_session": "c65de0f0-2ef0-4fe1-8bbc-105f898385f9",
+  "native_synthesis_owner": "local_3529f4ad-be8c-4f9c-bf43-6cebb66af992",
+  "source_range": "1769–2195; 427 source records / 253 chunk ranges",
+  "audio_coverage": "2026-11-03 09:06:38.314–09:38:03.405375 UTC+7, ASR hypothesis; not whole meeting",
+  "native_finality": "owner ACK complete and final review PASS at 02:58 UTC; no claim of business approval",
+  "files": [
+    {
+      "name": "SUMMARY.md",
+      "source_path": "D:\\WORK\\Agent\\Agent-first\\personal-meeting-assistant\\.local\\runtime\\reports\\20261103-0906_c65de0f0\\SUMMARY.md",
+      "destination_path": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\context\\meetings\\20261103\\SUMMARY.md",
+      "bytes": 9258,
+      "sha256": "ef79f37c413070c16378fa5b4846522c23be660c9adddcc4db4368db27df2777",
+      "source_modified_utc": "2026-11-03T02:42:13.997821+00:00"
+    },
+    {
+      "name": "TASKS.md",
+      "source_path": "D:\\WORK\\Agent\\Agent-first\\personal-meeting-assistant\\.local\\runtime\\reports\\20261103-0906_c65de0f0\\TASKS.md",
+      "destination_path": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\context\\meetings\\20261103\\TASKS.md",
+      "bytes": 2823,
+      "sha256": "3dae108f95fd1a03c5c0cfde2b467486691ec140c22b0d78da5341d8efc6fc69",
+      "source_modified_utc": "2026-11-03T02:42:14.165739+00:00"
+    }
+  ],
+  "limitations": [
+    "Speaker labels/assignments are uncertain; SUMMARY/TASKS are interpretations, not business approval.",
+    "Do not infer loss of 17 minutes from scheduled 08:50; actual meeting start unknown.",
+    "Raw WAV/MIC and complete RAW transcript not copied.",
+    "User corrections kept separately from these exact source bytes; Tar/Ta contextual only; Phet+Tình today confirmed, package referent to verify.",
+    "No price/spec/NCC/visa approval, ingestion, application or runtime changes."
+  ]
+}

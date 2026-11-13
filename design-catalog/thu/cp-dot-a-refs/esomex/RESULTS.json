@@ -1,0 +1,68 @@
+{
+  "results": [
+    {
+      "option": "A1",
+      "path": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\KOM-0356-0359-0363-0373-0626_Esomex-20_CP-A1.png",
+      "raw_imagegen_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a1cdf3-9216-7e23-9fb2-5938f838c938\\exec-2b35a993-8c48-4151-b972-792e0bdaf605.png",
+      "sha256": "3b8a7b713c22e87eaeff526e7d49cf1ab83d7406f651562e93f11d0b8fc5b8db",
+      "dimensions_px": [
+        1536,
+        1024
+      ],
+      "expected_dimensions_px": [
+        1536,
+        1024
+      ],
+      "attempts": 1,
+      "targeted_edit": false,
+      "tool": "image_gen__imagegen",
+      "model": "not exposed",
+      "transparent_background": false,
+      "quality": "not exposed",
+      "reference_images": [
+        "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\cp-dot-a-refs\\esomex\\A1_FRONT.png",
+        "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\cp-dot-a-refs\\esomex\\A1_SIDE.png"
+      ],
+      "prompt": "USE: distinct Esomex concept A1.\nDESIGN: airy ivory front, title large on the left, 20 emphasis to the right, bold emerald gradient diagonal flowing ribbon occupies the right and lower portion; distinct slim side in deep green. Follow Image 1 identity without copying any brand logo.\nSCENE: white seamless background, soft diffused light, gentle contact shadow, no props. One single medium-view 3/4 medical carton with front, thin right side and top visible; exactly one front-facing plain aluminium-PVC blister with 2 rows of 5 unmarked ivory hard capsules. No other objects. Aspect ratio 1536x1024.\nPRODUCT GEOMETRY: two-blister carton, slim flat approximately 110 x 58 x 15 mm: noticeably thin side; do not add thickness. Product is an illustrative concept, not a verified photo.\nINPUTS: Image 1 is the specified front SVG-render reference; Image 2 is the narrow side reference. Create the entire realistic packshot afresh; no pasted SVG or digitally composited facades. Preserve geometry and legibility exactly. Exact text in quotes, verbatim, correct accents. Side only the vertical name and active; standard sentences and English line may be on top or front, never squeezed onto the narrow side.\nFRONT/ELIGIBLE TOP TEXT EXACT: \"ESOMEX 20\"; \"Mỗi viên nang cứng chứa: Esomeprazol 20 mg\"; \"Viên nang cứng · Uống\"; \"Hộp 2 vỉ x 10 viên nang cứng\"; \"Box of 2 blisters x 10 hard capsules\"; \"Cơ sở sản xuất: USA NIC – Việt Nam\"; \"Đọc kỹ hướng dẫn sử dụng trước khi dùng\"; \"Để xa tầm tay trẻ em\"; \"Chỉ định, chống chỉ định, cách dùng và các thông tin khác: xem tờ hướng dẫn sử dụng\"; \"Số lô SX:\"; \"NSX:\"; \"HD:\". Leave the fields blank. SIDE TEXT ONLY: \"ESOMEX 20\"; \"Esomeprazol 20 mg\".\nMATERIAL: matte-laminated white ivory paperboard carton (~300 gsm), offset printed, crisp folded edges, no foil, no gloss UV, no specular highlights. aluminium–PVC blister shown FRONT SIDE ONLY (clear thermoformed PVC cavities with the tablets/capsules visible, plain silver aluminium base around them); perforation lines between cells.\nCONSTRAINTS: No Rx, logo, NNC, GMP, registration number, barcode, address, filled date/lot, extra text, no person, organ, body, symptom, or marketing claim. Typography is Vietnamese primary with subordinate English. White/ivory capsule colour is a design convention, not verified product detail.",
+      "text_issues": [],
+      "text_check": "Xem ảnh và phóng to mặt trước, cạnh; không phát hiện sai chữ rõ ở tên, hoạt chất, dạng, quy cách, dòng Anh, cơ sở, ba câu chuẩn và nhãn lô/ngày; nét rất nhỏ cần người kiểm độc lập, không khẳng định ảnh dùng in được.",
+      "visual_notes": [
+        "Một vỉ mặt trước gồm 10 nang trắng ngà.",
+        "Hộp mỏng là mô phỏng; không chứng minh kích thước hay bao bì thực tế."
+      ],
+      "status": "generated_needs_independent_review"
+    },
+    {
+      "option": "A2",
+      "path": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\KOM-0356-0359-0363-0373-0626_Esomex-20_CP-A2.png",
+      "raw_imagegen_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a1cdf3-9216-7e23-9fb2-5938f838c938\\exec-ce5e1a91-9c8b-4c8d-a5fb-7adbf99cb3d5.png",
+      "sha256": "5a36521f87cc83ce1f6639415544a368ea04bc95285dd7b918a22c8ef94a533c",
+      "dimensions_px": [
+        1536,
+        1024
+      ],
+      "expected_dimensions_px": [
+        1536,
+        1024
+      ],
+      "attempts": 1,
+      "targeted_edit": false,
+      "tool": "image_gen__imagegen",
+      "model": "not exposed",
+      "transparent_background": false,
+      "quality": "not exposed",
+      "reference_images": [
+        "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\cp-dot-a-refs\\esomex\\A2_FRONT.png",
+        "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\cp-dot-a-refs\\esomex\\A2_SIDE.png"
+      ],
+      "prompt": "USE: distinct Esomex concept A2.\nDESIGN: a different deep-green emerald orbit/sweep and curving abstract ring on the right, stacked ESOMEX and 20 on the left, ivory text field and deep green lower strip. Follow Image 1 identity without copying any brand logo.\nSCENE: white seamless background, soft diffused light, gentle contact shadow, no props. One single medium-view 3/4 medical carton with front, thin right side and top visible; exactly one front-facing plain aluminium-PVC blister with 2 rows of 5 unmarked ivory hard capsules. No other objects. Aspect ratio 1536x1024.\nPRODUCT GEOMETRY: two-blister carton, slim flat approximately 110 x 58 x 15 mm: noticeably thin side; do not add thickness. Product is an illustrative concept, not a verified photo.\nINPUTS: Image 1 is the specified front SVG-render reference; Image 2 is the narrow side reference. Create the entire realistic packshot afresh; no pasted SVG or digitally composited facades. Preserve geometry and legibility exactly. Exact text in quotes, verbatim, correct accents. Side only the vertical name and active; standard sentences and English line may be on top or front, never squeezed onto the narrow side.\nFRONT/ELIGIBLE TOP TEXT EXACT: \"ESOMEX 20\"; \"Mỗi viên nang cứng chứa: Esomeprazol 20 mg\"; \"Viên nang cứng · Uống\"; \"Hộp 2 vỉ x 10 viên nang cứng\"; \"Box of 2 blisters x 10 hard capsules\"; \"Cơ sở sản xuất: USA NIC – Việt Nam\"; \"Đọc kỹ hướng dẫn sử dụng trước khi dùng\"; \"Để xa tầm tay trẻ em\"; \"Chỉ định, chống chỉ định, cách dùng và các thông tin khác: xem tờ hướng dẫn sử dụng\"; \"Số lô SX:\"; \"NSX:\"; \"HD:\". Leave the fields blank. SIDE TEXT ONLY: \"ESOMEX 20\"; \"Esomeprazol 20 mg\".\nMATERIAL: matte-laminated white ivory paperboard carton (~300 gsm), offset printed, crisp folded edges, no foil, no gloss UV, no specular highlights. aluminium–PVC blister shown FRONT SIDE ONLY (clear thermoformed PVC cavities with the tablets/capsules visible, plain silver aluminium base around them); perforation lines between cells.\nCONSTRAINTS: No Rx, logo, NNC, GMP, registration number, barcode, address, filled date/lot, extra text, no person, organ, body, symptom, or marketing claim. Typography is Vietnamese primary with subordinate English. White/ivory capsule colour is a design convention, not verified product detail.",
+      "text_issues": [],
+      "text_check": "Xem ảnh và phóng to mặt trước, cạnh; không phát hiện sai chữ rõ ở tên, hoạt chất, dạng, quy cách, dòng Anh, cơ sở, ba câu chuẩn và nhãn lô/ngày; nét rất nhỏ cần người kiểm độc lập, không khẳng định ảnh dùng in được.",
+      "visual_notes": [
+        "Một vỉ mặt trước gồm 10 nang trắng ngà.",
+        "Hộp mỏng là mô phỏng; không chứng minh kích thước hay bao bì thực tế."
+      ],
+      "status": "generated_needs_independent_review"
+    }
+  ]
+}

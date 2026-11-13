@@ -1,0 +1,188 @@
+{
+  "schema": "desktop-continuation-readiness/1",
+  "project": "BIDOPS",
+  "preparedAtUtc": "2026-11-01T06:22:50Z",
+  "preparedAtNote": "Timestamp of readiness planning clock read; no Desktop execution claimed",
+  "expectedConversationId": "a5ab430d-1ab4-4c21-8a6a-2b597076de9f",
+  "expectedDesktopLocalId": "local_5e4b81c7-343c-47f7-a688-fe41f2921bfa",
+  "expectedCwd": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent",
+  "preparedRoot": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-31\\task\\output\\readiness-materials\\BIDOPS",
+  "scope": "Synthetic local implementation continuation only; Opus plans/integrates isolated copy, Sonnet parallel bounded work; no business/prod writes or new authority",
+  "readiness": {
+    "filesReady": {
+      "state": "READY_IN_PROJECT_HASH_VERIFIED",
+      "verified": true,
+      "sourceFiles": 23,
+      "sourceBytes": 235452,
+      "supportFilesIncludingThis": 4,
+      "totalFiles": 27,
+      "ownerPlacement": "PERFORMED",
+      "basis": "Host copied23files to actualCodeRoot and verified every SHA256"
+    },
+    "liveDesktop": {
+      "state": "EXACT_RECEIVER_ABSENT_IN_FRESH_NATIVE_REGISTRY",
+      "latestKnownConversationUtc": "2026-11-01T04:04:51Z",
+      "noExecutionObservedAfterCutoffUtc": "2026-11-01T05:27:00Z",
+      "basis": "Fresh host registry observation, not only worker preparation",
+      "activeClaim": false
+    },
+    "thisComputer": {
+      "state": "FILESYSTEM_CONTEXT_VERIFIED",
+      "machine": "Admin-PC",
+      "ownerPathReadable": true,
+      "CStagingWritable": true,
+      "desktopThisComputerSelection": "NOT_VERIFIED",
+      "note": "Reading C/D files does not establish live Desktop surface or active cwd"
+    },
+    "model": {
+      "state": "NOT_FRESHLY_VERIFIED",
+      "intendedMain": "Opus",
+      "intendedWorkers": "Sonnet, available authorized configuration",
+      "currentActualModel": null,
+      "quota": null,
+      "modelOrAccountChanged": false
+    },
+    "route": {
+      "state": "BLOCKED_NO_EXACT_RECEIVER",
+      "basis": "Parent says native agent registry has no exact receiver for this session; known inbound relay mismatch",
+      "deliveryAttempted": false,
+      "alternativeReceiverCreated": false,
+      "relaySent": false,
+      "permissionsChanged": false,
+      "next": "Wait for exact permitted native route or explicit user-directed placement/read action; do not substitute session/route"
+    },
+    "taskRead": {
+      "state": "NOT_OBSERVED",
+      "receipt": null,
+      "note": "Prepared and even owner-placed files do not prove conversation loaded task"
+    },
+    "started": {
+      "state": "NOT_OBSERVED",
+      "newExecutionReceipt": null,
+      "note": "No Claude call/tool run initiated by readiness preparation"
+    },
+    "output": {
+      "state": "PREPARATION_ONLY",
+      "newImplementation": false,
+      "newTestsRun": 0,
+      "historicalBaseline": {
+        "pilotCommitFromReceipt": "aac3e9428084254ae21fba4eaf0ee7b85a014b70",
+        "CodexTests": "100/100 per prior receipt",
+        "ClaudeSmoke": "1/1 in-process smoke per prior receipt",
+        "level": "L1 synthetic",
+        "actualEmployeeOrAgentUse": false
+      },
+      "businessAcceptance": "NOT_ESTABLISHED",
+      "ownerIntegration": false,
+      "release": false
+    }
+  },
+  "materials": [
+    {
+      "path": "NEXT-DESKTOP-TASK.md",
+      "bytes": 14003,
+      "sha256": "ae611226aa0daad21b53bba5f98f32176f6eaf6f2c021964f6d0d5106ab19ec4",
+      "prepared": true,
+      "copiedToOwner": true
+    },
+    {
+      "path": "GAP-MAP.md",
+      "bytes": 7152,
+      "sha256": "a5c6daafb3e23083221b3a15d7768e2a972220a42eb7f5861b679d66a1e486dd",
+      "prepared": true,
+      "copiedToOwner": true
+    },
+    {
+      "path": "COPY-MANIFEST.json",
+      "bytes": 22866,
+      "sha256": "74c5fdfbf8d61993fedacfdb0e4b8d8aa4edbb2a5a5ddf1783893983279d0ba0",
+      "prepared": true,
+      "copiedToOwner": true
+    }
+  ],
+  "payload": {
+    "root": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\data-work\\pilots\\bidops-b-next-20261101",
+    "manifest": "COPY-MANIFEST.json",
+    "fileCount": 23,
+    "totalBytes": 235452.0,
+    "everySourceCopyHashVerified": true,
+    "proposedOwnerRelativeRoot": "data-work/pilots/bidops-b-next-20261101",
+    "doNotOverwriteOwnerInstructions": true,
+    "excludeOwnerOriginalDocs": true
+  },
+  "placement": {
+    "proposedTaskRoot": "context/continuation-20261101/desktop-readiness-bidops",
+    "proposedCodeRoot": "data-work/pilots/bidops-b-next-20261101",
+    "performed": true,
+    "rootMust": "Placement completed and hash verified; preserve original owner instructions and sources"
+  },
+  "authority": {
+    "DAndLCKAutomaticallyLocked": false,
+    "newBusinessPolicy": false,
+    "realActorLabels": "Untrusted fixture labels, not company ACL",
+    "forbidden": [
+      "real mission/quote/master/people data changes",
+      "accepting historical prices as current quote",
+      "Mittaphab takeover",
+      "production integration without scope",
+      "merge/push/deploy",
+      "grants/credentials/hooks/permissions",
+      "alternative session/native receiver",
+      "relay mismatch delivery",
+      "legacy builder or G/H path probing",
+      "OSER Mission init without D09"
+    ]
+  },
+  "remainingBlockers": [
+    "Exact native receiver/route absent; do not deliver to substitute",
+    "No current task-read/started/output receipt from exact Desktop session",
+    "Current model/quota and This computer Desktop selection unverified",
+    "Real first case/master/business approvers/submission/identity/transport decisions remain pending; do not block independent synthetic work"
+  ],
+  "preparationActions": [
+    "Read named owner instructions and current continuation files",
+    "Read selected pilot contracts and actual critical code excerpts",
+    "Copied exact 23-file safe source-only allowlist under C staging",
+    "Computed source/destination SHA256 and owner context pins",
+    "Prepared broad Opus implementation goal and bounded gap map",
+    "Host installed task/docs and23source files into existingDproject and verified hashes"
+  ],
+  "notPerformed": [
+    "No code edits",
+    "No test execution",
+    "No Claude calls",
+    "No native agent/relay sends",
+    "No Git commands",
+    "No network/auth/permission actions"
+  ],
+  "installedAtUtc": "2026-11-01T06:30:44.242726+00:00",
+  "actualTaskPath": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\context\\continuation-20261101\\desktop-readiness-bidops\\NEXT-DESKTOP-TASK.md",
+  "actualCodeRoot": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\data-work\\pilots\\bidops-b-next-20261101",
+  "sourceFilesCopiedAndHashVerified": 23,
+  "freshLiveStatus": {
+    "exactReceiverPresent": false,
+    "newTaskSent": false,
+    "newTaskRead": false,
+    "newTaskStarted": false,
+    "replacementSessionCreated": false,
+    "nextHumanAction": "Open existing Desktop conversation a5ab430d-1ab4-4c21-8a6a-2b597076de9f on This computer; do not create another session",
+    "note": "Latest registry does not list this exact receiver; last transcript04:04:51Z"
+  },
+  "bootstrapVerification": {
+    "actor": "Codex, not Claude Desktop",
+    "result": "100/100 synthetic tests, exit0",
+    "sourceFilesUnchanged": true,
+    "receipt": "BOOTSTRAP-TEST-RECEIPT.json",
+    "finishUtc": "2026-11-01T06:32:48.367574Z"
+  },
+  "desktopLauncherAttempt": {
+    "officialCommand": "claude --desktop --resume a5ab430d-1ab4-4c21-8a6a-2b597076de9f",
+    "cwd": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent",
+    "firstNonTTY": "Refused before launch; redirected output unsupported",
+    "ttyRetry": "Opening session printed, exit0",
+    "nativeRegistryAfter": "Exact receiver still absent",
+    "newSessionCreatedByAgent": false,
+    "promptSent": false,
+    "interpretation": "Launcher opened existing history but does not prove live code receiver or execution; no repeated launch"
+  }
+}

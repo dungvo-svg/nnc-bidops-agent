@@ -1,0 +1,60 @@
+{
+  "boardId": "9f86a221-add8-4f2d-812a-1eb3a149a1eb",
+  "revision": 30,
+  "items": [
+    {
+      "id": "esomex-a1",
+      "state": "ready",
+      "title": "Esomex 20 · A1",
+      "asset": {
+        "originalFile": "assets\\esomex-a1\\original.png",
+        "previewFile": "assets\\esomex-a1\\preview.jpg"
+      }
+    },
+    {
+      "id": "esomex-a2",
+      "state": "ready",
+      "title": "Esomex 20 · A2",
+      "asset": {
+        "originalFile": "assets\\esomex-a2\\original.png",
+        "previewFile": "assets\\esomex-a2\\preview.jpg"
+      }
+    },
+    {
+      "id": "amitriptylin-a1",
+      "state": "ready",
+      "title": "Amitriptylin 25 mg · A1",
+      "asset": {
+        "originalFile": "assets\\amitriptylin-a1\\original.png",
+        "previewFile": "assets\\amitriptylin-a1\\preview.jpg"
+      }
+    },
+    {
+      "id": "amitriptylin-a2",
+      "state": "ready",
+      "title": "Amitriptylin 25 mg · A2",
+      "asset": {
+        "originalFile": "assets\\amitriptylin-a2\\original.png",
+        "previewFile": "assets\\amitriptylin-a2\\preview.jpg"
+      }
+    },
+    {
+      "id": "lactate-a1",
+      "state": "ready",
+      "title": "Lactate Ringer · A1",
+      "asset": {
+        "originalFile": "assets\\lactate-a1\\original.png",
+        "previewFile": "assets\\lactate-a1\\preview.jpg"
+      }
+    },
+    {
+      "id": "lactate-a2",
+      "state": "ready",
+      "title": "Lactate Ringer · A2",
+      "asset": {
+        "originalFile": "assets\\lactate-a2\\original.png",
+        "previewFile": "assets\\lactate-a2\\preview.jpg"
+      }
+    }
+  ]
+}

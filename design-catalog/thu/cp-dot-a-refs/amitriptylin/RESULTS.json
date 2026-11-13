@@ -1,0 +1,168 @@
+{
+  "model": "không được công cụ cung cấp",
+  "quality": "không có tham số chọn hoặc xác nhận",
+  "results": [
+    {
+      "item_id": "CP-A1",
+      "raw_paths": [
+        "C:\\Users\\Admin\\.codex\\generated_images\\01a1cdf3-5c8a-7e82-b766-65edbfaa01d1\\exec-12c0bfb5-da95-4a7b-b3e7-3f7d9bceb4a0.png"
+      ],
+      "final_path": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\KOM-1017_Amitriptylin-25mg_CP-A1.png",
+      "prompt": "USE: product packshot design concept for visual evaluation, 1536 × 1024 pixels.\nSCENE: seamless white background, softly diffused studio light, subtle shadow, one product only with one blister.\nSUBJECT: one thick 10-blister carton, approximately 100 × 55 × 48 proportions, upright three-quarter view showing front, right side, and top; one front-facing 2×5 aluminium–PVC blister of plain round flat white unmarked tablets. No rear-foil blister.\nLABEL: Image 1 is the exact front artwork and Image 2 is the exact side artwork. Reproduce the full visual system and all Vietnamese diacritics EXACT, verbatim; keep side headings and blank batch/date fields. Preserve product geometry and label legibility exactly. Do not add, translate, invent, omit or duplicate text.\nSTYLE: Keep the warm ivory upper face, large crimson title and restrained crimson dose block; use the broad crimson abstract flowing ribbons on the lower face. Match Image 1 without copying other brands.\nMATERIAL: matte-laminated white ivory paperboard carton (~300 gsm), offset printed, crisp folded edges, no foil, no gloss UV, no specular highlights. aluminium–PVC blister shown FRONT SIDE ONLY (clear thermoformed PVC cavities with the tablets/capsules visible, plain silver aluminium base around them); perforation lines between cells. Do NOT show or create the back (foil) side; no second blister; no text on the blister.\nCONSTRAINTS: no logos, ℞, GMP, registration numbers, barcodes, NNC, invented facts, Lao text, people, organs, symptoms, extra props or watermark. This is a generated mockup, not a photograph of real merchandise.",
+      "refs": [
+        "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\cp-dot-a-refs\\amitriptylin\\CP-A1_front.png",
+        "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\cp-dot-a-refs\\amitriptylin\\CP-A1_side.png"
+      ],
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "line_qa": [
+        {
+          "text": "Amitriptylin 25 mg",
+          "result": "đạt qua quan sát phóng to",
+          "location": "mặt bên"
+        },
+        {
+          "text": "Mỗi viên nén chứa: Amitriptylin 25 mg",
+          "result": "đạt qua quan sát phóng to",
+          "location": "mặt bên"
+        },
+        {
+          "text": "Viên nén · Uống",
+          "result": "đạt qua quan sát phóng to",
+          "location": "mặt bên"
+        },
+        {
+          "text": "Hộp 10 vỉ x 10 viên nén",
+          "result": "đạt qua quan sát phóng to",
+          "location": "mặt bên"
+        },
+        {
+          "text": "Box of 10 blisters x 10 tablets",
+          "result": "đạt qua quan sát phóng to",
+          "location": "mặt bên"
+        },
+        {
+          "text": "Cơ sở sản xuất: Công ty CP Dược phẩm Khánh Hòa (Khapharco) – Việt Nam",
+          "result": "đạt qua quan sát phóng to",
+          "location": "mặt trước"
+        },
+        {
+          "text": "Chỉ định, chống chỉ định, cách dùng và các thông tin khác: xem tờ hướng dẫn sử dụng",
+          "result": "đạt qua quan sát phóng to",
+          "location": "mặt bên"
+        },
+        {
+          "text": "Đọc kỹ hướng dẫn sử dụng trước khi dùng",
+          "result": "đạt qua quan sát phóng to",
+          "location": "mặt bên"
+        },
+        {
+          "text": "Để xa tầm tay trẻ em",
+          "result": "đạt qua quan sát phóng to",
+          "location": "mặt bên"
+        },
+        {
+          "text": "Số lô SX:",
+          "result": "đạt qua quan sát phóng to",
+          "location": "mặt bên"
+        },
+        {
+          "text": "NSX:",
+          "result": "đạt qua quan sát phóng to",
+          "location": "mặt bên"
+        },
+        {
+          "text": "HD:",
+          "result": "đạt qua quan sát phóng to",
+          "location": "mặt bên"
+        }
+      ],
+      "retry_count": 0,
+      "review_method": "Quan sát toàn ảnh và ảnh phóng to mặt bên; chưa kiểm thực tế tại kích thước 90 px",
+      "limit": "Ảnh mô phỏng AI, không xác nhận bao bì/viên thật; cần root kiểm độc lập."
+    },
+    {
+      "item_id": "CP-A2",
+      "raw_paths": [
+        "C:\\Users\\Admin\\.codex\\generated_images\\01a1cdf3-5c8a-7e82-b766-65edbfaa01d1\\exec-f3473788-371c-44c9-949d-0a8c39efc019.png"
+      ],
+      "final_path": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\KOM-1017_Amitriptylin-25mg_CP-A2.png",
+      "prompt": "USE: product packshot design concept for visual evaluation, 1536 × 1024 pixels.\nSCENE: seamless white background, softly diffused studio light, subtle shadow, one product only with one blister.\nSUBJECT: one thick 10-blister carton, approximately 100 × 55 × 48 proportions, upright three-quarter view showing front, right side, and top; one front-facing 2×5 aluminium–PVC blister of plain round flat white unmarked tablets. No rear-foil blister.\nLABEL: Image 1 is the exact front artwork and Image 2 is the exact side artwork. Reproduce the full visual system and all Vietnamese diacritics EXACT, verbatim; keep side headings and blank batch/date fields. Preserve product geometry and label legibility exactly. Do not add, translate, invent, omit or duplicate text.\nSTYLE: Keep a saturated deep-red face with bold cream typography and large sweeping cream arcs, visually distinct from ivory-first layouts. Match Image 1 without copying other brands.\nMATERIAL: matte-laminated white ivory paperboard carton (~300 gsm), offset printed, crisp folded edges, no foil, no gloss UV, no specular highlights. aluminium–PVC blister shown FRONT SIDE ONLY (clear thermoformed PVC cavities with the tablets/capsules visible, plain silver aluminium base around them); perforation lines between cells. Do NOT show or create the back (foil) side; no second blister; no text on the blister.\nCONSTRAINTS: no logos, ℞, GMP, registration numbers, barcodes, NNC, invented facts, Lao text, people, organs, symptoms, extra props or watermark. This is a generated mockup, not a photograph of real merchandise.",
+      "refs": [
+        "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\cp-dot-a-refs\\amitriptylin\\CP-A2_front.png",
+        "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\design-catalog\\thu\\cp-dot-a-refs\\amitriptylin\\CP-A2_side.png"
+      ],
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "line_qa": [
+        {
+          "text": "Amitriptylin 25 mg",
+          "result": "đạt qua quan sát phóng to",
+          "location": "mặt bên"
+        },
+        {
+          "text": "Mỗi viên nén chứa: Amitriptylin 25 mg",
+          "result": "đạt qua quan sát phóng to",
+          "location": "mặt bên"
+        },
+        {
+          "text": "Viên nén · Uống",
+          "result": "đạt qua quan sát phóng to",
+          "location": "mặt bên"
+        },
+        {
+          "text": "Hộp 10 vỉ x 10 viên nén",
+          "result": "đạt qua quan sát phóng to",
+          "location": "mặt bên"
+        },
+        {
+          "text": "Box of 10 blisters x 10 tablets",
+          "result": "đạt qua quan sát phóng to",
+          "location": "mặt bên"
+        },
+        {
+          "text": "Cơ sở sản xuất: Công ty CP Dược phẩm Khánh Hòa (Khapharco) – Việt Nam",
+          "result": "đạt qua quan sát phóng to",
+          "location": "mặt trước"
+        },
+        {
+          "text": "Chỉ định, chống chỉ định, cách dùng và các thông tin khác: xem tờ hướng dẫn sử dụng",
+          "result": "đạt qua quan sát phóng to",
+          "location": "mặt bên"
+        },
+        {
+          "text": "Đọc kỹ hướng dẫn sử dụng trước khi dùng",
+          "result": "đạt qua quan sát phóng to",
+          "location": "mặt bên"
+        },
+        {
+          "text": "Để xa tầm tay trẻ em",
+          "result": "đạt qua quan sát phóng to",
+          "location": "mặt bên"
+        },
+        {
+          "text": "Số lô SX:",
+          "result": "đạt qua quan sát phóng to",
+          "location": "mặt bên"
+        },
+        {
+          "text": "NSX:",
+          "result": "đạt qua quan sát phóng to",
+          "location": "mặt bên"
+        },
+        {
+          "text": "HD:",
+          "result": "đạt qua quan sát phóng to",
+          "location": "mặt bên"
+        }
+      ],
+      "retry_count": 0,
+      "review_method": "Quan sát toàn ảnh và ảnh phóng to mặt bên; chưa kiểm thực tế tại kích thước 90 px",
+      "limit": "Ảnh mô phỏng AI, không xác nhận bao bì/viên thật; cần root kiểm độc lập."
+    }
+  ]
+}

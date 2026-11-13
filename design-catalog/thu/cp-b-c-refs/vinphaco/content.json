@@ -1,0 +1,36 @@
+{
+  "valbitrin": {
+    "stem": "KOM-1026_Valbitrin-100",
+    "name": "Valbitrin",
+    "full": "Valbitrin 100",
+    "side": "VALBITRIN 100",
+    "dose": "100",
+    "w": 2000,
+    "h": 880,
+    "pack": "Hộp 2 vỉ x 14 viên nén bao phim",
+    "pack_en": "Box of 2 blisters x 14 film-coated tablets",
+    "ingredients": [
+      "Mỗi viên nén bao phim chứa:",
+      "Sacubitril 48,6 mg + Valsartan 51,4 mg"
+    ],
+    "form": "Viên nén bao phim · Uống",
+    "en": "Film-coated tablets · Oral use"
+  },
+  "vindexa": {
+    "stem": "KOM-0296_Vindexa-8mg-2ml",
+    "name": "Vindexa",
+    "full": "Vindexa 8 mg/2 ml",
+    "side": "VINDEXA 8 mg/2 ml",
+    "dose": "8 mg/2 ml",
+    "w": 1600,
+    "h": 1040,
+    "pack": "Hộp 1 vỉ x 10 ống x 2 ml",
+    "pack_en": "Box of 1 blister x 10 ampoules x 2 mL",
+    "ingredients": [
+      "Mỗi ống 2 ml chứa:",
+      "Dexamethason phosphat 8 mg"
+    ],
+    "form": "Dung dịch tiêm · Tiêm",
+    "en": "Solution for injection"
+  }
+}

@@ -1,0 +1,511 @@
+{
+  "atUTC": "2026-11-01T03:58:29.086766+00:00",
+  "method": "Codex read-only structured extraction, no workbook edits/recalc/external refresh; these are saved source snapshots",
+  "award2026": {
+    "file": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\sources\\whatsapp\\originals\\261029-Bang-gia-goc-thau-HC-2027.xlsx",
+    "sha256": "e8d755a22b61832decc1d4e907dbdc8f9d57733a46e449b3db82bf84b86f76b9",
+    "sheet": "Trung thau 2026",
+    "titleA1": "DANH MỤC NNC TRÚNG THẦU 2026 (đọc từ bản scan quyết định/hợp đồng, đối chiếu tổng với hợp đồng)",
+    "headerRange": "A3:K3",
+    "headers": [
+      "Bệnh viện",
+      "Nhóm",
+      "STT",
+      "Mã hàng (MPSC)",
+      "Tên sản phẩm",
+      "ĐVT",
+      "Số lượng",
+      "Đơn giá trúng (kíp)",
+      "Thành tiền (kíp)",
+      "Có trong DM 2027 của BV?",
+      "Ghi chú"
+    ],
+    "countingRule": "Rows whose D cell begins with MPSC (case-insensitive); count is source award lines, not distinct products/variants/customers",
+    "sourceLineCount": 189,
+    "distinctMPSCCodes": 149,
+    "byHospital": {
+      "Mahosod": 65,
+      "Settha": 87,
+      "Meladek": 37
+    },
+    "byGroup": {
+      "Thuốc": 54,
+      "VTTH": 122,
+      "Hóa chất": 13
+    },
+    "examples": [
+      {
+        "row": 4,
+        "hospital": "Mahosod",
+        "group": "Thuốc",
+        "stt": "1",
+        "mpsc": "MPSC09Ga00101",
+        "name": "Aciclovir tablet 400mg",
+        "uom": "Tab",
+        "qty": 3000,
+        "unitAwardKip": 1840,
+        "amountKip": 5520000,
+        "presentIn2027": "Có"
+      },
+      {
+        "row": 5,
+        "hospital": "Mahosod",
+        "group": "Thuốc",
+        "stt": "2",
+        "mpsc": "MPSC09Bbb00102",
+        "name": "Amoxicillin/Clavulanic acid powder for suspension 250/12.5mg",
+        "uom": "Sachet",
+        "qty": 2000,
+        "unitAwardKip": 3160,
+        "amountKip": 6320000,
+        "presentIn2027": "Có"
+      },
+      {
+        "row": 6,
+        "hospital": "Mahosod",
+        "group": "Thuốc",
+        "stt": "3",
+        "mpsc": "MPSC28Aa00300",
+        "name": "Baithach (Lao name) 45c/Box",
+        "uom": "Box",
+        "qty": 500,
+        "unitAwardKip": 75000,
+        "amountKip": 37500000,
+        "presentIn2027": "Có"
+      },
+      {
+        "row": 191,
+        "hospital": "Meladek",
+        "group": "Hóa chất",
+        "stt": "3",
+        "mpsc": "MPSC-SL-A-022-03",
+        "name": "Probe Cleaser",
+        "uom": "Tuk",
+        "qty": 10,
+        "unitAwardKip": 220000,
+        "amountKip": 2200000,
+        "presentIn2027": "Không"
+      },
+      {
+        "row": 192,
+        "hospital": "Meladek",
+        "group": "Hóa chất",
+        "stt": "4",
+        "mpsc": "MPSC-SL-A-022-04",
+        "name": "Control 3Level",
+        "uom": "Set",
+        "qty": 5,
+        "unitAwardKip": 10314000,
+        "amountKip": 51570000,
+        "presentIn2027": "Không"
+      }
+    ],
+    "limitations": "Workbook self-labels as NNC award2026 derived from scanned decisions/contracts. Original scans/contracts not independently reread in this operation; no claim of live inventory, renewed registration or current quote. Same MPSC can recur by hospital/spec. No workbook edits/recalculation/links refresh."
+  },
+  "workbooks": [
+    {
+      "file": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\sources\\whatsapp\\originals\\261029 Check giá-Stevimed phản hồi.xlsx",
+      "sha256": "ce67f4f57f8cf4fe1fe40c2c19e875d1ac0de4c018ad1a1cc50abb8726cd7e3b",
+      "sheetNames": [
+        "Price",
+        "Sheet1"
+      ],
+      "facts": [
+        {
+          "sheet": "Price",
+          "rows": [
+            [
+              {
+                "cell": "A1",
+                "value": "ANH NAM GỬI YÊU CẦU NGÀY 24/10/2026",
+                "cached": null
+              }
+            ],
+            [
+              {
+                "cell": "A2",
+                "value": "STT",
+                "cached": null
+              },
+              {
+                "cell": "B2",
+                "value": "Danh mục",
+                "cached": null
+              },
+              {
+                "cell": "C2",
+                "value": "ĐVT",
+                "cached": null
+              },
+              {
+                "cell": "D2",
+                "value": "Số lượng",
+                "cached": null
+              },
+              {
+                "cell": "E2",
+                "value": "Mã STEVIMED",
+                "cached": null
+              },
+              {
+                "cell": "F2",
+                "value": "Version",
+                "cached": null
+              },
+              {
+                "cell": "G2",
+                "value": "Ghi chú ",
+                "cached": null
+              }
+            ],
+            [
+              {
+                "cell": "A3",
+                "value": 1,
+                "cached": null
+              },
+              {
+                "cell": "B3",
+                "value": "Disposable operation Pack Surgical kit.Wrapper cloth size : 140x200cm 1unit, Cesarean drape size: 240x345cm 1unit, Absorbent towel size: 60x30cm 4unit, Disposable  surgical gown size : 120x130cm 4uunit",
+                "cached": null
+              },
+              {
+                "cell": "C3",
+                "value": "Set",
+                "cached": null
+              },
+              {
+                "cell": "D3",
+                "value": 300,
+                "cached": null
+              },
+              {
+                "cell": "E3",
+                "value": "SK.12.01-24",
+                "cached": null
+              },
+              {
+                "cell": "F3",
+                "value": 1,
+                "cached": null
+              },
+              {
+                "cell": "G3",
+                "value": "Lưu ý:\n- DƯ 8x Khăn thấm Airlaid 30x40\n- DƯ 1 x Khăn em bé 90x120\n- Khăn thấm 30x40 (yêu cầu 60x30)\n- Áo phẫu thuật 130x150 (yêu cầu 130x120)",
+                "cached": null
+              }
+            ],
+            [
+              {
+                "cell": "A4",
+                "value": 2,
+                "cached": null
+              },
+              {
+                "cell": "B4",
+                "value": "Drape incise 40cmx42cm (box/10pcs)",
+                "cached": null
+              },
+              {
+                "cell": "C4",
+                "value": "Pcs",
+                "cached": null
+              },
+              {
+                "cell": "D4",
+                "value": 2500,
+                "cached": null
+              },
+              {
+                "cell": "E4",
+                "value": "MP.25.01-02",
+                "cached": null
+              },
+              {
+                "cell": "F4",
+                "value": 1,
+                "cached": null
+              },
+              {
+                "cell": "G4",
+                "value": "Lưu ý: Màng phẫu thuật kích 37x37 cm (yêu cầu là 40x42)",
+                "cached": null
+              }
+            ]
+          ],
+          "interpretation": "Request/product code/version/specification rows; not independently accepted current supplier quote."
+        },
+        {
+          "sheet": "Sheet1",
+          "rows": [
+            [
+              {
+                "cell": "A1",
+                "value": "ANH NAM GỬI YÊU CẦU NGÀY 24/10/2026",
+                "cached": null
+              }
+            ],
+            [
+              {
+                "cell": "A2",
+                "value": "STT",
+                "cached": null
+              },
+              {
+                "cell": "B2",
+                "value": "Danh mục",
+                "cached": null
+              },
+              {
+                "cell": "C2",
+                "value": "ĐVT",
+                "cached": null
+              },
+              {
+                "cell": "D2",
+                "value": "Số lượng",
+                "cached": null
+              },
+              {
+                "cell": "E2",
+                "value": "Mã STEVIMED",
+                "cached": null
+              },
+              {
+                "cell": "F2",
+                "value": "Version",
+                "cached": null
+              },
+              {
+                "cell": "G2",
+                "value": "Ghi chú ",
+                "cached": null
+              }
+            ],
+            [
+              {
+                "cell": "A3",
+                "value": 1,
+                "cached": null
+              },
+              {
+                "cell": "B3",
+                "value": "Disposable operation Pack Surgical kit.Wrapper cloth size : 140x200cm 1unit, Cesarean drape size: 240x345cm 1unit, Absorbent towel size: 60x30cm 4unit, Disposable  surgical gown size : 120x130cm 4uunit",
+                "cached": null
+              },
+              {
+                "cell": "C3",
+                "value": "Set",
+                "cached": null
+              },
+              {
+                "cell": "D3",
+                "value": 300,
+                "cached": null
+              },
+              {
+                "cell": "E3",
+                "value": "SK.12.01-24",
+                "cached": null
+              },
+              {
+                "cell": "F3",
+                "value": 1,
+                "cached": null
+              },
+              {
+                "cell": "G3",
+                "value": "Lưu ý:\n- DƯ 8x Khăn thấm Airlaid 30x40\n- DƯ 1 x Khăn em bé 90x120\n- Khăn thấm 30x40 (yêu cầu 60x30)\n- Áo phẫu thuật 130x150 (yêu cầu 130x120)",
+                "cached": null
+              }
+            ],
+            [
+              {
+                "cell": "A4",
+                "value": 2,
+                "cached": null
+              },
+              {
+                "cell": "B4",
+                "value": "Drape incise 40cmx42cm (box/10pcs)",
+                "cached": null
+              },
+              {
+                "cell": "C4",
+                "value": "Pcs",
+                "cached": null
+              },
+              {
+                "cell": "D4",
+                "value": 2500,
+                "cached": null
+              },
+              {
+                "cell": "E4",
+                "value": "MP.25.01-02",
+                "cached": null
+              },
+              {
+                "cell": "F4",
+                "value": 1,
+                "cached": null
+              },
+              {
+                "cell": "G4",
+                "value": "Lưu ý: Màng phẫu thuật kích 37x37 cm (yêu cầu là 40x42)",
+                "cached": null
+              }
+            ]
+          ],
+          "interpretation": "Request/product code/version/specification rows; not independently accepted current supplier quote."
+        }
+      ],
+      "sheetsSelectedForTargetedExtraction": [
+        "Price",
+        "Sheet1"
+      ],
+      "workbookSheetCount": 2
+    },
+    {
+      "file": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\sources\\whatsapp\\originals\\261029-Bang-gia-goc-thau-HC-2027.xlsx",
+      "sha256": "e8d755a22b61832decc1d4e907dbdc8f9d57733a46e449b3db82bf84b86f76b9",
+      "sheetNames": [
+        "Huong dan",
+        "Tham so",
+        "Bang goc",
+        "Tien do",
+        "BV Mahosod",
+        "BV Settha",
+        "BV Meladek",
+        "BV SVNK",
+        "BV Mittaphap",
+        "Trung thau 2026"
+      ],
+      "facts": [
+        {
+          "sheet": "Huong dan",
+          "cell": "C25",
+          "text": "Cột \"Giá mua cũ\" chỉ lấy từ bảng giá Mittaphap 2027 (bản đang làm), chưa xác nhận còn hiệu lực. Mặt hàng \"Có giá cũ - cần xác nhận\" phải hỏi lại nhà cung cấp trước khi dùng. Ba cột \"Giá mua 2026 / Nhà cung cấp 2026 / Nguồn 2026\" cho biết năm ngoái mua của ai, giá bao nhiêu (tên nhà cung cấp ghi viết tắt như trong file 2026) — chỉ để gợi ý nơi hỏi giá, không dùng làm giá mới."
+        },
+        {
+          "sheet": "BV Mahosod",
+          "commonMasterFormulaSamples": [
+            {
+              "cell": "G4",
+              "formula": "=IFERROR(IF(INDEX('Bang goc'!$AC$4:$AC$2129,MATCH($B4,'Bang goc'!$B$4:$B$2129,0))=\"\",\"\",INDEX('Bang goc'!$AC$4:$AC$2129,MATCH($B4,'Bang goc'!$B$4:$B$2129,0))),\"\")"
+            },
+            {
+              "cell": "H4",
+              "formula": "=IFERROR(IF(INDEX('Bang goc'!$M$4:$M$2129,MATCH($B4,'Bang goc'!$B$4:$B$2129,0))=\"\",\"\",INDEX('Bang goc'!$M$4:$M$2129,MATCH($B4,'Bang goc'!$B$4:$B$2129,0))),\"\")"
+            }
+          ],
+          "limit": "Formula references only; does not prove recalculated values or that all links are current."
+        },
+        {
+          "sheet": "BV Settha",
+          "commonMasterFormulaSamples": [
+            {
+              "cell": "G4",
+              "formula": "=IFERROR(IF(INDEX('Bang goc'!$AC$4:$AC$2129,MATCH($B4,'Bang goc'!$B$4:$B$2129,0))=\"\",\"\",INDEX('Bang goc'!$AC$4:$AC$2129,MATCH($B4,'Bang goc'!$B$4:$B$2129,0))),\"\")"
+            },
+            {
+              "cell": "H4",
+              "formula": "=IFERROR(IF(INDEX('Bang goc'!$M$4:$M$2129,MATCH($B4,'Bang goc'!$B$4:$B$2129,0))=\"\",\"\",INDEX('Bang goc'!$M$4:$M$2129,MATCH($B4,'Bang goc'!$B$4:$B$2129,0))),\"\")"
+            }
+          ],
+          "limit": "Formula references only; does not prove recalculated values or that all links are current."
+        },
+        {
+          "sheet": "BV Meladek",
+          "commonMasterFormulaSamples": [
+            {
+              "cell": "G4",
+              "formula": "=IFERROR(IF(INDEX('Bang goc'!$AC$4:$AC$2129,MATCH($B4,'Bang goc'!$B$4:$B$2129,0))=\"\",\"\",INDEX('Bang goc'!$AC$4:$AC$2129,MATCH($B4,'Bang goc'!$B$4:$B$2129,0))),\"\")"
+            },
+            {
+              "cell": "H4",
+              "formula": "=IFERROR(IF(INDEX('Bang goc'!$M$4:$M$2129,MATCH($B4,'Bang goc'!$B$4:$B$2129,0))=\"\",\"\",INDEX('Bang goc'!$M$4:$M$2129,MATCH($B4,'Bang goc'!$B$4:$B$2129,0))),\"\")"
+            }
+          ],
+          "limit": "Formula references only; does not prove recalculated values or that all links are current."
+        },
+        {
+          "sheet": "BV SVNK",
+          "commonMasterFormulaSamples": [
+            {
+              "cell": "G4",
+              "formula": "=IFERROR(IF(INDEX('Bang goc'!$AC$4:$AC$2129,MATCH($B4,'Bang goc'!$B$4:$B$2129,0))=\"\",\"\",INDEX('Bang goc'!$AC$4:$AC$2129,MATCH($B4,'Bang goc'!$B$4:$B$2129,0))),\"\")"
+            },
+            {
+              "cell": "H4",
+              "formula": "=IFERROR(IF(INDEX('Bang goc'!$M$4:$M$2129,MATCH($B4,'Bang goc'!$B$4:$B$2129,0))=\"\",\"\",INDEX('Bang goc'!$M$4:$M$2129,MATCH($B4,'Bang goc'!$B$4:$B$2129,0))),\"\")"
+            }
+          ],
+          "limit": "Formula references only; does not prove recalculated values or that all links are current."
+        },
+        {
+          "sheet": "BV Mittaphap",
+          "commonMasterFormulaSamples": [
+            {
+              "cell": "G4",
+              "formula": "=IFERROR(IF(INDEX('Bang goc'!$AC$4:$AC$2129,MATCH($B4,'Bang goc'!$B$4:$B$2129,0))=\"\",\"\",INDEX('Bang goc'!$AC$4:$AC$2129,MATCH($B4,'Bang goc'!$B$4:$B$2129,0))),\"\")"
+            },
+            {
+              "cell": "H4",
+              "formula": "=IFERROR(IF(INDEX('Bang goc'!$M$4:$M$2129,MATCH($B4,'Bang goc'!$B$4:$B$2129,0))=\"\",\"\",INDEX('Bang goc'!$M$4:$M$2129,MATCH($B4,'Bang goc'!$B$4:$B$2129,0))),\"\")"
+            }
+          ],
+          "limit": "Formula references only; does not prove recalculated values or that all links are current."
+        }
+      ],
+      "sheetsSelectedForTargetedExtraction": [
+        "Huong dan",
+        "Bang goc",
+        "BV Mahosod",
+        "BV Settha",
+        "BV Meladek",
+        "BV SVNK",
+        "BV Mittaphap",
+        "Trung thau 2026"
+      ],
+      "workbookSheetCount": 10,
+      "lookupBoundary": "Bang goc!B3 is Mã hàng(MPSC); existing BV lookup samples use that code column. This does not establish equivalence of spec/UOM/validity or authorize joining ambiguous variants."
+    },
+    {
+      "file": "D:\\WORK\\Agent\\Agent-first\\NNC BidOps Agent\\sources\\whatsapp\\originals\\Komsenahak 2027 ລາຍການຢາ ເຄືອງໃຊການແພດ ປີ 2027  ສົງໃຫ້ບໍລິສັດ.xlsx",
+      "sha256": "1b12de819834d58c16355fe99abd8b4a18ced2757cda90cb041d71ecc5ce9692",
+      "sheetNames": [
+        "List 2027 ",
+        "Excemple for hard copy",
+        "Military Hospital' list ",
+        "Sheet1",
+        "Excemple for soft copy(USB",
+        "Giá NNC 2027"
+      ],
+      "facts": [
+        {
+          "sheet": "Excemple for hard copy",
+          "cell": "I8",
+          "text": "ນະຄອນຫຼວງວຽງຈັນ, ວັນທີ 13/11/2026",
+          "interpretation": "Date in an example offer/signature template, not independently verified closing date. Planning13Nov remains sourced to Phet chat, not this example cell."
+        },
+        {
+          "sheet": "Excemple for soft copy(USB",
+          "cell": "I8",
+          "text": "ນະຄອນຫຼວງວຽງຈັນ, ວັນທີ 13/11/2026",
+          "interpretation": "Date in an example offer/signature template, not independently verified closing date. Planning13Nov remains sourced to Phet chat, not this example cell."
+        }
+      ],
+      "limits": "List2027 and GiaNNC2027 titles do not establish current accepted quote/year-validity. Embedded pictures, formal HSMT/addenda and registry were not audited here. Military roster personal contact rows excluded from handoff as irrelevant.",
+      "sheetsSelectedForTargetedExtraction": [
+        "List 2027 ",
+        "Excemple for hard copy",
+        "Military Hospital' list ",
+        "Sheet1",
+        "Excemple for soft copy(USB",
+        "Giá NNC 2027"
+      ],
+      "workbookSheetCount": 6
+    }
+  ]
+}

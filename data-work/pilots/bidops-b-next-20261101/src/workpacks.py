@@ -83,6 +83,10 @@ class WorkpackInbox:
                 payload TEXT NOT NULL,payload_sha256 TEXT NOT NULL,source_snapshot TEXT NOT NULL,state TEXT NOT NULL,
                 review_event TEXT,cancel_event TEXT);
               CREATE TABLE IF NOT EXISTS draft_event(event_id TEXT PRIMARY KEY,payload_sha256 TEXT NOT NULL,kind TEXT NOT NULL,receipt TEXT NOT NULL);
+              CREATE TABLE IF NOT EXISTS draft_packet(packet_id TEXT PRIMARY KEY,draft_id TEXT NOT NULL,payload_sha256 TEXT NOT NULL,
+                packet_sha256 TEXT NOT NULL,path TEXT NOT NULL,export_event TEXT NOT NULL);
+              CREATE TABLE IF NOT EXISTS draft_return(return_id TEXT PRIMARY KEY,packet_id TEXT NOT NULL,status TEXT NOT NULL,
+                claimed_owner TEXT,claimed_agent TEXT,content_sha256 TEXT NOT NULL,import_event TEXT NOT NULL,content TEXT NOT NULL);
             """)
             prior=self.db.execute("SELECT catalog_path FROM draft_inbox_meta").fetchall()
             if prior and prior!=[(str(self.catalog_path),)]:
@@ -185,6 +189,93 @@ class WorkpackInbox:
         rows=self.db.execute('SELECT w.draft_id,w.payload,w.payload_sha256,w.state,w.generation FROM draft_slot s JOIN draft_workpack w ON w.draft_id=s.current_id WHERE s.active=1 ORDER BY w.slot_key').fetchall()
         return [{"draft_id":r[0],"payload":json.loads(r[1]),"payload_sha256":r[2],"state":r[3],"generation":r[4]}
                 for r in rows if include_cancelled or r[3]!='CANCELLED']
+
+    def export_packet(self,event_id,draft_id,expected_hash,out_path,as_of=None):
+        """Write a NEW local JSON packet for a REVIEWED current draft. Nothing is sent or assigned."""
+        out=Path(out_path).resolve()
+        request={"draft_id":draft_id,"expected_hash":expected_hash,"out_path":str(out)}
+        def change():
+            row=self._current(draft_id,expected_hash)
+            if row[3]!='REVIEWED':raise DraftConflict('only a current REVIEWED draft may be exported')
+            # Same source-scope check as review: catalog drift after review needs a new draft.
+            snapshot=_snapshot(self.catalog_path,as_of)
+            fresh=snapshot['payloads'].get(row[0])
+            if fresh is None or digest(fresh)!=expected_hash:raise DraftConflict('source scope/version drift; sync a new draft before export')
+            if out in {self.queue_path,self.catalog_path} or (out.exists() and any(os.path.samefile(out,p) for p in (self.queue_path,self.catalog_path))):
+                raise DraftConflict('packet export must not overwrite a database')
+            packet_id='packet:'+digest([draft_id,expected_hash])
+            if self.db.execute('SELECT 1 FROM draft_packet WHERE packet_id=?',(packet_id,)).fetchone():
+                raise DraftConflict('packet already exported for this draft version')
+            generation=self.db.execute('SELECT generation FROM draft_workpack WHERE draft_id=?',(draft_id,)).fetchone()[0]
+            body={"schema":"bidops-workpack-packet/1","packet_id":packet_id,"draft_id":draft_id,"generation":generation,
+                  "payload_sha256":expected_hash,"payload":json.loads(row[1]),
+                  "source_semantic_sha256_at_export":snapshot['semantic_sha256'],"owner_id":None,"agent_id":None,
+                  "dispatch_allowed":False,"delivery":"LOCAL_FILE_EXPORT_NOT_SENT"}
+            packet=dict(body,packet_sha256=digest(body))
+            self.db.execute('INSERT INTO draft_packet VALUES(?,?,?,?,?,?)',
+                            (packet_id,draft_id,expected_hash,packet['packet_sha256'],str(out),event_id))
+            out.parent.mkdir(parents=True,exist_ok=True)
+            # Exclusive create; FileExistsError rolls back the row above, so nothing is recorded.
+            with out.open('x',encoding='utf-8',newline='\n') as handle:
+                handle.write(json.dumps(packet,ensure_ascii=False,sort_keys=True,indent=2)+'\n')
+            return {"packet_id":packet_id,"draft_id":draft_id,"payload_sha256":expected_hash,
+                    "packet_sha256":packet['packet_sha256'],"path":str(out),"owner_id":None,"agent_id":None,
+                    "dispatch_allowed":False,"delivery":"LOCAL_FILE_EXPORT_NOT_SENT"}
+        return self._event(event_id,'packet_export',request,change)
+
+    _RETURN_KEYS={"packet_id","packet_sha256","draft_id","result","evidence_refs","note","claimed_owner","claimed_agent"}
+
+    @classmethod
+    def _read_return(cls,return_path):
+        try:
+            data=json.loads(Path(return_path).read_bytes().decode('utf-8'))
+        except (json.JSONDecodeError,UnicodeDecodeError) as exc:
+            raise ValueError('return file is not valid UTF-8 JSON') from exc
+        if not isinstance(data,dict):raise ValueError('return must be a JSON object')
+        if set(data)!=cls._RETURN_KEYS:
+            raise ValueError('return fields must be exactly: '+', '.join(sorted(cls._RETURN_KEYS)))
+        for key in ('packet_id','packet_sha256','draft_id'):
+            if not isinstance(data[key],str) or not data[key].strip():raise ValueError(key+' must be a non-empty string')
+        if data['result'] not in ('evidence','blocker','hold'):raise ValueError('result must be evidence, blocker or hold')
+        refs=data['evidence_refs']
+        if not isinstance(refs,list) or any(not isinstance(r,str) or not r.strip() for r in refs):
+            raise ValueError('evidence_refs must be a list of non-empty strings')
+        if data['result']=='evidence' and not refs:raise ValueError('evidence result requires evidence_refs')
+        if not isinstance(data['note'],str):raise ValueError('note must be a string')
+        for key in ('claimed_owner','claimed_agent'):
+            if data[key] is not None and not isinstance(data[key],str):raise ValueError(key+' must be a string or null')
+        return data
+
+    def import_return(self,event_id,return_path):
+        """Record a return as an UNVERIFIED claim. Never changes drafts, slots or owners."""
+        data=self._read_return(return_path)
+        content_sha=digest(data);return_id='return:'+content_sha
+        def change():
+            packet=self.db.execute('SELECT draft_id,packet_sha256 FROM draft_packet WHERE packet_id=?',(data['packet_id'],)).fetchone()
+            if not packet:raise DraftConflict('unknown packet')
+            if packet[1]!=data['packet_sha256']:raise DraftConflict('packet hash mismatch')
+            if packet[0]!=data['draft_id']:raise DraftConflict('draft_id does not match packet')
+            if self.db.execute('SELECT 1 FROM draft_return WHERE return_id=?',(return_id,)).fetchone():
+                raise DraftConflict('return already imported')
+            draft=self.db.execute('SELECT slot_key,state FROM draft_workpack WHERE draft_id=?',(packet[0],)).fetchone()
+            slot=self.db.execute('SELECT current_id,active FROM draft_slot WHERE slot_key=?',(draft[0],)).fetchone()
+            live=bool(slot and slot[0]==packet[0] and slot[1] and draft[1]!='CANCELLED')
+            status='RETURN_UNVERIFIED' if live else 'RETURN_HISTORY_ONLY'
+            self.db.execute('INSERT INTO draft_return VALUES(?,?,?,?,?,?,?,?)',
+                            (return_id,data['packet_id'],status,data['claimed_owner'],data['claimed_agent'],
+                             content_sha,event_id,canonical(data)))
+            return {"return_id":return_id,"packet_id":data['packet_id'],"draft_id":packet[0],"status":status,
+                    "return_result":data['result'],"evidence_ref_count":len(data['evidence_refs']),
+                    "claimed_owner":data['claimed_owner'],"claimed_agent":data['claimed_agent'],
+                    "claims_note":"claimed_owner/claimed_agent are unverified claims from the returned file",
+                    "verified_identity":False,"business_accepted":False,"owner_id":None,
+                    "draft_state_changed":False}
+        return self._event(event_id,'return_import',{"content_sha256":content_sha},change)
+
+    def list_returns(self):
+        rows=self.db.execute('SELECT return_id,packet_id,status,claimed_owner,claimed_agent,content_sha256,import_event,content FROM draft_return ORDER BY rowid').fetchall()
+        keys=('return_id','packet_id','status','claimed_owner','claimed_agent','content_sha256','import_event')
+        return [dict(zip(keys,r[:7]),content=json.loads(r[7])) for r in rows]
 
     def export_csv(self,path):
         out=Path(path).resolve()
