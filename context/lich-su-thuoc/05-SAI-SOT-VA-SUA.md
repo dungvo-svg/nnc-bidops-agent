@@ -138,3 +138,7 @@ Mỗi mục ghi: sai gì, ai phát hiện, nguyên nhân, đã sửa thế nào,
     - Sửa: trích toàn bộ 424 tin, lọc được 164 tin hỏi lại (06b).
 38. **Push git bị chặn.** Đã thêm quy tắc cho phép `git push origin *` vào `.claude/settings.local.json`, nhưng lớp kiểm an toàn của chế độ tự động vẫn chặn.
     - Hiện tại: Dũng tự chạy lệnh push.
+39. **Báo KOM-745 "thiếu ảnh" dù Dũng đã chốt bỏ** ("745 bỏ nha", 12/11 16:50; BV yêu cầu dạng tuýp).
+    - Phát hiện: Dũng, 13/11 ("tôi nhớ là bảo bạn bỏ rồi mà nhỉ?").
+    - Nguyên nhân: quyết định "bỏ" chỉ ghi trong báo cáo, chưa áp vào sheet KOM (vẫn "Chờ duyệt") và form chị Oanh (dòng 745 vẫn có thông tin hàng do Agent ghi ở v1). Báo cáo lại đếm theo trạng thái sheet.
+    - Bài học: quyết định "bỏ mã" phải áp ngay vào mọi nơi (sheet, form, danh sách báo cáo), và ghi vào danh sách chỉ đạo để đối chiếu trước mỗi báo cáo.
